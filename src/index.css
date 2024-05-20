@@ -233,7 +233,7 @@ white;
 }
 
 
-#Titolo{
+#Titolo_Home_Page{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -246,6 +246,10 @@ white;
   animation: zoomIn 1.3s ease-in-out forwards; /* Anima il titolo */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+
+
 @keyframes zoomIn {
   0% {
       transform: translate(-50%, -50%) scale(1); /* Scala iniziale */
@@ -367,8 +371,11 @@ white;
 }
 
 
-#card_home_1{
-  border: solid 1px black;
-  background-color: rgba(0, 0, 0, 0.425);
-  
+@media screen and (max-width: 700px){
+  #container_card {
+    display: flex; /* Abilita Flexbox */
+    flex-direction: column; /* Imposta la direzione dei figli in verticale */
 }
+}
+
+
