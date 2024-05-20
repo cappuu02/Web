@@ -375,6 +375,20 @@ white;
   #container_card {
     display: flex; /* Abilita Flexbox */
     flex-direction: column; /* Imposta la direzione dei figli in verticale */
+  }
+  #card{
+    font-size:medium;
+    width: 80%;
+    height: 80%;
+  }
+  #immagine-li{
+    width: 80%;
+    height: 80%;
+  }
+  #Titolo_Home_Page{
+    font-size: medium;
+    color: black;
+    
 }
 }
 
