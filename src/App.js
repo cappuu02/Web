@@ -1,6 +1,7 @@
 import Navbar from './components/navbar'
 import VideoC from './components/VideoSfondo'
 import HomeCard from './components/Home_Card'
+import Seconda from './components/seconda'
 import image1 from './Images/obbiettivi.webp'
 import image2 from './Images/canong.png'
 import { useEffect, useState } from "react";
@@ -28,6 +29,13 @@ function App() {
     getProdotti();
   }, []);
 
+
+
+
+
+
+
+  
   return (
     <>
 
@@ -39,7 +47,7 @@ function App() {
       <div className="container-fluid p-0 m-0">
         
         <VideoC />
-        <h1 id='Titolo_Home_Page'>Benvenuto nel nostro sito</h1>
+       
       </div>
       
      
@@ -52,7 +60,11 @@ function App() {
           <HomeCard  />
           <div id='spazio'></div>
         </div>
-        
+        <div id="container_card2" className='card-container'>
+          <Seconda  />
+          <div id='spazio'></div>
+        </div>
+
       </div>
 
       {prodotti ? prodotti : 'There is no product data available'}
