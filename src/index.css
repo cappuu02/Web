@@ -161,7 +161,6 @@ white;
 }
 #navbar1{ 
   height: 66px;
-  border-radius: 38px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   width: 80%;
   position:fixed; /* Con questa sezione di codice ho risolto il problema del video che non andava dietro alla navbar evitando di dover rendere il container del video absolute e causando problemi di layout nel resto della pagina*/
@@ -391,5 +390,7 @@ white;
     
 }
 }
+
+
 
 

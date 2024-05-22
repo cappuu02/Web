@@ -1,9 +1,12 @@
+import VerticalNav from "../components/VerticalNav";
 import Navbar from "../components/navbar";
 
 
 function Store() {
   return (
-    <Navbar />
+    <>
+     edhehbhb
+    </>
   );
 }
 
