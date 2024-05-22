@@ -396,10 +396,10 @@ white;
 .header__content{width: 100%;display:flex;}
 .header__logo h1{font-size:30px;}
 .header__logo{width: 200px; text-decoration: none;padding: 0px 10px;color: rgba(247, 245, 245, 0.471);font-family: 'Times New Roman', Times, serif;padding-right: 10%;margin-top:1%;}
-.header__menu{padding-bottom:0;margin-bottom:0;margin-right:10%;border:1px solid red}
+.header__menu{padding-bottom:0;margin-bottom:0;margin-right:10%; }
 .header__menu li{display: inline-block ;justify-content: space-between;}
 .header__menu li a{color:white;opacity: 0.8;display: inline-block;padding: 16px;font-size: 15px;}
-.header__icons{margin-left: 17%;display: flex;border:1px solid red;}
+.header__icons{margin-left: 17%;display: flex;}
 .header__menu li:hover{
   border-bottom: 0.3px solid red;
   color: rgb(255, 255, 255);
