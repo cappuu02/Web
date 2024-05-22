@@ -8,7 +8,7 @@ import Store from './Store';
 function Navbar(){
 
     const [isSearchVisible, setSearchVisible] = useState(false);
-   
+    const [isVisible, setVisible] = useState(false);
         
     
    
@@ -38,20 +38,42 @@ function Navbar(){
                     
                 </ul>
                <div className='header__icons'>
-                <div id="cart_icon" className="me-5 "><a href="#"><i className="bi bi-cart-check "></i></a></div>
-                        <div id="profile_icon" className="me-5 header__icons"><a href="#"><i className="bi bi-person-circle"></i></a></div>
-                <form id='Icone' className="d-flex" role="search">
+               <form  className="d-flex" role="search">
                         {isSearchVisible && <input id='cerca' className="form-control show" type="search" placeholder="Search" aria-label="Search"/>}
                         <div  id="search_icon" className="me-5 "><a onClick={() => setSearchVisible(!isSearchVisible)}><i className="bi bi-search"  id="search_bar"></i></a></div>
                        
-                </form>  
+                </form> 
+                <div id="cart_icon" className="me-5 header__icons "><a href="#"><i className="bi bi-cart-check "></i></a></div>
+                <div id="profile_icon" className="me-5 header__icons"><a href="#"><i className="bi bi-person-circle"></i></a></div>
                 </div>  
-                <div  className="icon-ham">
+                
+                {isVisible && <ul className="menu-open"><ul>
+                        <li >
+                            <a to="./Pages/Store" className="nav-link active" aria-current="page" >Store</a>
+                        </li>
+                        <li >
+                            <a id="nav_item" className="nav-link" href="#">Camera</a>
+                        </li>
+                        <li >
+                            <a id="nav_item" className="nav-link" href="#">Lenses</a>
+                        </li> 
+                        <li >
+                            <a id="nav_item" className="nav-link" href="#">Accessories</a>
+                        </li> 
+                        <li >
+                            <a id="nav_item" className="nav-link" href="#">Support</a>
+                        </li> 
+                        
+                        
+                         </ul></ul>}
+
+                <a onClick={() => setVisible(!isVisible)}> <div  className="icon-ham">
                     <span>
                     </span>
                     <span>
                     </span>
-                </div>
+                </div></a>
+                 
                 
             </div>
                 
