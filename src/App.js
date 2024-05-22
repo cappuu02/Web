@@ -6,6 +6,7 @@ import image2 from './Images/canong.png'
 import { useEffect, useState } from "react";
 
 
+
 function App() {
   const topFunction = () => {
     window.scrollTo(0, 0);
@@ -41,6 +42,7 @@ function App() {
           <HomeCard  />
           <div id='spazio'></div>
         </div>
+        
         
       </div>
 

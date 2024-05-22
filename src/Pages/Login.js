@@ -1,5 +1,4 @@
-import man_icon from '../Images/man_icon.svg'
-import female_icon from '../Images/Female_icon.svg'
+
 import React, { useEffect } from 'react';
 
 function Login() {
@@ -10,26 +9,43 @@ function Login() {
     const container = document.getElementById('container');
     const registerBtn = document.getElementById('register');
     const loginBtn = document.getElementById('login');
+    const registerCellBtn = document.getElementById('registerCELL');
+    const loginCellBtn = document.getElementById('loginCELL');
 
-    if (registerBtn && loginBtn && container) {
-      const handleRegisterClick = () => {
-        container.classList.add("active");
+    if (registerBtn && loginBtn && container && registerCellBtn && loginCellBtn) {
+        const handleRegisterClick = () => {
+            container.classList.add("active");
+        };
+        
+        
+        const handleRegisterClick2 = (e) => {
+          e.preventDefault();
+          container.classList.add("activeCELL");
       };
 
-      const handleLoginClick = () => {
-        container.classList.remove("active");
-      };
+      const handleLoginClick2 = () => {
+        container.classList.remove("activeCELL");
+    };
 
-      registerBtn.addEventListener('click', handleRegisterClick);
-      loginBtn.addEventListener('click', handleLoginClick);
+        const handleLoginClick = () => {
+            container.classList.remove("active");
+        };
 
-      // Cleanup event listeners on component unmount
-      return () => {
-        registerBtn.removeEventListener('click', handleRegisterClick);
-        loginBtn.removeEventListener('click', handleLoginClick);
-      };
+        // Aggiungi l'evento di click ai pulsanti "Register" sia nel pannello di accesso che al di fuori
+        registerBtn.addEventListener('click', handleRegisterClick);
+        loginBtn.addEventListener('click', handleLoginClick);
+        registerCellBtn.addEventListener('click', handleRegisterClick2);
+        loginCellBtn.addEventListener('click', handleLoginClick2);
+
+        // Cleanup event listeners on component unmount
+        return () => {
+            registerBtn.removeEventListener('click', handleRegisterClick);
+            registerCellBtn.removeEventListener('click', handleRegisterClick);
+            loginBtn.removeEventListener('click', handleLoginClick);
+            loginCellBtn.addEventListener('click', handleLoginClick);
+        };
     }
-  }, []);
+}, []);
 
 
   return (
@@ -44,6 +60,7 @@ function Login() {
             <input type='email' placeholder='Email'></input>
             <input type='password' placeholder='Password'></input>
             <button>Sign up</button>
+            <button id='loginCELL'>Login</button>
           </form>
         </div>
 
@@ -55,8 +72,10 @@ function Login() {
             <input type='password' placeholder='Password'></input>
             <a href='#'>forget your password?</a>
             <button>Sign in</button>
+            <button id='registerCELL'>Register</button>
           </form>
         </div>
+
         <div className='toggle-container'>
           <div className='toggle'>
             <div className='toggle-panel toggle-left'>
@@ -79,5 +98,4 @@ function Login() {
 
 
 export default Login;
-
 

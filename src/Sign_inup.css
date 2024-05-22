@@ -26,6 +26,7 @@
     min-height: 480px;
 }
 
+
 .container p{
     font-size: 14px;
     line-height: 20px;
@@ -44,6 +45,7 @@
     margin: 15px 0 10px;
 }
 
+
 .container button{
     background-color: #e72d2d;
     color: #fff;
@@ -57,6 +59,8 @@
     margin-top: 10px;
     cursor: pointer;
 }
+
+
 
 .container button.hidden{
     background-color: transparent;
@@ -97,6 +101,7 @@
     z-index: 2;
 }
 
+/* Sign in si sposta a destra*/
 .container.active .sign-in{
     transform: translateX(100%);
 }
@@ -108,6 +113,7 @@
     z-index: 1;
 }
 
+/* Sign up diventa visibile quando sign in si sposta a dx e */
 .container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
@@ -115,16 +121,7 @@
     animation: move 0.6s;
 }
 
-@keyframes move{
-    0%, 49.99%{
-        opacity: 0;
-        z-index: 1;
-    }
-    50%, 100%{
-        opacity: 1;
-        z-index: 5;
-    }
-}
+
 
 
 
@@ -136,13 +133,12 @@
     height: 100%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
     z-index: 1000;
 }
 
+/* toggle-container si sposta a sinistra*/
 .container.active .toggle-container{
     transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
 }
 
 .toggle{
@@ -158,8 +154,6 @@
 }
 
 
-
-
 .container.active .toggle{
     transform: translateX(50%);
 }
@@ -172,13 +166,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 30px;
     text-align: center;
     top: 0;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
 
+/*il pannello toggle left si sposta a sinistra*/
 .toggle-left{
     transform: translateX(-200%);
 }
@@ -192,7 +186,69 @@
     transform: translateX(0);
 }
 
+/*il pannello si sposta ulteriormente a dx*/
 .container.active .toggle-right{
     transform: translateX(200%);
 }
 
+#registerCELL{
+    display: none;
+}
+
+#loginCELL{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .container{
+        position: relative;
+    }
+    
+    #registerCELL{
+        display: block;
+    }
+
+    #loginCELL{
+        display: block;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    /*LOGIN*/
+    .sign-up{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /*Register*/
+    .sign-in{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    
+    /* Sign in si sposta a destra*/
+    .container.activeCELL .sign-in{
+        transform: translateX(100%);
+    }
+
+/* Sign up diventa visibile quando sign in si sposta a dx e */
+    .container.activeCELL .sign-up{
+        transform: translateX(0%);
+        opacity: 1;
+        z-index: 5;
+        animation: move 0.6s;
+    }
+
+    }
+
+    
+
+  
+
+  
