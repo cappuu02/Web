@@ -17,15 +17,17 @@ function Login() {
             container.classList.add("active");
         };
         
-        
+
         const handleRegisterClick2 = (e) => {
           e.preventDefault();
           container.classList.add("activeCELL");
+          container.classList.add("active");
       };
 
       const handleLoginClick2 = () => {
         container.classList.remove("activeCELL");
-    };
+        container.classList.remove("active");
+      };
 
         const handleLoginClick = () => {
             container.classList.remove("active");
@@ -44,6 +46,10 @@ function Login() {
             loginBtn.removeEventListener('click', handleLoginClick);
             loginCellBtn.addEventListener('click', handleLoginClick);
         };
+        
+        
+        
+        
     }
 }, []);
 
