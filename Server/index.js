@@ -4,6 +4,8 @@ const port = 3001
 
 
 const prodotti_model = require('./prodottiModel')
+const ordine_model = require('./ordineModel')
+const utenti_model = require('./utentiModel')
 
 app.use(express.json())
 
@@ -14,7 +16,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => {
+app.get('/prodotti', (req, res) => {
   prodotti_model.getProdotti()
   .then(response => {
     
@@ -26,7 +28,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/prodotti', (req, res) => {
-  merchant_model.createMerchant(req.body)
+  prodotti_model.createProdotti(req.body)
   .then(response => {
     res.status(200).send(response);
   })
@@ -57,6 +59,95 @@ app.put("/prodotti/:id", (req, res) => {
     });
 });
 
+app.get('/ordine', (req, res) => {
+   ordine_model.getOrdine()
+  .then(response => {
+    
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.post('/ordine', (req, res) => {
+  ordine_model.createOrdine(req.body)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.delete('/ordine/:id', (req, res) => {
+  ordine_model.deleteOrdine(req.params.id)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+app.put("/ordine", (req, res) => {
+  const body = req.body;
+  ordine_model
+    .updateOrdine(body)
+    .then((response) => {
+      res.status(200).send(response);
+    })
+    .catch((error) => {
+      res.status(500).send(error);
+    });
+});
+
+app.get('/utenti', (req, res) => {
+  utenti_model.getUtenti()
+  .then(response => {
+    
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.post('/utenti', (req, res) => {
+  if (req.body.hasOwnProperty('reg')) {
+    
+    utenti_model.createUtenti(req.body)
+    
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  } else {
+    utenti_model.checkUtenti(req.body)
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  }
+});
+app.put("/utenti/", (req, res) => {
+  const body = req.body;
+  utenti_model
+    .updateUtenti(body)
+    .then((response) => {
+      res.status(200).send(response);
+    })
+    .catch((error) => {
+      res.status(500).send(error);
+    });
+});
+
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })
+
+
+

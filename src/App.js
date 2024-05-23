@@ -3,7 +3,8 @@ import VideoC from './components/VideoSfondo'
 import HomeCard from './components/Home_Card'
 import image1 from './Images/obbiettivi.webp'
 import image2 from './Images/canong.png'
-import { useEffect, useState } from "react";
+import AuthProvider from "./components/AuthProvider";
+
 
 
 
@@ -13,14 +14,12 @@ function App() {
   
   }
 
-  const [prodotti, setProdotti] = useState(false);
-
 
   
 
   return (
     <>
-
+      <AuthProvider>
     
       <div className='w-auto pt-0'>
         <Navbar />
@@ -45,10 +44,7 @@ function App() {
         
         
       </div>
-
-      {prodotti ? prodotti : 'There is no product data available'}
-
-      
+      </AuthProvider>
         
     </>
   );
