@@ -9,8 +9,9 @@ import {
 import App from './App';
 import Store from './Pages/Store';
 import Login from './Pages/Login';
-import Profile from './Pages/F_Profilo/Profile';
-import './Sign_inup.css'
+import Profile from './Pages/Profile';
+import './Sign_inup.css';
+import './index.css';
 
 const router = createBrowserRouter([
   {

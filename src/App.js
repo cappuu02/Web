@@ -4,7 +4,7 @@ import HomeCard from './components/Home_Card'
 import image1 from './Images/obbiettivi.webp'
 import image2 from './Images/canong.png'
 import { useEffect, useState } from "react";
-import './index.module.css'
+
 
 
 function App() {
