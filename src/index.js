@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import './Sign_inup.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import App from './App';
 import Store from './Pages/Store';
 import Login from './Pages/Login';
-
+import Profile from './Pages/F_Profilo/Profile';
+import './Sign_inup.css'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +25,10 @@ const router = createBrowserRouter([
     path: "/Login",
     element: <Login />,
   },
+  {
+    path: "/Profile",
+    element: <Profile />,
+  }
 ]);
 
 

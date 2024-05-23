@@ -37,7 +37,7 @@ function Navbar(){
                 <form id="Icone" class="d-flex" role="search">
                         {isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
                         <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>
-                        <div id="cart_icon" class="me-5 mb-4"><a href="#"><i class="bi bi-cart-check"></i></a></div>
+                        <div id="cart_icon" class="me-5 mb-4"><Link to="/Profile"><i class="bi bi-cart-check"></i></Link></div>
                         <div id="profile_icon" class="me-5 mb-4"><Link to="/Login"><i class="bi bi-person-circle"></i></Link></div>
                 </form>     
             </div>

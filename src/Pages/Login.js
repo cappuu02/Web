@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 function Login() {
   useEffect(() => {
-    const container = document.getElementById('container');
+    const container = document.getElementById('container_login');
     const registerBtn = document.getElementById('register');
     const loginBtn = document.getElementById('login');
     const registerCellBtn = document.getElementById('registerCELL');
@@ -54,7 +54,7 @@ function Login() {
   return (
     <>
       <div id='body_sign_inup'>
-        <div className="container" id="container">
+        <div className="container_login" id="container_login">
           <div className="form-container sign-up">
             <form>
               <h1>Create Account</h1>
