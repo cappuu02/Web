@@ -1,4 +1,4 @@
-import VerticalNav from "../components/VerticalNav";
+
 import Navbar from "../components/navbar";
 
 
