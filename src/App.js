@@ -1,26 +1,43 @@
-import Navbar from './components/navbar'
-import VideoC from './components/VideoSfondo'
-import HomeCard from './components/Home_Card'
-import image1 from './Images/obbiettivi.webp'
-import image2 from './Images/canong.png'
-import AuthProvider from "./components/AuthProvider";
-
-
+import React, { useEffect, useState} from 'react';
+import Navbar from './components/navbar';
+import VideoC from './components/VideoSfondo';
+import HomeCard from './components/Home_Card';
+import image1 from './Images/obbiettivi.webp';
+import image2 from './Images/canong.png';
 
 
 function App() {
   const topFunction = () => {
     window.scrollTo(0, 0);
-  
-  }
+  };
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
 
-  
+  useEffect(() => {
+    const cookie = document.cookie
+     .split('; ')
+     .find((row) => row.startsWith('isAuthenticated='));
+
+    if (cookie) {
+      setIsAuthenticated(true);
+    } else {
+      
+    }
+  }, []);
 
   return (
     <>
-      <AuthProvider>
-    
+
+<div>
+      {isAuthenticated? (
+        <div>miao</div>
+      ) : (
+        <div>You are not authenticated</div>
+      )}
+    </div>
+
+
       <div className='w-auto pt-0'>
         <Navbar />
       </div>
@@ -44,10 +61,8 @@ function App() {
         
         
       </div>
-      </AuthProvider>
-        
     </>
   );
 }
 
-export default App;
+export default App

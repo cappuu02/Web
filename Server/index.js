@@ -6,6 +6,7 @@ const port = 3001
 const prodotti_model = require('./prodottiModel')
 const ordine_model = require('./ordineModel')
 const utenti_model = require('./utentiModel')
+const user_stats_model = require('./user_statsModel')
 
 app.use(express.json())
 
@@ -133,7 +134,9 @@ app.post('/utenti', (req, res) => {
       });
   }
 });
-app.put("/utenti/", (req, res) => {
+
+
+app.put("/utenti", (req, res) => {
   const body = req.body;
   utenti_model
     .updateUtenti(body)
@@ -144,6 +147,40 @@ app.put("/utenti/", (req, res) => {
       res.status(500).send(error);
     });
 });
+
+app.get('/user_stats', (req, res) => {
+  user_stats_model.getUser_stats()
+  .then(response => {
+    
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.post('/user_stats', (req, res) => {
+  if (req.body.hasOwnProperty('create')) {
+    
+    user_stats_model.createUser_stats(req.body)
+    
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  } if (req.body.hasOwnProperty('log')) {
+    user_stats_model.updateUser_stats(req.body)
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  }
+})
+
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
