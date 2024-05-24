@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Login() {
   useEffect(() => {
@@ -73,7 +74,7 @@ function Login() {
               <span>Use your email and password</span>
               <input type='email' placeholder='Email' />
               <input type='password' placeholder='Password' />
-              <a href='#'>Forgot your password?</a>
+              <Link to="/MissPassword">Forgot your password?</Link>
               <button>Sign in</button>
               <button id='registerCELL'>Register</button>
             </form>

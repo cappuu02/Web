@@ -12,6 +12,7 @@ import Login from './Pages/Login';
 import Profile from './Pages/Profile';
 import './Sign_inup.css';
 import './index.css';
+import MissPassword from './components/MissPassword';
 
 const router = createBrowserRouter([
   {
@@ -29,8 +30,11 @@ const router = createBrowserRouter([
   {
     path: "/Profile",
     element: <Profile />,
-  }
-  
+  },
+  {
+    path: "/MissPassword",
+    element: <MissPassword />,
+  },
 ]);
 
 
