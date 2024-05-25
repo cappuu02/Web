@@ -21,8 +21,8 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
+    width: 900px;
+    max-width: 140%;
     min-height: 480px;
 }
 
@@ -183,6 +183,26 @@
 
 #loginCELL {
     display: none;
+}
+
+#email_psw{
+    width: 50%;
+}
+
+#email_psw:hover{
+    width: 100%;
+    transition: all 0.7s ease-out;
+}
+
+#forgot{
+
+}
+
+#forgot:hover{
+    text-decoration: underline;
+    color: rgb(37, 156, 253);
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 600px) {

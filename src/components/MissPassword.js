@@ -9,12 +9,11 @@ function MissPassword(){
           <div className="form-container sign-in" style={{justifyContent: 'center', display: 'flex', alignItems: 'center', width: '100%'}}>
             <form>
               <h1>Forgotten Password</h1>
-              <span>Use your email and password</span>
-              <input type='email' placeholder='Email' />
-              <input type='password' placeholder='Password' />
-              <Link to="/MissPassword">Forgot your password?</Link>
-              <button>Sign in</button>
-              <button id='registerCELL'>Register</button>
+              <span>Insert your email and we'll send you the instruction for change the account email</span>
+              <span>If you will have any problems, contact us on the dedicate page</span>
+              <input id='email_psw' type='email' placeholder='Email' />
+              <button id='miss_psw_btn' style={{width: '50%'}}>Send</button>
+              <button id='return_login' style={{width: '50%'}}>Return to Login</button>
             </form>
           </div>
         </div>

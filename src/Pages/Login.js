@@ -74,7 +74,7 @@ function Login() {
               <span>Use your email and password</span>
               <input type='email' placeholder='Email' />
               <input type='password' placeholder='Password' />
-              <Link to="/MissPassword">Forgot your password?</Link>
+              <Link to="/MissPassword" id='forgot'>Forgot your password?</Link>
               <button>Sign in</button>
               <button id='registerCELL'>Register</button>
             </form>
