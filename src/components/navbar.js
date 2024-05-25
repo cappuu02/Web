@@ -35,12 +35,16 @@ function Navbar(){
                         <li >
                             <a id="nav_item" className="nav-link" href="#">Support</a>
                         </li> 
+                        <li>
+                            
+                        </li>
                     
                 </ul>
+                <input id='cerca1' className="form-control" type="search" placeholder="Search" aria-label="Search"/>
                <div className='header__icons'>
                <form  className="d-flex" role="search">
                         {isSearchVisible && <input id='cerca' className="form-control show" type="search" placeholder="Search" aria-label="Search"/>}
-                        <div  id="search_icon" className="me-5 "><a onClick={() => setSearchVisible(!isSearchVisible)}><i className="bi bi-search"  id="search_bar"></i></a></div>
+                        <div  id="search_icon" className="me-5 header__icons"><a onClick={() => setSearchVisible(!isSearchVisible)}><i className="bi bi-search"  id="search_bar"></i></a></div>
                        
                 </form> 
                 <div id="cart_icon" className="me-5 header__icons "><a href="#"><i className="bi bi-cart-check "></i></a></div>
@@ -63,10 +67,10 @@ function Navbar(){
                         <li >
                             <a id="nav_item" className="nav-link" href="#">Support</a>
                         </li> 
-                        
+                       
                         
                          </ul></ul>}
-
+                
                 <a onClick={() => setVisible(!isVisible)}> <div  className="icon-ham">
                     <span>
                     </span>

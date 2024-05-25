@@ -22,7 +22,7 @@ function Seconda() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src={immagine3} text="Third slide" id="imgcaru"/>
+        <img src={immagine} text="Third slide" id="imgcaru"/>
         <Carousel.Caption>
           <h3>uno due tre e stella</h3>
           <p>
