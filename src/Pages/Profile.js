@@ -15,7 +15,7 @@ import Security from '../components/Security'
             <Account />
         </div>
         <div id='Security_page'>
-            <Security />
+            
         </div>
         
         </>

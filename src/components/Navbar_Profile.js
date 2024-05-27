@@ -8,7 +8,7 @@ function Navbar_Profile(){
                         <li>
                             <div className={style.logoProfile}>
                                 <img src={settingimage} className={style.imgProfile} alt="cameraNAV" />
-                                <span className={style.nav_item}>Account Settings</span>
+                                <span  className={style.nav_item}>Account Settings</span>
                             </div>
                         </li>
                         <li id={style.li_profile}><a id={style.link_profile}>

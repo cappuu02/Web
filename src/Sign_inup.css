@@ -21,8 +21,8 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 900px;
-    max-width: 140%;
+    width: 768px;
+    max-width: 100%;
     min-height: 480px;
 }
 
