@@ -1,8 +1,5 @@
 import React from 'react';
-import style from '../profile.module.css';
-import Navbar from '../components/navbar';
 import NavbarP from '../components/Navbar_Profile';
-import Account from '../components/Account'
 import Security from '../components/Security'
 
 
@@ -12,12 +9,8 @@ import Security from '../components/Security'
         <>
             <NavbarP />
         <div id='Account_page'>
-            <Account />
+            <Security />
         </div>
-        <div id='Security_page'>
-            
-        </div>
-        
         </>
     );
   }

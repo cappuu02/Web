@@ -82,6 +82,9 @@
   margin-left: 15px;
   font-size: 20px;
   text-align: center;
+  text-decoration: none;
+  color: #000000;
+  
 }
 
 
@@ -99,7 +102,7 @@
 */
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     #navbar_profile{
         width: 22%;
     }
@@ -114,187 +117,119 @@
       width: 50px;
       height: 50px;
     }
+    #container_profile{
+      width: 80%;
+    }
+    #paragrafo_1{
+      display: none;
+    }
 
-}
+    #paragrafo_2{
+      display: none;
+    }
+    #name_field{
+      width: 50%;
+    }
+  }
 
 
 /*Account*/
 /*-------*/
 
-.box_centrale{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-
-#container_profile{
-  text-align: center;
-  position: relative;
-  border: 3px solid #eee;
-  border-radius: 20px;
-  width: 40%;
-  margin-left: 30%;
-  margin-top: 6%;
-  height: 82vh;
-}
 
 #box_profile{
-  border-radius: 20px;
-  width: 100%;
-  height: 20%;
-  height: 55vh;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-
-#title{
-  text-align: center;
-  margin-bottom: 2%;
-  margin-top: 1px;
-}
-
-#paragrafo_1{
-  font-size: medium;
-}
-
-#pass_field {
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  text-align: center;
-  margin-left: 1%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px;
+  grid-template-columns: auto;
+  padding: 20px;
+  border: solid 2px rgb(235, 235, 235);
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   width: 40%;
-  padding:0.3%;
-}
-
-#pass_field:hover {
-  background-color: #eee;
-}
-
-#name_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
   text-align: center;
-  width: 40%;
-  padding: 0.3%;
-  
+  margin-left: 50%;
+  margin-top: 27%;
 }
 
-#name_field:hover {
-  background-color: #eee;
+
+.grid_item{
+  display: flex;
+  align-items: center;
 }
 
-#email_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
+#input_profilo{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
   text-align: center;
-  width: 40%;
-  padding: 0.3%;
-}
-
-#Address_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
-}
-
-#Nm_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
-}
-
-#Cap_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
+  margin-left: 20%;
+  width: 30%;
 }
 
 
-
-#city_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
+#input_profilo:hover{
+  width: 35%;
+  transition: all 0.5s ease-in-out;
 }
 
-#region_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
+label{
+  width: 200px;
+  font-size: 23PX;
+  text-align: left;
+  margin-left: 15%;
 }
 
-#nation_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
-
-}
-
-#surname_field{
-  border: solid 2px #eee;
-  background: #eee;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  width: 40%;
-  padding: 0.3%;
-}
-
-
-@media screen and (max-width: 700px) {
-    #container_profile{
-        
-    }
-}
 
 
 
 /*COMPONENTE SECURITY*/
 /*-------------------*/
 
-#container_profile_email{
-  position: relative;
-  border: 3px solid #eee;
-  border-radius: 20px;
-  padding: 20px;
-  max-width: 60%;
-  margin-left: 25%;
-  margin-top: 8%;
-  height: 28vh;
+#container_security{
+  display: flex;
+
 }
+
+#box_profile2{
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  grid-template-columns: auto;
+  padding: 20px;
+  border: solid 2px rgb(235, 235, 235);
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 30%;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: 15%;
+  justify-content: center;
+}
+
+#box_profile3{
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px;
+  grid-template-columns: auto;
+  padding: 20px;
+  border: solid 2px rgb(235, 235, 235);
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 30%;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+
 
 #numberphone_field{
   border: solid 2px #eee;
@@ -306,18 +241,12 @@
   padding: 0.3%;
 }
 
-#title_2{
-  text-align: Center;
-}
 
 #numberphone_field{
   margin-left: 5%;
 }
 
-#button_email_reset{
-  margin-left: 20%;
-  width: 20%;
-}
+
 
 #pass_reset_field{
   border: solid 2px #eee;
@@ -328,6 +257,23 @@
   width: 40%;
   padding: 0.3%;
 }
+
+
+#input_profilo2{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+}
+
+#button_email_reset{
+  width: 20%;
+  margin-left: 40%;
+}
+
 
 
 

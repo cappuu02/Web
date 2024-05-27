@@ -12,8 +12,8 @@ function MissPassword(){
               <span>Insert your email and we'll send you the instruction for change the account email</span>
               <span>If you will have any problems, contact us on the dedicate page</span>
               <input id='email_psw' type='email' placeholder='Email' />
-              <button id='miss_psw_btn' style={{width: '50%'}}>Send</button>
-              <button id='return_login' style={{width: '50%'}}>Return to Login</button>
+              <Link to="/Login/Reset_Password"><button id='miss_psw_btn' style={{maxwidth: '50%'}}>Send</button></Link>
+              <button id='return_login' style={{maxwidth: '50%'}}>Return to Login</button>
             </form>
           </div>
         </div>

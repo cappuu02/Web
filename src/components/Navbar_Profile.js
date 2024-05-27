@@ -1,5 +1,7 @@
 import style from '../profile.module.css';
 import settingimage from '../Images/setting.png'
+import { Link } from 'react-router-dom';
+
 
 function Navbar_Profile(){
     return(
@@ -11,18 +13,18 @@ function Navbar_Profile(){
                                 <span  className={style.nav_item}>Account Settings</span>
                             </div>
                         </li>
-                        <li id={style.li_profile}><a id={style.link_profile}>
+                        <Link to="/Profile_Account"><li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-person-vcard-fill ${style.icon}`}></i>
                             <span id='Account' className={style.nav_item}>Account</span>
-                        </a></li>
+                        </a></li></Link>
                         <li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-credit-card-fill ${style.icon}`}></i>
                             <span id='Orders' className={style.nav_item}>Orders</span>
                         </a></li>
-                        <li id={style.li_profile}><a id={style.link_profile}>
+                        <Link to="/Profile_Security"><li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-shield-check ${style.icon}`}></i>
                             <span id='Security' className={style.nav_item}>Security</span>
-                        </a></li>
+                        </a></li></Link>
                         <li id={style.li_profile}><a id={style.link_profile}>
                             <i id='Logout' className={`bi bi-box-arrow-left ${style.icon}`}></i>
                             <span className={style.nav_item}>Logout</span>
