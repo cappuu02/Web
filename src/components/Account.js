@@ -7,7 +7,7 @@ function Account(){
         <div id={style.box_profile} >
             <h2 class={style.titolo_account}>Account Information</h2>
             <div class={style.grid_item}>
-                <label>Name:</label>
+                <label>Name</label>
                 <input id={style.input_profilo} type="text" value="Readonly 1" readonly/>
             </div>
             <div class={style.grid_item}>

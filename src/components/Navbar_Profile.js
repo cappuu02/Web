@@ -1,10 +1,19 @@
 import style from '../profile.module.css';
+import React, { useEffect } from 'react';
 import settingimage from '../Images/setting.png'
 import { Link } from 'react-router-dom';
 
 
 function Navbar_Profile(){
-    return(
+    
+
+
+    
+
+
+        return(
+        <>
+        <i id={style.icon_list} className={`bi bi-list`}></i>
         <nav id={style.navbar_profile}>
                     <ul id={style.elenco_ul}>
                         <li>
@@ -12,6 +21,7 @@ function Navbar_Profile(){
                                 <img src={settingimage} className={style.imgProfile} alt="cameraNAV" />
                                 <span  className={style.nav_item}>Account Settings</span>
                             </div>
+                            
                         </li>
                         <Link to="/Profile_Account"><li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-person-vcard-fill ${style.icon}`}></i>
@@ -31,6 +41,7 @@ function Navbar_Profile(){
                         </a></li>
                     </ul>
                 </nav>
+        </>
     )
 }
 
