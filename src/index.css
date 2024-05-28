@@ -90,6 +90,10 @@ white;
   width: 250px;
 }
 
+#navbar_principale{
+  background-color: #efefef;
+}
+
 /*icone navbar principale*/
 .me-5 a i {
   color: rgb(0, 0, 0);
@@ -103,7 +107,10 @@ white;
   transition: 0.2s;
 }
 
-
+/*colore elementi navbar*/
+.nav-item .nav-link {
+  color: rgb(0, 0, 0); /* Sostituisci #yourColor con il colore che preferisci */
+}
 
 
 #Scrollup {
@@ -160,6 +167,9 @@ white;
   padding-left:2%;
 }
 
+#newsletter_button{
+  margin-top: 3%
+}
 
 .video-container {
   
@@ -308,12 +318,13 @@ white;
   font-weight: bold;
 }
 
-
+#titolo_card3{
+  padding-top: 10%;
+}
 
 #buttoncard{
-  background: rgb(250, 250, 250);
-  border: solid 2px red;
-  border-radius: 20px;
+  border: solid 2px rgb(2, 2, 2);
+  border-radius: 10px;
   color: black;
   padding-left: 30px;
   padding-right: 30px;
@@ -322,10 +333,9 @@ white;
 }
 
 #buttoncard:hover{
-  background: rgb(255, 0, 0);
-  color: black;
+  color: rgb(255, 0, 0);
   border: solid 2px red;
-  border-radius: 20px;
+  
 }
 
 .form-control{

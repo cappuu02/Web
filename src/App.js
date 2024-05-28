@@ -54,45 +54,37 @@ function App() {
       <footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h2>Servizi di assistenza</h2>
+                <h2>Support services</h2>
                 <ul>
-                    <li><a href="#">Contattaci</a></li>
-                    <li><a href="#">Informazioni di consegna</a></li>
-                    <li><a href="#">Resi</a></li>
-                    <li><a href="#">Domande frequenti</a></li>
-                    <li><a href="#">Domande frequenti Repeat & Save</a></li>
+                    <li>Contact us via:</li>
+                    <ul>
+                      <li>Email: <a href="https://www.google.com/intl/it/gmail/about/">MI-Support@gmail.com</a></li>
+                      <li>Telephone: +39 3662883732</li>
+                      
+                    </ul>
                 </ul>
             </div>
             <div class="footer-section">
                 <h2>Informazioni</h2>
                 <ul>
-                    <li><a href="#">Perché acquistare da noi?</a></li>
-                    <li><a href="#">Garanzia del prodotto</a></li>
-                    <li><a href="#">Acquistare online in modo sicuro</a></li>
-                    <li><a href="#">Termini e condizioni iniziative promozionali</a></li>
-                    <li><a href="#">Termini e condizioni Abbonamento inchiostro per stampanti</a></li>
-                    <li><a href="#">Mappa del sito</a></li>
+                    <li><a href="#">Why buy from us?</a></li>
+                    <li><a href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/faq/index_it.htm#:~:text=Nell'UE%20il%20periodo%20di,esistenza%20al%20momento%20della%20consegna.">Product warranty</a></li>
+                    <li><a href="https://www.eccnet.eu/consumer-rights/what-are-my-consumer-rights/shopping-rights/online-shopping-rights">Buy online safely</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h2>Acquisto</h2>
                 <ul>
-                    <li><a href="#">Black Friday</a></li>
-                    <li><a href="#">Studenti</a></li>
-                    <li><a href="#">Fotocamere</a></li>
-                    <li><a href="#">Inchiostro, toner e carta</a></li>
-                    <li><a href="#">Obiettivi</a></li>
-                    <li><a href="#">Ink Finder</a></li>
-                    <li><a href="#">Stampanti</a></li>
-                    <li><a href="#">Videocamere</a></li>
-                    <li><a href="#">Accessori e merchandising</a></li>
-                    <li><a href="#">I prodotti più venduti</a></li>
+                    <li><a href="#">Camera</a></li>
+                    <li><a href="#">Lenses</a></li>
+                    <li><a href="#">Accessories and merchandising</a></li>
                 </ul>
             </div>
             <div class="footer-section newsletter">
-                <h2>Registrati per ricevere le news di Canon</h2>
-                <p>Ricevi aggiornamenti regolari via mail su nuovi prodotti, consigli utili e offerte</p>
-                <Link to="/Login"><button class="register-button">REGISTRATI ORA</button></Link>
+                <h2>Sign up to receive Canon news</h2>
+                <p>Receive regular updates via email on new products, useful tips and offers</p>
+                <Link to="/Login"><button class="register-button">Sign Up</button></Link>
+                <Link to="/Login"><button id='newsletter_button' class="register-button">Subscribe to newsletter</button></Link>
             </div>
         </div>
     </footer>

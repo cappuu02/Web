@@ -10,13 +10,13 @@ function Seconda() {
       <Carousel.Item>
         <img src={immagine} text="First slide" id="imgcaru"/>
         <Carousel.Caption>
-          <h4>"Photography is a love affair with life."</h4>
+          <h4 style={{color: 'rgb(255,255,255, 0.8)'}}>"Photography is a love affair with life."</h4>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img src={immagine2} text="Second slide" id="imgcaru" />
         <Carousel.Caption>
-          <h4>“It's a world, someone's face. When I capture it, I see the future of the world"</h4>
+          <h4 style={{color: 'rgb(255,255,255, 0.6)'}}>“It's a world, someone's face. When I capture it, I see the future of the world"</h4>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

@@ -12,13 +12,13 @@ function Navbar(){
     return(
         
         <nav id="navbar_principale"class="navbar navbar-expand-lg  justify-content-center" data-bs-theme="light"  >
-        <div class="container-fluid" >
+        <div class="container-fluid">
             <li><Link to="/" className="navbar-brand text-black ms-2 fs-1  p-2">Mi-Reflex</Link></li>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul id="navbar_full" class="navbar-nav me-auto mb-2 mb-lg-0 " >
                     <div class="d-flex justify-content-center ms-5 ps-5 fs-4 " data-bs-theme="light">
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                            <li><Link to="/Store"  class="nav-link active" aria-current="page" >Store</Link></li>
+                            <li><Link to="/Store"  class="nav-link" aria-current="page" >Store</Link></li>
                         </li>
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Camera</a>
