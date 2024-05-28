@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom';
 
 function Navbar_Profile(){
     
-
-
-    
-
-
         return(
         <>
         <i id={style.icon_list} className={`bi bi-list`}></i>

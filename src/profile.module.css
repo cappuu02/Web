@@ -1,3 +1,9 @@
+
+#body_profilo{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+
+}
+
 /*SIDE NAVBAR*/
 /*-----------*/
 
@@ -9,11 +15,10 @@
 }
 
 #navbar_profile{
-  position: fixed;
   padding: 0;
   top: 7%;
   bottom: 0;
-  height: 100vh; /*altezza della navbar*/
+  height: 87.5vh; /*altezza della navbar*/
   left: 0;
   background: #ffffff;
   width: 15%;
@@ -108,7 +113,7 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     
     .nav_item{
       display: none;
@@ -159,21 +164,19 @@
 
 
 #box_profile{
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: #ffffff;
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 30px;
+  grid-gap:25px;
   grid-template-columns: auto;
-  padding: 20px;
   border: solid 2px rgb(235, 235, 235);
   border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   width: 40%;
   text-align: center;
-  margin-left: 50%;
-  margin-top: 27%;
+  position: absolute;
+  top: 14%;
+  left: 35%;
 }
 
 
@@ -203,10 +206,21 @@ label{
 }
 
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 700px) {
   #box_profile{
-    margin-top: 160%;
-    width: 80%;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    border: solid 2px rgb(235, 235, 235);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    position: relative;
+    width: 85%;
+    top: 0vh;
+    left: 8%;
   }
   .grid_item {
     flex-direction: column;
@@ -239,6 +253,7 @@ label{
 }
 
 #box_profile2{
+  position: absolute;
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: auto auto;
@@ -250,12 +265,13 @@ label{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   width: 30%;
   text-align: center;
-  margin-left: 50%;
-  margin-top: 15%;
   justify-content: center;
+  top: 35%;
+  left: 55%
 }
 
 #box_profile3{
+  position: absolute;
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: auto auto;
@@ -267,9 +283,10 @@ label{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   width: 30%;
   text-align: center;
-  margin-left: 50%;
-  margin-top: 5%;
+
   justify-content: center;
+  top: 70%;
+  left: 55%
 }
 
 

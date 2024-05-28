@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 function Store() {
   return (
     <>
-     edhehbhb
+     <Navbar />
     </>
   );
 }

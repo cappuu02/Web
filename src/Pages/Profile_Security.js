@@ -1,16 +1,20 @@
 import React from 'react';
 import NavbarP from '../components/Navbar_Profile';
 import Security from '../components/Security'
+import Navbar from '../components/navbar'
+import style from '../profile.module.css'
 
 
     function Profile() {
    
     return (
-        <>
-            <NavbarP />
-        <div id='Account_page'>
-            <Security />
-        </div>
+        <>  
+            
+            <Navbar />
+            <div id={style.body_profilo}>
+                <NavbarP />
+                <Security />
+            </div>
         </>
     );
   }
@@ -19,4 +23,9 @@ import Security from '../components/Security'
 
 
 
+
+
+
+
+  
 

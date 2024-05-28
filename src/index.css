@@ -110,6 +110,11 @@ white;
 /*colore elementi navbar*/
 .nav-item .nav-link {
   color: rgb(0, 0, 0); /* Sostituisci #yourColor con il colore che preferisci */
+  border-bottom: solid 3px transparent;
+}
+
+.nav-item .nav-link:hover{
+  border-bottom: solid 3px #e3001b; /* Sostituisci #yourColor con il colore che preferisci */
 }
 
 
@@ -598,6 +603,8 @@ transform: translateY(0%);
 }
 }
 }
+
+
 .icon-ham {
   overflow:hidden;
 }
@@ -630,7 +637,11 @@ transform: translateY(0%);
   
 }
 
-/* Roba di terza */
+
+
+
+
+/* ELEMENTI DI TERZA*/
 .benefits {
   display: flex;
   justify-content: space-around;
@@ -656,6 +667,8 @@ transform: translateY(0%);
   margin-bottom: 20px;
   padding-right: 20px;
 }
+
+
 
 
 
