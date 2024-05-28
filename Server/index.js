@@ -7,8 +7,11 @@ const prodotti_model = require('./prodottiModel')
 const ordine_model = require('./ordineModel')
 const utenti_model = require('./utentiModel')
 const user_stats_model = require('./user_statsModel')
-
+const indirizzi_model = require('./indirizziModel')
+const email_sender = require('./email_sender')
 app.use(express.json())
+
+
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -27,6 +30,10 @@ app.get('/prodotti', (req, res) => {
     res.status(500).send(error);
   })
 })
+
+app.post('/send-email', (req,res) => {
+  email_sender.sendEmail(req.body)
+});
 
 app.post('/prodotti', (req, res) => {
   prodotti_model.createProdotti(req.body)
@@ -124,7 +131,7 @@ app.post('/utenti', (req, res) => {
       .catch(error => {
         res.status(500).send(error);
       });
-  } else {
+  } if(req.body.hasOwnProperty('login')) {
     utenti_model.checkUtenti(req.body)
       .then(response => {
         res.status(200).send(response);
@@ -132,8 +139,25 @@ app.post('/utenti', (req, res) => {
       .catch(error => {
         res.status(500).send(error);
       });
-  }
-});
+  } if(req.body.hasOwnProperty('rec')) {
+    utenti_model.checkEmail(req.body)
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  } if(req.body.hasOwnProperty('newPass')) {
+    utenti_model.checkupPass(req.body)
+      .then(response => {
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+    }
+}
+);
 
 
 app.put("/utenti", (req, res) => {
@@ -179,6 +203,27 @@ app.post('/user_stats', (req, res) => {
         res.status(500).send(error);
       });
   }
+})
+
+app.post('/prodotti', (req, res) => {
+  sgMail.send(msg)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.get('/indirizzi', (req, res) => {
+  indirizzi_model.getIndirizzi()
+  .then(response => {
+    
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
 })
 
 

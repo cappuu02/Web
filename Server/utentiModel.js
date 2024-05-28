@@ -100,6 +100,65 @@ const checkUtenti = (body) => {
   });
 };
 
+const checkEmail = (body) => {
+  return new Promise(function (resolve, reject) {
+    const { email, rec } = body;
+    pool.query(
+      "SELECT COUNT(*) FROM utenti WHERE email = $1",
+      [email],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results.rows[0].count < 1) {
+          resolve("email not in use");
+        } else {
+          resolve("Email sent")
+        }
+      }
+    );
+  });
+};
+
+
+
+const checkupPass = (body) => {
+  return new Promise(function (resolve, reject) {
+    const { email,pass, newPass } = body;
+    pool.query(
+      "SELECT COUNT(*) FROM utenti WHERE email = $1 AND password = $2 ",
+      [email, pass],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results.rows[0].count > 0) {
+          resolve("pass exists");
+        } else {
+          pool.query(
+            "UPDATE utenti SET password = $2 WHERE email = $1 RETURNING *",
+            [email,pass],
+            (error, results) => {
+              if (error) {
+                reject(error);
+              }
+              
+              console.log(results.rows[0].exists);
+              if (results && results.rows) {
+                resolve(
+                  `pass changed`
+                );
+              } else {
+                reject(new Error("No results found"));
+              }
+            }
+          );
+        }
+      }
+    );
+  });
+};
+
 
 const deleteUtenti = (id) => {
   return new Promise(function (resolve, reject) {
@@ -140,6 +199,8 @@ module.exports = {
   getUtenti,
   createUtenti,
   checkUtenti,
+  checkEmail,
+  checkupPass,
   deleteUtenti,
   updateUtenti
 };
