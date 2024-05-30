@@ -92,6 +92,7 @@ white;
 
 #navbar_principale{
   background-color: #efefef;
+  position: relative;
 }
 
 /*icone navbar principale*/
@@ -573,10 +574,13 @@ footer {
   color: rgb(255, 255, 255);
 }
 
+
+
+
 /*RESPONSIVE*/
 /*----------*/
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 700px){
   #sfondoparte2{
     margin: 1px 0;
   
@@ -765,14 +769,28 @@ transform: translateY(0%);
     justify-content: center;
     display: table-row;
     text-align: center;
+    position: relative;
+    left: 15%;
   }
 
   #titolo_footer{
     text-align: center;
   }
   
- 
+  #li_hide_footer{
+    display: none;
+  }
   
+  #register_button_footer{
+    margin-left: 160%;
+    width: 200%;
+
+  }
+
+  #newsletter_button{
+    margin-left: 160%;
+    width: 200%;
+  }
 
   
 

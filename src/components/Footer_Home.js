@@ -36,7 +36,7 @@ function Footer_Home(){
                 <h2 id="li_hide_footer">Sign up to receive Canon news</h2>
                 <p id="li_hide_footer">Receive regular updates via email on new products, useful tips and offers</p>
                 <Link to="/Login"><button id='register_button_footer' class="register-button">Sign Up</button></Link>
-                <Link to="/Login"><button id='newsletter_button' class="register-button">Subscribe to newsletter</button></Link>
+                <Link to="/Login"><button id='newsletter_button' class="register-button">Newsletter</button></Link>
             </div>
             
         </div>
