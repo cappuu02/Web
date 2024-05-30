@@ -1,7 +1,7 @@
 
 #body_profilo{
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-
+  height: 140vh;
 }
 
 /*SIDE NAVBAR*/
@@ -131,13 +131,14 @@
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   width: 40%;
-  text-align: center;
+  text-align: left;
   position: absolute;
   margin-top: 8%;
   left: 35%;
   padding-bottom: 1%;
   padding-top: 1%;
 }
+
 
 
 .grid_item{
@@ -177,7 +178,7 @@
 label{
   width: 200px;
   font-size: 23px;
-
+  margin-left: 10%;
 }
 
 #button_modifica{
@@ -360,22 +361,41 @@ label{
 
 @media screen and (max-width: 1800px) {
   #navbar_profile{
-    top: 13%;
+    top: 110px;
+  }
+  #box_profile2{
+    margin-top: 10%;
   }
 }
 @media screen and (max-width: 1600px) {
   #navbar_profile{
-    top: 14%;
+    top: 110px;
   }
+  #box_profile{
+    margin-top: 10%;
+  }
+  #box_profile2{
+    margin-top: 10%;
+  }
+
 }
 @media screen and (max-width: 1400px) {
   #navbar_profile{
-    top: 17%;
+    top: 110px;
   }
+  #box_profile{
+    margin-top: 11%;
+  }
+  
 }
 @media screen and (max-width: 1200px) {
   #navbar_profile{
-    top: 20%;
+    top: 110px;
+    width: 7%;
+  }
+
+  #box_profile2{
+    margin-top: 15%;
   }
 }
 

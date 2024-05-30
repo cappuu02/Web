@@ -100,6 +100,12 @@ function Account(){
                 <input id={style.input_profilo} type="text" defaultValue=" 1" />
             </div>
             <button id={style.button_modifica} type="button" class="btn btn-danger">Apply Changes</button>
+
+            
+
+
+
+
         </div>
 
 
@@ -168,6 +174,24 @@ function Account(){
                 
                 <input id={style.input_profilo} type="text" value=" 1" />
             </div>
+
+            <hr></hr>
+
+            <div class={style.grid_item}>
+                <label>Card Number</label>
+                <input id={style.input_profilo} type="text" value=" 1" />
+            </div>
+            <div class={style.grid_item}>
+                <label>Expiration date</label>
+                <input id={style.input_profilo} type="text" value=" 1" />
+            </div>
+            <div class={style.grid_item}>
+                <label>Pin</label>
+                <input id={style.input_profilo} type="text" value=" 1" />
+            </div>
+
+
+
         </div>
         )
         }
