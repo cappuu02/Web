@@ -15,10 +15,11 @@
 }
 
 #navbar_profile{
+  position: fixed;
   padding: 0;
-  top: 7%;
+  top: 11.8%;
   bottom: 0;
-  height: 110vh; /*altezza della navbar*/
+  height: 120vh; /*altezza della navbar*/
   left: 0;
   background: #ffffff;
   width: 15%;
@@ -113,50 +114,7 @@
   display: none;
 }
 
-@media screen and (max-width: 700px) {
-    
-    .nav_item{
-      display: none;
-    }
-    .icon{
-      margin-left: 2%;
-      transition: all 0.1s ease-in-out;
-    }
-    .imgProfile:hover{
-      width: 50px;
-      height: 50px;
-    }
-    #container_profile{
-      width: 80%;
-    }
-    #paragrafo_1{
-      display: none;
-    }
 
-    #paragrafo_2{
-      display: none;
-    }
-    #name_field{
-      width: 50%;
-    }
-
-    #navbar_profile{
-      width: 22%;
-      display: none
-    }
-
-    #icon_list{
-      display:block;
-      font-size: 40px;
-      margin-left: 6%;
-      position:relative;
-    }
-    
-    #navbar_profile_active{
-      display:block;
-    }
-    
-  }
 
 
 /*Account*/
@@ -175,7 +133,7 @@
   width: 40%;
   text-align: center;
   position: absolute;
-  top: 16%;
+  margin-top: 8%;
   left: 35%;
   padding-bottom: 1%;
   padding-top: 1%;
@@ -218,9 +176,8 @@
 
 label{
   width: 200px;
-  font-size: 23PX;
-  text-align: left;
-  margin-left: 15%;
+  font-size: 23px;
+
 }
 
 #button_modifica{
@@ -228,45 +185,6 @@ label{
   margin-left: 38%;
   margin-top: 5%;
 }
-
-@media screen and (max-width: 700px) {
-  #box_profile{
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
-    grid-template-columns: auto;
-    border: solid 2px rgb(235, 235, 235);
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    position: relative;
-    width: 85%;
-    top: 0vh;
-    left: 8%;
-  }
-  .grid_item {
-    flex-direction: column;
-}
-
-label{
-  margin-left: 0%;
-  text-align: center;
-}
-
-#input_profilo{
-  margin-right: 20%;
-  margin-top: 2%1;
-  width: 90%;
-
-}
-  
-  
-
-}
-
-
-
 
 
 /*COMPONENTE SECURITY*/
@@ -285,7 +203,6 @@ label{
 
 #box_profile2{
   position: absolute;
-  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
@@ -294,50 +211,14 @@ label{
   border: solid 2px rgb(235, 235, 235);
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  width: 30%;
+  width: 40%;
   text-align: center;
   justify-content: center;
-  top: 20%;
-  left: 55%
+  margin-top: 8%;
+  left: 35%
 }
 
-#box_profile3{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 30px;
-  grid-template-columns: auto;
-  padding: 20px;
-  border: solid 2px rgb(235, 235, 235);
-  border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  width: 30%;
-  text-align: center;
 
-  justify-content: center;
-  top: 50%;
-  left: 55%
-}
-
-#box_profile4{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 30px;
-  grid-template-columns: auto;
-  padding: 20px;
-  border: solid 2px rgb(235, 235, 235);
-  border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  width: 30%;
-  text-align: center;
-
-  justify-content: center;
-  top: 80%;
-  left: 55%
-}
 
 
 
@@ -401,6 +282,9 @@ label{
 }
 
 
+
+
+
 @media screen and (max-width: 414px) {
     
   #box_profile2{
@@ -439,3 +323,121 @@ label{
   display: None;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY PER RIDIMENSIONAMENTO SCHERMI CON LE NAVBAR FIXED*/
+
+@media screen and (max-width: 1800px) {
+  #navbar_profile{
+    top: 13%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  #navbar_profile{
+    top: 14%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #navbar_profile{
+    top: 17%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #navbar_profile{
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+    
+
+  #navbar_profile{
+    display: none
+  }
+
+  #icon_list{
+    display:block;
+    font-size: 42px;
+    top: 9%;
+    left: 1%;
+    position:fixed;
+  }
+  
+  #box_profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Aggiunge spazio tra gli elementi */
+    width: 80%;
+    margin-top: 30%;
+    margin-left: -21%;
+    align-items: center;
+}
+
+#box_profile  {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Allinea il contenuto al centro */
+    text-align: left;
+}
+
+
+
+#input_profilo{
+  width: 130%;
+}
+
+.grid_item{
+  display: flex;
+  flex-direction: column;
+  
+}
+  
+label{
+  width: 200px;
+  font-size: 23.6px;
+  margin-left: -22%;
+  display: inline;
+}
+
+#button_modifica{
+  margin-left: 7%;
+  width: 50%;
+}
+
+
+}
+  
+
+
+/*MEDIA QUERY BLOCCO CENTRALE PAGINA ACCOUNT*/

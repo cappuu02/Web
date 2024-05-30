@@ -92,7 +92,9 @@ white;
 
 #navbar_principale{
   background-color: #efefef;
-  position: relative;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
 
 /*icone navbar principale*/
