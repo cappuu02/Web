@@ -2,6 +2,7 @@ import style from '../profile.module.css';
 import React, { useEffect } from 'react';
 import settingimage from '../Images/setting.png'
 import { Link } from 'react-router-dom';
+import lensesimage from "../Images/lenses.png"
 
 
 function Navbar_Profile(){
@@ -13,27 +14,23 @@ function Navbar_Profile(){
                     <ul id={style.elenco_ul}>
                         <li>
                             <div className={style.logoProfile}>
-                                <img src={settingimage} className={style.imgProfile} alt="cameraNAV" />
-                                <span  className={style.nav_item}>Account Settings</span>
+                                <i class="bi bi-shop" id={style.logo_shop_nav} ></i>
+                                <span  className={style.title_store_logo}>MI-Store</span>
                             </div>
                             
                         </li>
                         <Link to="/Profile_Account"><li id={style.li_profile}><a id={style.link_profile}>
-                            <i className={`bi bi-person-vcard-fill ${style.icon}`}></i>
-                            <span id='Account' className={style.nav_item}>Account</span>
+                            <i className={`bi bi-camera ${style.icon}`}></i>
+                            <span id='Account' className={style.nav_item}>Camera</span>
                         </a></li></Link>
                         <Link to="/Profile_Orders" ><li id={style.li_profile}><a id={style.link_profile}>
-                            <i className={`bi bi-credit-card-fill ${style.icon}`}></i>
-                            <span id='Orders' className={style.nav_item}>Orders</span>
+                            <i className={`bi bi-image-alt ${style.icon}`}></i>
+                            <span id='Orders' className={style.nav_item}>Lenses</span>
                         </a></li></Link>
                         <Link to="/Profile_Security"><li id={style.li_profile}><a id={style.link_profile}>
-                            <i className={`bi bi-shield-check ${style.icon}`}></i>
-                            <span id='Security' className={style.nav_item}>Security</span>
+                            <i className={`bi bi-transparency ${style.icon}`}></i>
+                            <span id='Security' className={style.nav_item}>Accessories</span>
                         </a></li></Link>
-                        <li id={style.li_profile}><a id={style.link_profile}>
-                            <i id='Logout' className={`bi bi-box-arrow-left ${style.icon}`}></i>
-                            <span className={style.nav_item}>Logout</span>
-                        </a></li>
                     </ul>
                 </nav>
         </>

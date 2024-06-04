@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  margin-left: 16%;
+}
+
+.grid {
+  display: grid;
+  gap: 10px; /*Gap griglia orizzontale*/
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.col {
+
+}

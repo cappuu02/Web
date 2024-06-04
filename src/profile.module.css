@@ -1,7 +1,7 @@
 
 #body_profilo{
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  height: 140vh;
+  height: 150vh;
 }
 
 /*SIDE NAVBAR*/
@@ -41,7 +41,15 @@
   margin-left: 15px;
 }
 
+#logo_shop_nav{
+  font-size: 40px;
+}
 
+.title_store_logo{
+  margin-left: 14%;
+  font-size: 20px;
+  margin-top: 7%;
+}
 
 .logoProfile .imgProfile{
   width: 50px;
@@ -311,6 +319,90 @@ label{
 
 /*COMPONENTE ORDERS*/
 /*-----------------*/
+#box_profile3{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+
+  grid-gap: 20px;
+  
+  padding: 20px;
+  width: 60%;
+  margin-top: 10%;
+  left: 26%;
+
+  border: solid 2px rgb(235, 235, 235);
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+
+.dropbtn {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;/*faccio comparire la manina*/
+}
+
+.contenuto {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  white-space: nowrap;
+  padding: 16px; 
+  justify-content: center;/*Allineo scritte dentro i box bianchi quando hover sul button*/
+  font-size: 18px;
+}
+
+.dropdown:hover .contenuto {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+}
+
+.contenuto p {
+  margin: 0 10px;
+}
+
+.dropbtn:hover {
+  background-color: #3e8e41;
+  width: 100%; /* add this line */
+  font-size: 25px;
+}
+
+#input_profilo_order{
+  width: 20%;
+  margin: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -430,7 +522,6 @@ label{
     align-items: center; /* Allinea il contenuto al centro */
     text-align: left;
 }
-
 
 
 #input_profilo{

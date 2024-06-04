@@ -15,6 +15,8 @@ import Profile_Account from './Pages/Profile_Account';
 import Profile_Security from './Pages/Profile_Security'
 import MissPassword from './components/MissPassword';
 import Reset_Password from './components/Reset_Password';
+import Profile_Orders from './Pages/Profile_Orders'
+
 
 const router = createBrowserRouter([
   {
@@ -45,7 +47,10 @@ const router = createBrowserRouter([
     path: "/Profile_Security",
     element: <Profile_Security />,
   },
-  
+  {
+    path: "/Profile_Orders",
+    element: <Profile_Orders />,
+  },
 ]);
 
 
