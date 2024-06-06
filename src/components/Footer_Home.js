@@ -32,7 +32,7 @@ function Footer_Home(){
                     <li><a href="#">Accessories and merchandising</a></li>
                 </ul>
             </div>
-            <div class="footer-section newsletter4">
+            <div class="footer-section newsletter">
                 <h2 id="li_hide_footer">Sign up to receive Canon news</h2>
                 <p id="li_hide_footer">Receive regular updates via email on new products, useful tips and offers</p>
                 <Link to="/Login"><button id='register_button_footer' class="register-button">Sign Up</button></Link>

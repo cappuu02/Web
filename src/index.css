@@ -179,7 +179,8 @@ white;
 }
 
 #newsletter_button{
-  margin-top: 3%
+  margin-top: 3%;
+  margin-left:20px;
 }
 
 .video-container {
@@ -527,14 +528,16 @@ footer {
   display: inline-block;
   padding: 10px 20px;
   font-size: 14px;
-  color: #fff;
-  background-color: #007bff;
+  color: #000000;
+  background-color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
+  
 }
 
 .register-button:hover {
-  background-color: #0056b3;
+  border-color: red;
+  color:red;
 }
 
 /*nav bar NON TOCCARE*/
@@ -588,13 +591,12 @@ footer {
     
   }
   #sfondoparte2{
-    margin: 1px 0;
-  
+    margin-bottom: 0%;
     position:relative;
     top:0;
     left:0;
     background:white;
-    height: 3300px;
+    height: 3600px;
   }
   #container_card{
     display: flex; /* Abilita Flexbox */

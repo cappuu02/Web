@@ -3,6 +3,7 @@ import Account from '../components/Account'
 import Navbar from '../components/navbar';
 import style from '../profile.module.css'
 import NavbarPR from '../components/Navbar.profileR';
+import NavbarP from '../components/Navbar_Profile';
 
     function Profile() {
         const [isCursorNear, setIsCursorNear] = useState(false);
@@ -24,8 +25,10 @@ import NavbarPR from '../components/Navbar.profileR';
         }, []);
     return (
         <>  
+
             <div id={style.body_profilo}>
                 <Navbar />
+                <NavbarP />
                 <div className="App">
       <NavbarPR showToggleButton={isCursorNear} />
     </div>

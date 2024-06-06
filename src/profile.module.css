@@ -130,13 +130,14 @@
 
 
 #box_profile{
+  z-index:1;
   background-color: #ffffff;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap:25px;
   grid-template-columns: auto;
   border: solid 2px rgb(235, 235, 235);
-  border-radius: 30px;
+  
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   width: 40%;
   text-align: left;

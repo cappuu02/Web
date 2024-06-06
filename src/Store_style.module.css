@@ -1,11 +1,13 @@
 .container {
   display: grid;
   margin-left: 16%;
+  
 }
 
 .grid {
   display: grid;
   gap: 10px; /*Gap griglia orizzontale*/
+  
 }
 
 .row {
@@ -15,5 +17,12 @@
 }
 
 .col {
+  display: grid;
 
+}
+.btn-primary{
+  background-color: aliceblue;
+}
+.btn{
+  background-color: aliceblue;
 }
