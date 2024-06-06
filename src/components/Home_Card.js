@@ -1,36 +1,28 @@
 import React from 'react';
-import image3 from '../Images/ricambi.webp';
-import image2 from '../Images/canong.png';
-import image1 from '../Images/obbiettivi.webp';
-import image4 from '../Images/obbiettivo.png';
+import image3 from '../Images/ricambi.jpg';
+import image2 from '../Images/obbiettivi.webp';
+import image1 from '../Images/production.jpg';
 function HomeCard() {
   return (
     <>
       <div id="card">
           <img src={image3}  id='immagine-li'></img>
-              <h2>Card 1</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis metus nec nunc pharetra euismod.</p>
-              <button type="button" id='buttoncard' className="btn">Click me</button>        
+              <h2>Market Analysis</h2>
+              <p>Constant and accurate market research to guarantee maximum quality and performance of our products.</p>       
       </div>
       
       <div id="card">
-          <img src={image2}  id='immagine-li'></img>
-              <h2>Card </h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis metus nec nunc pharetra euismod.</p>
-              <button type="button" id='buttoncard' className="btn">Click me</button>        
+          <img style={{borderRadius: '30px'}} src={image2}  id='immagine-li'></img>
+          <h2 >niche production</h2>
+              <p>from a careful market analysis we have managed to select the best products with the best technologies to offer to customers.</p>
+              <button type="button" id='buttoncard' className="btn">Shop Now</button>        
       </div>
 
       <div id="card">
           <img src={image1}  id='immagine-li'></img>
-              <h2>Card </h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis metus nec nunc pharetra euismod.</p>
-              <button type="button" id='buttoncard' className="btn">Click me</button>        
-      </div>
-      <div id="card">
-          <img src={image4}  id='immagine-li'></img>
-              <h2>Card </h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis metus nec nunc pharetra euismod.</p>
-              <button type="button" id='buttoncard' className="btn">Click me</button>        
+              <h2 id="titolo_card3">Accurate Production</h2>
+              <p>The creation of the products is carried out by high-precision machinery under the care of our most trusted collaborators</p>
+      
       </div>
     </>
   );

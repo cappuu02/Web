@@ -6,25 +6,23 @@ import boh from '../Images/boh.webp';
 function terzo(){
     return(
         <div class="card-container">
-        <h1 className='h1-terza'>PERCHÉ ACQUISTARE I PRODOTTI CANON ONLINE?</h1>
+        <h1 className='h1-terza'>WHY BUY MI-REFLEX PRODUCTS ONLINE?</h1>
         <div class="benefits">
             <div class="benefit">
                 <img src={camiona} alt="Consegna e resi gratuiti"/>
-                <h2>Consegna e resi gratuiti</h2>
-                <p>Spedizione standard GRATUITA e resi gratuiti entro 30 giorni su tutti gli ordini a partire da € 30,00</p>
-                <a href="#">Per saperne di più</a>
+                <h2 id='h2_terzo'>Free delivery and returns</h2>
+                <p id='paragrafo_terzo'>We offer all the security of a 2-year manufacturer's guarantee (European Warranty System) on our products. Exceptions apply</p>
+                <p  id='paragrafo_terzo'>FREE standard shipping and free returns within 30 days on all orders starting from €30.00</p>
             </div>
             <div class="benefit">
                 <img src={ok} alt="Garanzia di 2 anni del produttore"/>
-                <h2>Garanzia di 2 anni del produttore*</h2>
-                <p>Offriamo tutta la sicurezza di una garanzia del produttore di 2 anni (European Warranty System) sui nostri prodotti. Sono previste eccezioni</p>
-                <a href="#">Per saperne di più</a>
+                <h2 id='h2_terzo'>2-year warranty*</h2>
+                <p id='paragrafo_terzo'>We offer all the security of a 2-year manufacturer's guarantee (European Warranty System) on our products. Exceptions apply</p>
             </div>
             <div class="benefit">
                 <img src={boh} alt="Ampia gamma di prodotti"/>
-                <h2>Ampia gamma di prodotti</h2>
-                <p>Scopri in un unico punto la nostra gamma completa di prodotti, tra cui quelli in esclusiva per il sito Canon</p>
-                <a href="#">Per saperne di più</a>
+                <h2 id='h2_terzo'>Wide range of products</h2>
+                <p id='paragrafo_terzo'>Discover our full range of products in one place, including those exclusive to the MI-Reflex website</p>
             </div>
         </div>
     </div>

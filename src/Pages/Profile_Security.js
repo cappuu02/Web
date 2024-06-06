@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Account from '../components/Account'
-import Navbar from '../components/navbar';
+import NavbarP from '../components/Navbar_Profile';
+import Security from '../components/Security'
+import Navbar from '../components/navbar'
 import style from '../profile.module.css'
 import NavbarPR from '../components/Navbar.profileR';
-import NavbarP from '../components/Navbar_Profile';
 
     function Profile() {
         const [isCursorNear, setIsCursorNear] = useState(false);
@@ -25,15 +25,15 @@ import NavbarP from '../components/Navbar_Profile';
         }, []);
     return (
         <>  
-
+            
+            
             <div id={style.body_profilo}>
-                <Navbar />
+            <Navbar />
                 <NavbarP />
                 <div className="App">
       <NavbarPR showToggleButton={isCursorNear} />
     </div>
-                
-                <Account />
+                <Security />
             </div>
         </>
     );
@@ -43,4 +43,9 @@ import NavbarP from '../components/Navbar_Profile';
 
 
 
+
+
+
+
+  
 
