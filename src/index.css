@@ -354,7 +354,7 @@ white;
 }
 
 #cerca {
-  
+  left:20px;
   width: 500px;
   height: 60%;
   margin-top: 5%;
@@ -705,9 +705,11 @@ transform: translateY(0%);
   .menu-open li {padding:3%;justify-content:space-between;border-bottom:1px solid #d70a0abc;list-style-type: none;font-size: 35px;}
   .menu-open{padding:5%;height: 200vh;position:absolute;width:100%;
     top:63px;
-    background-color: #c6c6c692;
     animation: comparsa2;
     animation-duration: 0.7s;
+    backdrop-filter: blur(10px); /* Applica l'effetto blur */
+    -webkit-backdrop-filter: blur(10px); /* Supporto per WebKit */
+    background-color: rgba(255, 255, 255, 0.5); /* Colore di sfondo trasparente */
   }
   .icon-ham{
     height:50px;width: 50px;margin-left:85%;position:fixed;top:3%;
