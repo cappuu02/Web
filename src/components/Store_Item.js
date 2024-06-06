@@ -1,17 +1,17 @@
 import React from 'react';
 import style from "../Store_style.module.css"
 import XT5 from "../components/Camera_Products/XT5_Camera"
-/*import X100V from ""
-import X100VI from ""
-import XT50 from ""
-import XT5 from ""
-import XH2 from ""
-import XH2s from ""
-import XS20 from ""
-import XS10 from ""
-import GFX50s from ""
-import GFX100 from ""
-import GFX100II from ""*/
+import X100V from "../components/Camera_Products/X100V_Camera"
+import X100VI from "../components/Camera_Products/X100VI"
+import XT50 from "../components/Camera_Products/XT50_Camera"
+import XH2 from "../components/Camera_Products/XH2_Camera"
+import XH2s from "../components/Camera_Products/XH2s_Camera"
+import XS20 from "../components/Camera_Products/XS20_Camera"
+import XS10 from "../components/Camera_Products/XS10_Camera"
+import GFX50s from "../components/Camera_Products/GFX50s_Camera"
+import GFX100 from "../components/Camera_Products/GFX100_Camera"
+import GFX100S from "../components/Camera_Products/GFX100S_Camera"
+import GFX100II from "../components/Camera_Products/GFX100II_Camera"
 
 
 
@@ -24,7 +24,7 @@ function Store_Item() {
             <XT5 />
           </div>
           <div className={style.col}>
-            <XT5 />
+            <XT50 />
           </div>
           <div className={style.col}>
             <XT5 />

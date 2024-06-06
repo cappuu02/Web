@@ -2,7 +2,7 @@ import React from 'react';
 import image1 from '../../Images/Camera/XT5.webp';
 import '../../Store_style.module.css';
 
-function XT5(){
+function GFX100(){
     return(
         <>
  <div id='card_shop' class="container m-4">
@@ -11,7 +11,7 @@ function XT5(){
     <div class="card-body mt-3 mb-3">
       <div class="row">
         <div class="col-10">
-          <h4 class="card-title">XT5</h4>
+          <h4 class="card-title">GFX100</h4>
           <p class="card-text">
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
@@ -37,4 +37,4 @@ function XT5(){
 
     )
 }
-export default XT5;
+export default GFX100;

@@ -2,7 +2,7 @@ import React from 'react';
 import image1 from '../../Images/Camera/XT5.webp';
 import '../../Store_style.module.css';
 
-function XT5(){
+function GF120(){
     return(
         <>
  <div id='card_shop' class="container m-4">
@@ -37,4 +37,4 @@ function XT5(){
 
     )
 }
-export default XT5;
+export default GF120;
