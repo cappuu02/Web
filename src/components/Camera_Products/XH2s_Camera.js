@@ -37,4 +37,4 @@ function XH2s(){
 
     )
 }
-export default Xh2s;
+export default XH2s;

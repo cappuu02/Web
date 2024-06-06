@@ -1,50 +1,40 @@
 import React from 'react';
-import style from "../Store_style.module.css"
-/*import XF33 from "../components/Camera_Products/"
-import XF18 from "../components/Camera_Products/"
-import XF56 from "../components/Camera_Products/"
-import XF80 from "../components/Camera_Products/"
-import XF16 from "../components/Camera_Products/"
-import XF70 from "../components/Camera_Products/"
-import XF100 from "../components/Camera_Products/"
-import GF20 from "../components/Camera_Products/"
-import GF250 from "../components/Camera_Products/"
-import GF55 from "../components/Camera_Products/"
-import GF500 from "../components/Camera_Products/"
-import GFX100II from "../components/Camera_Products/"*/
+import image1 from '../../Images/Camera/XT5.webp';
+import '../../Store_style.module.css';
 
-
-
-function Store_Item() {
-  return (
-    <div className={style.container}>
-      <div className={style.grid}>
-        <div className={style.row}>
-          <div className={style.col}>
-            <XF33 />
-          </div>
-          <div className={style.col}>
-            <XT5 />
-          </div>
-          <div className={style.col}>
-            <XT5 />
-          </div>
-        </div>
-        <div className={style.row}>
-          <div className={style.col}>
-            <XT5 />
-          </div>
-          <div className={style.col}>
-            <XT5 />
-          </div>
-          <div className={style.col}>
-            <XT5 />
-          </div>
+function XF33(){
+    return(
+        <>
+ <div id='card_shop' class="container m-4">
+  <div  class="card border-0 rounded-0 shadow" >
+    <img src={image1} class="card-img-top rounded-0" alt="..." />
+    <div class="card-body mt-3 mb-3">
+      <div class="row">
+        <div class="col-10">
+          <h4 class="card-title">XF33</h4>
+          <p class="card-text">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            (123)
+          </p>
         </div>
         
       </div>
     </div>
-  );
-}
+    <div class="row align-items-center text-center g-0">
+      <div class="col-4">
+        <h5>$129</h5>
+      </div>
+      <div class="col-8">
+        <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning">ADD TO CART</a>
+      </div>
+    </div>
+  </div>
+</div>
+        </>
 
-export default Store_Item;
+    )
+}
+export default XF33;

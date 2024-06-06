@@ -15,7 +15,7 @@ import GFX100II from "../components/Camera_Products/GFX100II_Camera"
 
 
 
-function Store_Item() {
+function Store_Lens() {
   return (
     <div className={style.container}>
       <div className={style.grid}>
@@ -68,4 +68,4 @@ function Store_Item() {
   );
 }
 
-export default Store_Item;
+export default Store_Lens;

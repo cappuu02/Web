@@ -53,7 +53,7 @@ function Navbar(){
                             <a id="nav_item" className="nav-link" href="#">Camera</a>
                         </li>
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Lenses</a>
+                            <Link to="/Store_Lens" id="nav_item" aria-current="page" >Lenses</Link>
                         </li> 
                         <li >
                             <a id="nav_item" className="nav-link" href="#">Accessories</a>
