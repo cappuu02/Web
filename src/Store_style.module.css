@@ -1,0 +1,41 @@
+
+.container {
+  display: grid;
+  margin-left: 16%;
+ padding-top:10%;
+ padding:10%;
+}
+
+.grid {
+  display: grid;
+  gap: 10px; /*Gap griglia orizzontale*/
+  
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.col {
+  display: grid;
+
+}
+.btn-primary{
+  background-color: aliceblue;
+}
+.btn{
+  background-color: aliceblue;
+}
+
+#card_shop{
+  width: 10rem;
+}
+
+
+
+
+
+
+
