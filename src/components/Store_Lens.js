@@ -1,17 +1,17 @@
 import React from 'react';
 import style from "../Store_style.module.css"
-import XT5 from "../components/Camera_Products/XT5_Camera"
-import X100V from "../components/Camera_Products/X100V_Camera"
-import X100VI from "../components/Camera_Products/X100VI_Camera"
-import XT50 from "../components/Camera_Products/XT50_Camera"
-import XH2 from "../components/Camera_Products/XH2_Camera"
-import XH2s from "../components/Camera_Products/XH2s_Camera"
-import XS20 from "../components/Camera_Products/XS20_Camera"
-import XS10 from "../components/Camera_Products/XS10_Camera"
-import GFX50s from "../components/Camera_Products/GFX50s_Camera"
-import GFX100 from "../components/Camera_Products/GFX100_Camera"
-import GFX100S from "../components/Camera_Products/GFX100S_Camera"
-import GFX100II from "../components/Camera_Products/GFX100II_Camera"
+import XF33 from "../components/Lens_Product/XF33_Lens"
+import XF18 from "../components/Lens_Product/XF18_Lens"
+import XF56 from "../components/Lens_Product/XF56_Lens"
+import XF80 from "../components/Lens_Product/XF80_Lens"
+import XF16 from "../components/Lens_Product/XF16_Lens"
+import XF70 from "../components/Lens_Product/XF70_Lens"
+import XF100 from "../components/Lens_Product/XF100_Lens"
+import GF20 from "../components/Lens_Product/GF20_Lens"
+import GF120 from "../components/Lens_Product/GF120_Lens"
+import GF250 from "../components/Lens_Product/GF250_Lens"
+import GF55 from "../components/Lens_Product/GF55_Lens"
+import GF500 from "../components/Lens_Product/GF500_Lens"
 
 
 
@@ -21,45 +21,42 @@ function Store_Lens() {
       <div className={style.grid}>
         <div className={style.row}>
           <div className={style.col}>
-            <XT5 />
+            <XF33 />
           </div>
           <div className={style.col}>
-            <X100V />
+            <XF18 />
           </div>
           <div className={style.col}>
-            <X100V />
+            <XF56 />
           </div>
         </div>
         <div className={style.row}>
           <div className={style.col}>
-            <X100VI />
+            <XF80 />
           </div>
           <div className={style.col}>
-            <XT50 />
+            <XF16 />
           </div>
           <div className={style.col}>
-            <XH2/>
+            <XF70/>
           </div>
           <div className={style.col}>
-            <XH2s/>
+            <XF100/>
           </div>
           <div className={style.col}>
-            <XS20/>
+            <GF20/>
           </div>
           <div className={style.col}>
-            <XS10/>
+            <GF120/>
           </div>
           <div className={style.col}>
-            <GFX50s/>
+            <GF250/>
           </div>
           <div className={style.col}>
-            <GFX100/>
+            <GF55/>
           </div>
           <div className={style.col}>
-            <GFX100S/>
-          </div>
-          <div className={style.col}>
-            <GFX100II/>
+            <GF500/>
           </div>
         </div>
         

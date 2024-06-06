@@ -23,7 +23,7 @@ function Navbar_Profile(){
                             <i className={`bi bi-camera ${style.icon}`}></i>
                             <span id='Account' className={style.nav_item}>Camera</span>
                         </a></li></Link>
-                        <Link to="/Profile_Orders" ><li id={style.li_profile}><a id={style.link_profile}>
+                        <Link to="/Store_Lens" ><li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-image-alt ${style.icon}`}></i>
                             <span id='Orders' className={style.nav_item}>Lenses</span>
                         </a></li></Link>
