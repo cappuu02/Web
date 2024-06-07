@@ -19,7 +19,7 @@ function Navbar_Profile(){
                             </div>
                             
                         </li>
-                        <Link to="/Profile_Account"><li id={style.li_profile}><a id={style.link_profile}>
+                        <Link to="/Store_Camera"><li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-camera ${style.icon}`}></i>
                             <span id='Account' className={style.nav_item}>Camera</span>
                         </a></li></Link>
@@ -27,7 +27,7 @@ function Navbar_Profile(){
                             <i className={`bi bi-image-alt ${style.icon}`}></i>
                             <span id='Orders' className={style.nav_item}>Lenses</span>
                         </a></li></Link>
-                        <Link to="/Profile_Security"><li id={style.li_profile}><a id={style.link_profile}>
+                        <Link to="/Store_Accessori"><li id={style.li_profile}><a id={style.link_profile}>
                             <i className={`bi bi-transparency ${style.icon}`}></i>
                             <span id='Security' className={style.nav_item}>Accessories</span>
                         </a></li></Link>

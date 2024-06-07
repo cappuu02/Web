@@ -1,16 +1,15 @@
 import StoreItem from "../components/Store_Item"
 import Navbar from "../components/navbar";
 import NavbarStore from "../components/Navbar_Store"
-import Lens from "./Lens";
-function Store_Lens() {
+function Store_Camera() {
   return (
     <>
       <Navbar />
       <NavbarStore />
-      <Lens/>
+      <StoreItem />
     </>
   );
 }
 
 
-export default Store_Lens;
+export default Store_Camera;

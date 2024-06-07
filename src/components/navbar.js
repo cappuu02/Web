@@ -21,10 +21,10 @@ function Navbar(){
                             <li><Link to="/Store"  class="nav-link" aria-current="page" >Store</Link></li>
                         </li>
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                            <a class="nav-link" href="#">Camera</a>
+                        <Link to="/Store"  class="nav-link" aria-current="page" >Camera</Link>
                         </li>
                         <li id="nav_item_princ"class="nav-item p-1 m-3  ">
-                            <a class="nav-link" href="#">Lenses</a>
+                        <li><Link to="/Store_Lens"  class="nav-link" aria-current="page" >Lens</Link></li>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Accessories</a>
@@ -59,9 +59,9 @@ function Navbar(){
                             <a id="nav_item" className="nav-link" href="#">Accessories</a>
                         </li> 
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Support</a>
+                        <Link to="/Store_Lens" id="nav_item" aria-current="page" >Profile</Link>
                         </li> 
-                        
+                     
                         
                          </ul></ul>}
 
