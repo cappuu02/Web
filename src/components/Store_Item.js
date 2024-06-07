@@ -27,7 +27,7 @@ function Store_Item() {
             <X100V />
           </div>
           <div className={style.col}>
-            <X100V />
+            <GFX50s />
           </div>
         </div>
         <div className={style.row}>

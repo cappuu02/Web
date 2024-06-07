@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../Images/Camera/XT5.webp';
+import image1 from '../../Images/Camera/GFX50S.webp';
 import '../../Store_style.module.css';
 
 function GFX50s(){
@@ -17,7 +17,8 @@ function GFX50s(){
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
-            (123)
+            <i class="bi bi-star-fill text-warning"></i>
+            (223)
           </p>
         </div>
         
@@ -25,7 +26,7 @@ function GFX50s(){
     </div>
     <div class="row align-items-center text-center g-0">
       <div class="col-4">
-        <h5>$129</h5>
+        <h5>$300</h5>
       </div>
       <div class="col-8">
         <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning">ADD TO CART</a>

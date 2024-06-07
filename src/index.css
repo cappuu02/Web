@@ -89,7 +89,9 @@ white;
 }
 
 #navbar_principale{
-  background-color: #ffffffc0;
+  backdrop-filter: blur(10px); /* Applica l'effetto blur */
+  -webkit-backdrop-filter: blur(10px); /* Supporto per WebKit */
+  background-color: rgba(255, 255, 255, 0.644); /* Colore di sfondo trasparente */
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -621,7 +623,16 @@ footer {
     display: flex; /* Abilita Flexbox */
     flex-direction: column; /* Imposta la direzione dei figli in verticale */
   }
-
+  #card:hover {
+    background-color: white;
+    transition: 1s;
+   transform:translate(0%,0%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.446);
+    flex: 1;
+    margin: 0 1rem;
+    animation:  1s ease-in-out forwards;
+  }
 
   .card-container{
     flex-direction: column;
@@ -730,7 +741,12 @@ transform: translateY(0%);
   #spazio{
     padding: 0px;
   }
-
+  footer {
+    margin-top:0%;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    border-top: 2px solid #e3001b;
+  }
   .footer-container{
     justify-content: center;
     display: table-row;
