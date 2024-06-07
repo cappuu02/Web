@@ -8,7 +8,6 @@ function Store() {
     <>
       <Navbar />
       <NavbarStore />
-      
       <StoreItem />
     </>
   );

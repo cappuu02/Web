@@ -25,7 +25,7 @@ import NavbarPR from '../components/Navbar.profileR';
         }, []);
     return (
         <>  
-            <div id={style.body_profilo}>
+            <div id={style.body_profilo_orders}>
                 <Navbar />
                 <NavbarP />
                 <div className="App">

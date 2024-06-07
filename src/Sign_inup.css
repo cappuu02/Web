@@ -146,6 +146,8 @@
     transform: translateX(50%);
 }
 
+
+
 .toggle-panel {
     position: absolute;
     width: 50%;
@@ -186,23 +188,32 @@
 }
 
 #email_psw{
-    width: 50%;
-}
-
-#email_psw:hover{
     width: 100%;
-    transition: all 0.7s ease-out;
 }
 
-#forgot{
-
+#return_login{
+    width: 60%;
 }
+
+
 
 #forgot:hover{
     text-decoration: underline;
     color: rgb(37, 156, 253);
     font-size: 14px;
     transition: all 0.2s ease-in-out;
+}
+
+
+#return_home_btn{
+    margin-top: 2%;
+    width: 15%;
+    padding: 0.5%;
+    background: #e72d2d;
+    border: solid 2px transparent;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    border-radius: 10px;
 }
 
 

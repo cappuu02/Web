@@ -95,6 +95,7 @@ function Login() {
             </div>
           </div>
         </div>
+        <button id='return_home_btn'>Return Home</button>
       </div>
     </>
   );

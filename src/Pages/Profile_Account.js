@@ -23,16 +23,15 @@ import NavbarP from '../components/Navbar_Profile';
             window.removeEventListener('mousemove', handleMouseMove);
           };
         }, []);
-    return (
+    
+        return (
         <>  
-
-            <div id={style.body_profilo}>
+            <div id={style.body_profilo_account}>
                 <Navbar />
                 <NavbarP />
                 <div className="App">
-      <NavbarPR showToggleButton={isCursorNear} />
-    </div>
-                
+                <NavbarPR showToggleButton={isCursorNear} />
+                </div>
                 <Account />
             </div>
         </>

@@ -8,7 +8,6 @@ function Navbar_Profile(){
     
         return(
         <>
-        <i id={style.icon_list} className={`bi bi-list`}></i>
         <nav id={style.navbar_profile}>
                     <ul id={style.elenco_ul}>
                         <li>

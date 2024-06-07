@@ -17,6 +17,7 @@ function Reset_Password(){
             </form>
           </div>
         </div>
+        <button id='return_home_btn'>Return Home</button>
       </div>        
         </>
     )

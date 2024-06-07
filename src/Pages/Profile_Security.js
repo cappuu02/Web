@@ -25,14 +25,12 @@ import NavbarPR from '../components/Navbar.profileR';
         }, []);
     return (
         <>  
-            
-            
-            <div id={style.body_profilo}>
-            <Navbar />
+            <div id={style.body_profilo_security}>
+                <Navbar />
                 <NavbarP />
                 <div className="App">
-      <NavbarPR showToggleButton={isCursorNear} />
-    </div>
+      <         NavbarPR showToggleButton={isCursorNear} />
+                </div>
                 <Security />
             </div>
         </>

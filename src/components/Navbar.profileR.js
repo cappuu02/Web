@@ -28,19 +28,19 @@ function SideNavbar({ showToggleButton }) {
                             
                         </li>
                         <Link to="/Profile_Account"><li id='li_profile'><a id='link_profile'>
-                            <i className={`bi bi-person-vcard-fill ='icon'}`}></i>
+                            <i id='icone_sidebar_resp' className={`bi bi-person-vcard-fill ='icon'}`}></i>
                             <span id='Account' className='nav_item'>Account</span>
                         </a></li></Link>
                         <Link to="/Profile_Orders" ><li id='li_profile'><a id='link_profile'>
-                            <i className={`bi bi-credit-card-fill ='icon'}`}></i>
+                            <i id='icone_sidebar_resp' className={`bi bi-credit-card-fill ='icon'}`}></i>
                             <span id='Orders' className='nav_item'>Orders</span>
                         </a></li></Link>
                         <Link to="/Profile_Security"><li id='li_profile'><a id='link_profile'>
-                            <i className={`bi bi-shield-check ='icon'}`}></i>
+                            <i id='icone_sidebar_resp' className={`bi bi-shield-check ='icon'}`}></i>
                             <span id='Security' className='nav_item'>Security</span>
                         </a></li></Link>
                         <li id='li_profile'><a id='link_profile'>
-                            <i id='Logout' className={`bi bi-box-arrow-left ='icon'}`}></i>
+                            <i id='icone_sidebar_resp' className={`bi bi-box-arrow-left ='icon'}`}></i>
                             <span className='nav_item'>Logout</span>
                         </a></li>
                     </ul>

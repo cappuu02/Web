@@ -20,9 +20,8 @@
   display: grid;
 
 }
-.btn-primary{
-  background-color: aliceblue;
-}
-.btn{
-  background-color: aliceblue;
+
+
+#bottone_card_store{
+  color: aqua;
 }

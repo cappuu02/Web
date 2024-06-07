@@ -1,11 +1,26 @@
 
-#body_profilo{
+#body_profilo_account{
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  height: 150vh;
+  height: 100%;
 }
+
+#body_profilo_security{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  height: 100%;
+}
+
+#body_profilo_orders{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  height: 100%;
+}
+
+
+
 
 /*SIDE NAVBAR*/
 /*-----------*/
+
+
 
 *{
   padding: 0;
@@ -17,7 +32,7 @@
 #navbar_profile{
   position: fixed;
   padding: 0;
-  top: 11.8%;
+  top: 10%;
   bottom: 0;
   height: 120vh; /*altezza della navbar*/
   left: 0;
@@ -124,11 +139,9 @@
 
 
 
-
-/*Account*/
-/*-------*/
-
-
+/*--------------------------------------------------------------*/
+/*                            Account                          */
+/*------------------------------------------------------------*/
 #box_profile{
   z-index:1;
   background-color: #ffffff;
@@ -137,12 +150,11 @@
   grid-gap:25px;
   grid-template-columns: auto;
   border: solid 2px rgb(235, 235, 235);
-  
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   width: 40%;
   text-align: left;
   position: absolute;
-  margin-top: 8%;
+  margin-top: 6%;
   left: 35%;
   padding-bottom: 1%;
   padding-top: 1%;
@@ -197,8 +209,64 @@ label{
 }
 
 
-/*COMPONENTE SECURITY*/
-/*-------------------*/
+
+@media screen and (max-width: 500px) {
+
+  
+  
+  #navbar_profile{
+    display: none
+  }
+
+  #icon_list{
+    display:block;
+    font-size: 42px;
+    top: 9%;
+    left: 1%;
+    position:fixed;
+  }
+  
+  #box_profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Aggiunge spazio tra gli elementi */
+    width: 80%;
+    margin-top: 30%;
+    margin-left: -25%;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+}
+
+
+#input_profilo{
+  width: 140%;
+  margin: 0;
+}
+
+.grid_item{
+  display: flex;
+  flex-direction: column;
+  
+}
+  
+label{
+  width: 200px;
+  font-size: 23.6px;
+  margin-left: -40%;
+  display: inline;
+}
+
+#button_modifica{
+  margin-left: 7%;
+  width: 50%;
+}
+}
+
+
+/*--------------------------------------------------------------*/
+/*                            SECURITY                         */
+/*------------------------------------------------------------*/
 
 #body_profilo{
   position: relative;
@@ -219,7 +287,6 @@ label{
   grid-template-columns: auto;
   padding: 20px;
   border: solid 2px rgb(235, 235, 235);
-  border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   width: 40%;
   text-align: center;
@@ -227,9 +294,6 @@ label{
   margin-top: 8%;
   left: 35%
 }
-
-
-
 
 
 #numberphone_field{
@@ -280,6 +344,16 @@ label{
   margin-left: 5%;
 }
 
+#input_profilo4{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 40%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}
 
 #button_email_reset2{
   width: 70%;
@@ -295,31 +369,48 @@ label{
 
 
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
     
   #box_profile2{
-    margin-top: 40%;
-    width: 350px;
-  }
-
-  #box_profile3{
     margin-top: 20%;
-    width: 350px;
+    width: 90%;
+    margin-left: -25%;
   }
-
+  #button_psw_reset2{
+    width: 90%;
+    margin-left: 4%;
+  }
+  
   #input_profilo2{
     border: solid 2px rgb(0, 0, 0);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
-    width: 70%;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
   }
+  #input_profilo3{
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  #input_profilo4{
 
+    width: 93%;
+    display: block;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  #button_email_reset2{
+    width: 90%;
+    margin-left: 6%;
+  }
 }
 
 
 
-/*COMPONENTE ORDERS*/
-/*-----------------*/
+/*--------------------------------------------------------------*/
+/*                            ORDERS                           */
+/*------------------------------------------------------------*/
 #box_profile3{
   position: absolute;
   display: flex;
@@ -334,7 +425,6 @@ label{
   left: 26%;
 
   border: solid 2px rgb(235, 235, 235);
-  border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
@@ -383,173 +473,28 @@ label{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Parte JAVASCRIPT CON HIDE*/
-#OrdersNOP{
-  display: none;
-}
-
-#SecurityNOP{
-  display: None;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*MEDIA QUERY PER RIDIMENSIONAMENTO SCHERMI CON LE NAVBAR FIXED*/
-
-@media screen and (max-width: 1800px) {
-  #navbar_profile{
-    top: 110px;
-  }
-  #box_profile2{
-    margin-top: 10%;
-  }
-}
-@media screen and (max-width: 1600px) {
-  #navbar_profile{
-    top: 110px;
-  }
-  #box_profile{
-    margin-top: 10%;
-  }
-  #box_profile2{
-    margin-top: 10%;
-  }
-
-}
-@media screen and (max-width: 1400px) {
-  #navbar_profile{
-    top: 110px;
-  }
-  #box_profile{
-    margin-top: 11%;
+@media screen and (max-width: 500px) {
+  #box_profile3{
+    margin-top: 20%;
+    width: 90%;
+    margin-left: -18%;
   }
   
-}
-@media screen and (max-width: 1200px) {
-  #navbar_profile{
-    top: 110px;
-    width: 7%;
-  }
-
-  #box_profile2{
-    margin-top: 15%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-    
-
-  #navbar_profile{
-    display: none
-  }
-
-  #icon_list{
-    display:block;
-    font-size: 42px;
-    top: 9%;
-    left: 1%;
-    position:fixed;
+  .dropbtn {
+    width: 100%;
   }
   
-  #box_profile {
+  .contenuto {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     display: flex;
-    flex-direction: column;
-    gap: 10px; /* Aggiunge spazio tra gli elementi */
-    width: 80%;
-    margin-top: 30%;
-    margin-left: -21%;
-    align-items: center;
-}
+    flex-direction: column; /* add this line */
+  }
 
-#box_profile  {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Allinea il contenuto al centro */
-    text-align: left;
-}
-
-
-#input_profilo{
-  width: 130%;
-}
-
-.grid_item{
-  display: flex;
-  flex-direction: column;
-  
-}
-  
-label{
-  width: 200px;
-  font-size: 23.6px;
-  margin-left: -22%;
-  display: inline;
-}
-
-#button_modifica{
-  margin-left: 7%;
-  width: 50%;
-}
-
+  #input_profilo_order{
+    width: 100%;
+    margin: 1%;
+  }
 
 }
-  
 
 
-/*MEDIA QUERY BLOCCO CENTRALE PAGINA ACCOUNT*/
