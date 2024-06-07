@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../Images/Camera/GFX100s-front.webp';
+import image1 from '../../Images/Accessori/BCW126S.webp';
 import '../../Store_style.module.css';
 
 function pino(){

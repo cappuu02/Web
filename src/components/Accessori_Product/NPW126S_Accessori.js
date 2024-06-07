@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../Images/Camera/GFX50S.webp';
+import image1 from '../../Images/Accessori/NPW126S.webp';
 import '../../Store_style.module.css';
 
 function NPW126S(){

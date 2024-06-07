@@ -18,6 +18,7 @@ import Reset_Password from './components/Reset_Password';
 import Profile_Orders from './Pages/Profile_Orders'
 import Store_Lens from './Pages/Store_Lens';
 import Store_Acessori from './Pages/Store_Acessori'
+import Store_Camera from './Pages/Store_Camera'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,11 +57,11 @@ const router = createBrowserRouter([
     element: <Store_Lens />,
   },
   {
-    path: "/Store_Items",
-    element: <Store_Lens />,
+    path: "/Store_Camera",
+    element: <Store_Camera />,
   },
   {
-    path: "/Store_Acessori",
+    path: "/Store_Accessori",
     element: <Store_Acessori />,
   },
 ]);

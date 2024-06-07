@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../Images/Camera/GFX50S.webp';
+import image1 from '../../Images/Accessori/EF60F.webp';
 import '../../Store_style.module.css';
 
 function EF60F(){

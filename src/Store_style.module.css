@@ -1,3 +1,6 @@
+body{
+  background-color: rgba(0, 0, 0, 0.13);
+}
 
 .container {
   display: grid;

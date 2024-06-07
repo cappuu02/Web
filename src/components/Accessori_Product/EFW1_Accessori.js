@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../Images/Camera/GFX50S.webp';
+import image1 from '../../Images/Accessori/EFW1.webp';
 import '../../Store_style.module.css';
 
 function  EFW1(){
