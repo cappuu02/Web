@@ -17,7 +17,8 @@ function XF18(){
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
-            (123)
+            <i class="bi bi-star-fill text-warning"></i>
+            (20)
           </p>
         </div>
         
@@ -25,7 +26,7 @@ function XF18(){
     </div>
     <div class="row align-items-center text-center g-0">
       <div class="col-4">
-        <h5>$129</h5>
+        <h5>$999</h5>
       </div>
       <div class="col-8">
         <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning">ADD TO CART</a>

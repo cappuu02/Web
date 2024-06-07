@@ -16,8 +16,8 @@ function GF20(){
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
             <i class="bi bi-star-fill text-warning"></i>
-            <i class="bi bi-star-fill text-warning"></i>
-            (123)
+      
+            (300)
           </p>
         </div>
         
@@ -25,7 +25,7 @@ function GF20(){
     </div>
     <div class="row align-items-center text-center g-0">
       <div class="col-4">
-        <h5>$129</h5>
+        <h5>$2.000</h5>
       </div>
       <div class="col-8">
         <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning">ADD TO CART</a>
