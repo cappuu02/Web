@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../Images/Camera/XT5.webp';
+import image1 from '../../Images/Lens/XF70_Lens.webp';
 import '../../Store_style.module.css';
 
 function XF70(){
