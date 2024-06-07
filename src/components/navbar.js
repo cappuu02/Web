@@ -21,13 +21,13 @@ function Navbar(){
                             <li><Link to="/Store"  class="nav-link" aria-current="page" >Store</Link></li>
                         </li>
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                        <Link to="/Store"  class="nav-link" aria-current="page" >Camera</Link>
+                        <Link to="/Store_Camera"  class="nav-link" aria-current="page" >Camera</Link>
                         </li>
                         <li id="nav_item_princ"class="nav-item p-1 m-3  ">
                         <li><Link to="/Store_Lens"  class="nav-link" aria-current="page" >Lens</Link></li>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                            <a class="nav-link" href="#">Accessories</a>
+                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Support</a>
@@ -50,16 +50,16 @@ function Navbar(){
                         <Link to="/Store"  class="nav-link" aria-current="page" >Store</Link>
                         </li>
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Camera</a>
+                        <Link to="/Store_Camera"  class="nav-link" aria-current="page" >Camera</Link>
                         </li>
                         <li >
                             <Link to="/Store_Lens" id="nav_item" aria-current="page" >Lenses</Link>
                         </li> 
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Accessories</a>
+                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
                         </li> 
                         <li >
-                        <Link to="/Store_Lens" id="nav_item" aria-current="page" >Profile</Link>
+                        <Link to="/Profile_Account" id="nav_item" aria-current="page" >Profile</Link>
                         </li> 
                      
                         
