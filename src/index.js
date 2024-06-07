@@ -17,7 +17,7 @@ import MissPassword from './components/MissPassword';
 import Reset_Password from './components/Reset_Password';
 import Profile_Orders from './Pages/Profile_Orders'
 import Store_Lens from './Pages/Store_Lens';
-import Store_Accessori from '.Pages/Store_Accessori'
+import Store_Acessori from './Pages/Store_Acessori'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,8 +60,8 @@ const router = createBrowserRouter([
     element: <Store_Lens />,
   },
   {
-    path: "/Store_Accessori",
-    element: <Store_Accessori />,
+    path: "/Store_Acessori",
+    element: <Store_Acessori />,
   },
 ]);
 
