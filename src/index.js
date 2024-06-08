@@ -19,6 +19,7 @@ import Profile_Orders from './Pages/Profile_Orders'
 import Store_Lens from './Pages/Store_Lens';
 import Store_Acessori from './Pages/Store_Acessori'
 import Store_Camera from './Pages/Store_Camera'
+import Cart from './components/Cart';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
   {
     path: "/Store_Accessori",
     element: <Store_Acessori />,
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
   },
 ]);
 
