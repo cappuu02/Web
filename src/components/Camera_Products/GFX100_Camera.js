@@ -28,7 +28,7 @@ function GFX100(){
         <h5>$600</h5>
       </div>
       <div class="col-8">
-        <a href="#" class="btn btn-dark w-100 p-3 rounded-0 text-warning">ADD TO CART</a>
+      <a href="#" class="btn btn-dark w-100 p-3 rounded-0 custom-text-red">ADD TO CART</a>
       </div>
     </div>
   </div>
