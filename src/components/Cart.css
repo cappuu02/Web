@@ -8,10 +8,11 @@
 
 .cart {
   background-color: #343a40;
-  color: #fff;
+  color: #000000;
   border-radius: 15px;
   padding: 20px;
   width: 80%;
+  height: 400px;
   max-width: 600px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -34,7 +35,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 10px;
-  background-color: #495057;
+  background-color: #ffffffbb;
   border-radius: 10px;
 }
 
@@ -70,11 +71,12 @@
 }
 
 .btn-remove {
-  background-color: #ff4d4d;
+  background-color: #000000;
   color: #fff;
   margin-right: 10px;
 }
 
 .btn:hover {
+  background-color: #ff4d4d;
   opacity: 0.8;
 }

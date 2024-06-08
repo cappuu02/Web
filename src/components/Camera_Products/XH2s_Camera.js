@@ -1,7 +1,7 @@
 import React from 'react';
 import image1 from '../../Images/Camera/XH2s.webp';
-import '../store_style.module.css';
-import { useCart } from '../CartContext';
+import '../../Store_style.module.css';
+import { useCart } from '../../CartContext';
 
 function XH2s() {
   const { addToCart } = useCart();

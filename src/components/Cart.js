@@ -1,11 +1,14 @@
 import React from 'react';
 import './Cart.css';
-import { useCart } from './CartContext';
+import { useCart } from '../CartContext';
+import Navbar from './navbar'
 
 const Cart = () => {
   const { cartItems, removeFromCart } = useCart();
 
   return (
+    <div>
+        <Navbar />
     <div className="cart-container">
       <div className="cart">
         <h1>Shopping Cart</h1>
@@ -27,6 +30,7 @@ const Cart = () => {
           ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 };
