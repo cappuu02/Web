@@ -146,8 +146,6 @@
     transform: translateX(50%);
 }
 
-
-
 .toggle-panel {
     position: absolute;
     width: 50%;
@@ -191,11 +189,14 @@
     width: 100%;
 }
 
-#return_login{
-    width: 60%;
+#email_psw:hover{
+    width: 100%;
+    transition: all 0.7s ease-out;
 }
 
+#forgot{
 
+}
 
 #forgot:hover{
     text-decoration: underline;
@@ -206,17 +207,23 @@
 
 
 #return_home_btn{
+    background-color: #c72525;
+    color: white;
+    font-size: 18px;
     margin-top: 2%;
-    width: 15%;
-    padding: 0.5%;
-    background: #e72d2d;
-    border: solid 2px transparent;
-    color: rgb(255, 255, 255);
-    font-size: 22px;
+    width: 14%;
+    height: 7%;
+    border: solid 2px #c72525;
     border-radius: 10px;
 }
 
 
+
+#return_home_btn:hover{
+    width: 10%;
+    transform: rotate(360deg);
+    transition: all 0.8s ease-in-out;    
+}
 
 
 

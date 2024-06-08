@@ -1,9 +1,16 @@
+body{
+  background-color: rgba(0, 0, 0, 0.13);
+}
+
 .container {
   display: grid;
   margin-left: 16%;
-  
+ padding-top:10%;
+ padding:10%;
 }
-
+.custom-text-red {
+    color: rgba(220, 17, 17, 0.785);
+}
 .grid {
   display: grid;
   gap: 10px; /*Gap griglia orizzontale*/
@@ -20,8 +27,20 @@
   display: grid;
 
 }
-
-
-#bottone_card_store{
-  color: aqua;
+.btn-primary{
+  background-color: aliceblue;
 }
+.btn{
+  background-color: aliceblue;
+}
+
+#card_shop{
+  width: 10rem;
+}
+
+
+
+
+
+
+

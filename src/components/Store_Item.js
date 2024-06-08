@@ -1,8 +1,20 @@
 import React from 'react';
 import style from "../Store_style.module.css"
 import XT5 from "../components/Camera_Products/XT5_Camera"
+import X100V from "../components/Camera_Products/X100V_Camera"
+import X100VI from "../components/Camera_Products/X100VI_Camera"
+import XT50 from "../components/Camera_Products/XT50_Camera"
+import XH2 from "../components/Camera_Products/XH2_Camera"
+import XH2s from "../components/Camera_Products/XH2s_Camera"
+import XS20 from "../components/Camera_Products/XS20_Camera"
+import XS10 from "../components/Camera_Products/XS10_Camera"
+import GFX50s from "../components/Camera_Products/GFX50s_Camera"
+import GFX100 from "../components/Camera_Products/GFX100_Camera"
+import GFX100S from "../components/Camera_Products/GFX100S_Camera"
+import GFX100II from "../components/Camera_Products/GFX100II_Camera"
 
-//contenitore CARD STORE
+
+
 function Store_Item() {
   return (
     <div className={style.container}>
@@ -12,21 +24,42 @@ function Store_Item() {
             <XT5 />
           </div>
           <div className={style.col}>
-            <XT5 />
+            <X100V />
           </div>
           <div className={style.col}>
-            <XT5 />
+            <GFX50s />
           </div>
         </div>
         <div className={style.row}>
           <div className={style.col}>
-            <XT5 />
+            <X100VI />
           </div>
           <div className={style.col}>
-            <XT5 />
+            <XT50 />
           </div>
           <div className={style.col}>
-            <XT5 />
+            <XH2/>
+          </div>
+          <div className={style.col}>
+            <XH2s/>
+          </div>
+          <div className={style.col}>
+            <XS20/>
+          </div>
+          <div className={style.col}>
+            <XS10/>
+          </div>
+          <div className={style.col}>
+            <GFX50s/>
+          </div>
+          <div className={style.col}>
+            <GFX100/>
+          </div>
+          <div className={style.col}>
+            <GFX100S/>
+          </div>
+          <div className={style.col}>
+            <GFX100II/>
           </div>
         </div>
         

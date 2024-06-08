@@ -16,6 +16,11 @@ import Profile_Security from './Pages/Profile_Security'
 import MissPassword from './components/MissPassword';
 import Reset_Password from './components/Reset_Password';
 import Profile_Orders from './Pages/Profile_Orders'
+import Store_Lens from './Pages/Store_Lens';
+import Store_Acessori from './Pages/Store_Acessori'
+import Store_Camera from './Pages/Store_Camera'
+import Cart from './components/Cart';
+import { CartProvider } from './CartContext';
 
 
 const router = createBrowserRouter([
@@ -51,15 +56,32 @@ const router = createBrowserRouter([
     path: "/Profile_Orders",
     element: <Profile_Orders />,
   },
+  {
+    path: "/Store_Lens",
+    element: <Store_Lens />,
+  },
+  {
+    path: "/Store_Camera",
+    element: <Store_Camera />,
+  },
+  {
+    path: "/Store_Accessori",
+    element: <Store_Acessori />,
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
+  },
 ]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+  <React.StrictMode>
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

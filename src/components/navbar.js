@@ -21,13 +21,13 @@ function Navbar(){
                             <li><Link to="/Store"  class="nav-link" aria-current="page" >Store</Link></li>
                         </li>
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                            <a class="nav-link" href="#">Camera</a>
+                        <Link to="/Store_Camera"  class="nav-link" aria-current="page" >Camera</Link>
                         </li>
                         <li id="nav_item_princ"class="nav-item p-1 m-3  ">
-                            <a class="nav-link" href="#">Lenses</a>
+                        <li><Link to="/Store_Lens"  class="nav-link" aria-current="page" >Lens</Link></li>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                            <a class="nav-link" href="#">Accessories</a>
+                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Support</a>
@@ -39,7 +39,7 @@ function Navbar(){
                 <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>
                         {/*{isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
                         <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>*/}
-                        <div id="cart_icon" class="me-5 mb-4"><Link to="/Profile_Account"><i class="bi bi-cart-check"></i></Link></div>
+                        <div id="cart_icon" class="me-5 mb-4"><Link to="/Cart"><i class="bi bi-cart-check"></i></Link></div>
                         <div id="profile_icon" class="me-5 mb-4"><Link to="/Login"><i class="bi bi-person-circle"></i></Link></div>
                 </form>     
             </div>
@@ -50,18 +50,18 @@ function Navbar(){
                         <Link to="/Store"  class="nav-link" aria-current="page" >Store</Link>
                         </li>
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Camera</a>
+                        <Link to="/Store_Camera"  class="nav-link" aria-current="page" >Camera</Link>
                         </li>
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Lenses</a>
+                            <Link to="/Store_Lens" id="nav_item" aria-current="page" >Lenses</Link>
                         </li> 
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Accessories</a>
+                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
                         </li> 
                         <li >
-                            <a id="nav_item" className="nav-link" href="#">Support</a>
+                        <Link to="/Profile_Account" id="nav_item" aria-current="page" >Profile</Link>
                         </li> 
-                        
+                     
                         
                          </ul></ul>}
 
