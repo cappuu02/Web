@@ -30,6 +30,80 @@ const sendEmail = async (body) => {
 
   
 };
+<<<<<<< Updated upstream
 module.exports = {
     sendEmail
+=======
+
+const sendEmail1 = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Email Change MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to change your email: http://localhost:3000/Profile_Security/Change_Email' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+
+const sendEmail2 = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Password Change MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to change your password: http://localhost:3000/Profile_Security/Password_Changer' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+
+const sendEmail3 = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Phone Number Change MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to change your phone number: http://localhost:3000/Profile_Security/Telephone_Changer' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+module.exports = {
+    sendEmail,
+    sendEmail1,
+    sendEmail2,
+    sendEmail3,
+>>>>>>> Stashed changes
   };

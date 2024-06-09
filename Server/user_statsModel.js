@@ -4,7 +4,11 @@ const pool = new Pool({
   host: 'localhost',
   database: 'fotosito',
   password: 'postgres',
+<<<<<<< Updated upstream
   port: 5433,
+=======
+  port: 5432,
+>>>>>>> Stashed changes
 });
 
 const getUser_stats = async () => {

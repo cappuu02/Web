@@ -7,10 +7,10 @@ const pool = new Pool({
   port: 5432,
 });
 
-const getProdotti = async () => {
+const getordini = async () => {
   try {
     return await new Promise(function (resolve, reject) {
-      pool.query("SELECT * FROM prodotti", (error, results) => {
+      pool.query("SELECT * FROM ordini", (error, results) => {
         if (error) {
           reject(error);
         }
@@ -28,19 +28,46 @@ const getProdotti = async () => {
 };
 
 
-const createProdotti = (body) => {
+const getordiniUser = (body) => {
   return new Promise(function (resolve, reject) {
-    const { name, email } = body;
+    const { utente_email, get } = body;
+  
     pool.query(
-      "INSERT INTO prodotti (name, email) VALUES ($1, $2) RETURNING *",
-      [name, email],
+      'SELECT * FROM ordini WHERE utente_email = $1',
+      [utente_email],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results && results.rows) {
+          resolve(results.rows);
+        } else {
+          resolve(
+            `noGot`
+          );
+        }
+      }
+    );
+  });
+};
+
+
+
+
+const createordini = (body) => {
+  return new Promise(function (resolve, reject) {
+    const { utente_email, create } = body;
+  
+    pool.query(
+      'INSERT INTO ordini (utente_email, prodotto_id, quantita, costo_totale) VALUES ($1, NULL, NULL, NULL) RETURNING *',
+      [utente_email],
       (error, results) => {
         if (error) {
           reject(error);
         }
         if (results && results.rows) {
           resolve(
-            `A new product has been added: ${JSON.stringify(results.rows[0])}`
+            `A new order has been added: ${JSON.stringify(results.rows[0])}`
           );
         } else {
           reject(new Error("No results found"));
@@ -51,34 +78,34 @@ const createProdotti = (body) => {
 };
 
 
-const deleteProdotti = (id) => {
+const deleteordini = (id) => {
   return new Promise(function (resolve, reject) {
     pool.query(
-      "DELETE FROM prodotti WHERE id = $1",
+      "DELETE FROM ordini WHERE id = $1",
       [id],
       (error, results) => {
         if (error) {
           reject(error);
         }
-        resolve(`Product deleted with ID: ${id}`);
+        resolve(`Order deleted with ID: ${2}`);
       }
     );
   });
 };
 
 
-const updateProdotti = (id, body) => {
+const updateordini = (body) => {
   return new Promise(function (resolve, reject) {
-    const { name, email } = body;
+    const { id, id1, quantita, costo_totale } = body;
     pool.query(
-      "UPDATE prodotti SET id = $1, email = $2 WHERE id = $3 RETURNING *",
-      [name, email, id],
+      "UPDATE ordini SET id = $2, quantita = $3, costo_totale = $4 WHERE id = $1 RETURNING *",
+      [id, id1, quantita, costo_totale],
       (error, results) => {
         if (error) {
           reject(error);
         }
         if (results && results.rows) {
-          resolve(`product updated: ${JSON.stringify(results.rows[0])}`);
+          resolve(`order updated: ${JSON.stringify(results.rows[0])}`);
         } else {
           reject(new Error("No results found"));
         }
@@ -87,8 +114,9 @@ const updateProdotti = (id, body) => {
   });
 };
 module.exports = {
-  getProdotti,
-  createProdotti,
-  deleteProdotti,
-  updateProdotti
+  getordini,
+  getordiniUser,
+  createordini,
+  deleteordini,
+  updateordini
 };

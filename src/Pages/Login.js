@@ -1,27 +1,58 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< Updated upstream
 
 
 function Login() {
+=======
+import { Link } from 'react-router-dom';
+
+function Login() {
+
+>>>>>>> Stashed changes
   const [accessi, setAccessCount] = useState(0);
   const [data_ultimo_accesso, setLastAccess] = useState(new Date());
   const [data_registrazione, setFirstReg] = useState(new Date());
 
   const [emailLogin, setEmailLogin] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
+<<<<<<< Updated upstream
+=======
+  const [email1Error, setEmail1Error] = useState("");
+
+  const [logError, setLogError] = useState("");
+>>>>>>> Stashed changes
 
   const [emailReg, setEmailReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
   const [emailError, setEmailError] = useState("");
 
+<<<<<<< Updated upstream
+=======
+  const [regError, setRegError] = useState("");
+
+>>>>>>> Stashed changes
   const validateEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
 
+<<<<<<< Updated upstream
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateEmail(emailReg)) {
+=======
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let email = emailReg;
+    let password = passwordReg;
+    let reg = 1;
+
+    if (!validateEmail(emailReg) & emailReg != "" &  passwordReg != "") {
+>>>>>>> Stashed changes
       setEmailError("Please enter a valid email address.");
       
       setTimeout(() => {
@@ -30,6 +61,7 @@ function Login() {
       return;
     }
 
+<<<<<<< Updated upstream
     let email = emailReg;
     let password = passwordReg;
     let reg = 1;
@@ -47,6 +79,18 @@ function Login() {
       setTimeout(() => {
         label.remove();
       }, 700);
+=======
+    
+
+    if (email === "" || password === "") {
+      
+      setEmailError("Please fill all fields.");
+      setTimeout(() => {
+        setEmailError("");
+      
+}, 700);
+
+>>>>>>> Stashed changes
       return;
     }
 
@@ -62,6 +106,7 @@ function Login() {
       const esito = await response.text();
 
       if (esito === 'Registration successful') {
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'Registration successful';
         label.style.color = 'green';
@@ -73,6 +118,12 @@ function Login() {
 
         setTimeout(() => {
           label.remove();
+=======
+        setRegError("Registration Successful")
+
+        setTimeout(() => {
+          setRegError("")
+>>>>>>> Stashed changes
         }, 700);
 
         let create = 1;
@@ -97,6 +148,7 @@ function Login() {
         return;
       }
       if (esito === 'This email is already used') {
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'This email is already used';
         label.style.color = 'red';
@@ -110,6 +162,16 @@ function Login() {
           label.remove();
         }, 700);
         return;
+=======
+        setEmailError("This email is already in use.");
+      
+
+      setTimeout(() => {
+        setEmailError("")
+      }, 700);
+      return;
+        
+>>>>>>> Stashed changes
       }
       else {
         alert(response)
@@ -128,6 +190,7 @@ function Login() {
     let login = 1;
 
     if (email === "" || password === "") {
+<<<<<<< Updated upstream
       const label = document.createElement('label');
       label.textContent = 'Please fill all the fields';
       label.style.color = 'red';
@@ -140,6 +203,13 @@ function Login() {
       setTimeout(() => {
         label.remove();
       }, 700);
+=======
+      setEmail1Error("Please fill all fields")
+
+        setTimeout(() => {
+          setEmail1Error("")
+        }, 700);
+>>>>>>> Stashed changes
       return;
     }
 
@@ -155,6 +225,7 @@ function Login() {
       const esito = await response.text();
 
       if (esito === 'Login successful') {
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'Login successful';
         label.style.color = 'green';
@@ -172,6 +243,18 @@ function Login() {
           label.remove();
         }, 700);
 
+=======
+        setLogError("Login Successful")
+
+        setTimeout(() => {
+          setLogError("")
+        }, 700);
+
+        document.cookie = `isAuthenticated=true,${emailLogin}; max-age=${60 * 60 * 24 * 7}; path=/`;
+
+      
+
+>>>>>>> Stashed changes
         setAccessCount(accessi);
         setLastAccess(new Date());
         let log = 1;
@@ -195,6 +278,7 @@ function Login() {
       }
       }
       if (esito === 'This email is not registered') {
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'Invalid Email or Password';
         label.style.color = 'red';
@@ -206,6 +290,12 @@ function Login() {
 
         setTimeout(() => {
           label.remove();
+=======
+        setEmail1Error("Email taken/Invalid Password")
+
+        setTimeout(() => {
+          setEmail1Error("")
+>>>>>>> Stashed changes
         }, 700);
         return;
       }
@@ -219,7 +309,13 @@ function Login() {
   }
 
   useEffect(() => {
+<<<<<<< Updated upstream
     const container = document.getElementById('container');
+=======
+
+    
+    const container = document.getElementById('container_login');
+>>>>>>> Stashed changes
     const registerBtn = document.getElementById('register');
     const loginBtn = document.getElementById('login');
     const registerCellBtn = document.getElementById('registerCELL');
@@ -276,12 +372,18 @@ function Login() {
             <form onSubmit={handleSubmit}>
               <h1>Create Account</h1>
               <span>Use your email for registration</span>
+<<<<<<< Updated upstream
 
               <input type='email' placeholder='Email' onChange={(e) => { setEmailReg(e.target.value) }} />
               {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+=======
+              <input type='email' placeholder='Email' onChange={(e) => { setEmailReg(e.target.value) }} />
+>>>>>>> Stashed changes
               <input type='password' placeholder='Password' onChange={(e) => { setPasswordReg(e.target.value) }} />
               <button>Sign up</button>
               <button id='loginCELL'>Login</button>
+              <p class="error-text">&nbsp;  {emailError}</p>
+              <p class="good-text">&nbsp;  {regError}</p>
             </form>
           </div>
 
@@ -291,9 +393,17 @@ function Login() {
               <span>Use your email and password</span>
               <input type='email' placeholder='Email' onChange={(e) => { setEmailLogin(e.target.value) }} />
               <input type='password' placeholder='Password' onChange={(e) => { setPasswordLogin(e.target.value) }} />
+<<<<<<< Updated upstream
               <a href='#'>Forgot your password?</a>
               <button >Sign in</button>
+=======
+              <Link to="/Login/MissPassword" id='forgot'>Forgot your password?</Link>
+              <button>Sign in</button>
+>>>>>>> Stashed changes
               <button id='registerCELL'>Register</button>
+              <p class="error-text">&nbsp;  {email1Error}</p>
+              <p class="good-text">&nbsp;  {logError}</p>
+
             </form>
           </div>
 
@@ -308,6 +418,7 @@ function Login() {
                 <h1>Welcome</h1>
                 <p>Register with your personal details to use all of site features</p>
                 <button className='hidden' id='register'>Sign Up</button>
+                
               </div>
             </div>
           </div>

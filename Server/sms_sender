@@ -1,0 +1,45 @@
+const twilio = require('twilio');
+
+
+function sendSMS(toNumber) {
+
+  accountSid =
+  authToken =
+  toNumber =
+  messageBody = "Test"
+
+  const client = new twilio(accountSid, authToken);
+
+
+  return client.messages
+
+    .create({
+
+      body: messageBody,
+
+      from: fromNumber,
+
+      to: toNumber
+
+    })
+
+    .then(message => {
+
+      console.log(`SMS sent successfully! SID: ${message.sid}`);
+
+      return message.sid;
+
+    })
+
+    .catch(error => {
+
+      console.error(`Error sending SMS: ${error}`);
+
+      throw error;
+
+    });
+
+}
+
+
+module.exports = sendSMS;

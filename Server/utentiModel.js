@@ -4,7 +4,11 @@ const pool = new Pool({
   host: 'localhost',
   database: 'fotosito',
   password: 'postgres',
+<<<<<<< Updated upstream
   port: 5433,
+=======
+  port: 5432,
+>>>>>>> Stashed changes
 });
 
 const getUtenti = async () => {
@@ -120,6 +124,51 @@ const checkEmail = (body) => {
   });
 };
 
+<<<<<<< Updated upstream
+=======
+const checkEmailChange = (body) => {
+  return new Promise(function (resolve, reject) {
+    const { email, rec } = body;
+    pool.query(
+      "SELECT COUNT(*) FROM utenti WHERE email = $1",
+      [email],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results.rows[0].count > 0) {
+          resolve("Email already used");
+        } else {
+          resolve("Email sent")
+        }
+      }
+    );
+  });
+};
+
+const emailUpdate = (body) => {
+  return new Promise(function (resolve, reject) {
+    
+    const { utente_email, email, emailupdate } = body;
+    
+    pool.query(
+      "UPDATE utenti SET email = $2 WHERE email = $1 RETURNING *",
+      [utente_email, email],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results && results.rows) {
+          resolve(`user updated: ${JSON.stringify(results.rows[0])}`);
+        } else {
+          reject(new Error("No results found"));
+        }
+      }
+    );
+  });
+};
+
+>>>>>>> Stashed changes
 
 
 const checkupPass = (body) => {
@@ -200,6 +249,11 @@ module.exports = {
   createUtenti,
   checkUtenti,
   checkEmail,
+<<<<<<< Updated upstream
+=======
+  checkEmailChange,
+  emailUpdate,
+>>>>>>> Stashed changes
   checkupPass,
   deleteUtenti,
   updateUtenti

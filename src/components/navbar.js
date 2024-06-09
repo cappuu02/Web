@@ -1,7 +1,14 @@
 import React, { useState, useEffect,useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+const cookie1 = document.cookie.split('; ')
+    .find((row) => row.startsWith('isAuthenticated='));
 
+    if (cookie1) {
+      
+      var isAuthenticated = cookie1.split('=')[1];
+      
+    }
 
 
 //funzione navbar che rappresenta il componente
@@ -50,6 +57,7 @@ function Navbar(){
                     </div>
                 </ul>      
                 <form id="Icone" class="d-flex" role="search">
+<<<<<<< Updated upstream
                         {isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
                         <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>
                         <div id="cart_icon" class="me-5 mb-4"><Link to="/Profile_Account"><i class="bi bi-cart"></i></Link></div>
@@ -59,6 +67,19 @@ function Navbar(){
                             <div id="profile_icon" class="me-5 mb-4"><Link to="/Login"><i class="bi bi-person"></i></Link></div>
 
                         )}
+=======
+                <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>
+                        {/*{isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
+                        <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>*/}
+                        <div id="cart_icon" class="me-5 mb-4"><Link to="/Cart"><i class="bi bi-cart-check"></i></Link></div>
+                        
+                        <div id="profile_icon" class="me-5 mb-4">{isAuthenticated? (<Link to="/Profile_Account"><i class="bi bi-person-check"></i></Link>
+                        ) : (<Link to="/Login"><i class="bi bi-person"></i></Link>
+
+  )}
+
+</div>
+>>>>>>> Stashed changes
                 </form>     
             </div>
         </div>
