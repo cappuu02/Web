@@ -1,14 +1,36 @@
 import React, { useState, useEffect,useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+const cookie1 = document.cookie.split('; ')
+    .find((row) => row.startsWith('isAuthenticated='));
 
+    if (cookie1) {
+      
+      var isAuthenticated = cookie1.split('=')[1];
+      
+    }
 
 
 //funzione navbar che rappresenta il componente
 function Navbar(){
 
     const [isSearchVisible, setSearchVisible] = useState(false);
-    const [isVisible, setVisible] = useState(false);
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+
+    useEffect(() => {
+      const cookie = document.cookie
+       .split('; ')
+       .find((row) => row.startsWith('isAuthenticated='));
+  
+      if (cookie) {
+        setIsAuthenticated(true);
+      } else {
+        
+      }
+    }, []);
+
     return(
         
         <nav id="navbar_principale"class="navbar navbar-expand-lg  justify-content-center" data-bs-theme="light"  >
@@ -21,62 +43,47 @@ function Navbar(){
                             <li><Link to="/Store"  class="nav-link" aria-current="page" >Store</Link></li>
                         </li>
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                        <Link to="/Store_Camera"  class="nav-link" aria-current="page" >Camera</Link>
+                            <a class="nav-link" href="#">Camera</a>
                         </li>
                         <li id="nav_item_princ"class="nav-item p-1 m-3  ">
-                        <li><Link to="/Store_Lens"  class="nav-link" aria-current="page" >Lens</Link></li>
+                            <a class="nav-link" href="#">Lenses</a>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
+                            <a class="nav-link" href="#">Accessories</a>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Support</a>
                         </li> 
                     </div>
                 </ul>      
-              
                 <form id="Icone" class="d-flex" role="search">
+<<<<<<< Updated upstream
+                        {isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
+                        <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>
+                        <div id="cart_icon" class="me-5 mb-4"><Link to="/Profile_Account"><i class="bi bi-cart"></i></Link></div>
+                        {isAuthenticated? (
+                            <div id="profile_icon" class="me-5 mb-4"><Link to="/Profile_Account"><i class="bi bi-person-check"></i></Link></div>
+                        ) :(
+                            <div id="profile_icon" class="me-5 mb-4"><Link to="/Login"><i class="bi bi-person"></i></Link></div>
+
+                        )}
+=======
                 <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>
                         {/*{isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
                         <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>*/}
                         <div id="cart_icon" class="me-5 mb-4"><Link to="/Cart"><i class="bi bi-cart-check"></i></Link></div>
-                        <div id="profile_icon" class="me-5 mb-4"><Link to="/Login"><i class="bi bi-person-circle"></i></Link></div>
+                        
+                        <div id="profile_icon" class="me-5 mb-4">{isAuthenticated? (<Link to="/Profile_Account"><i class="bi bi-person-check"></i></Link>
+                        ) : (<Link to="/Login"><i class="bi bi-person"></i></Link>
+
+  )}
+
+</div>
+>>>>>>> Stashed changes
                 </form>     
             </div>
         </div>
-        <div class="container-fluid-ham">
-        {isVisible && <ul className="menu-open"><ul>
-                        <li >
-                        <Link to="/Store"  class="nav-link" aria-current="page" >Store</Link>
-                        </li>
-                        <li >
-                        <Link to="/Store_Camera"  class="nav-link" aria-current="page" >Camera</Link>
-                        </li>
-                        <li >
-                            <Link to="/Store_Lens" id="nav_item" aria-current="page" >Lenses</Link>
-                        </li> 
-                        <li >
-                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
-                        </li> 
-                        <li >
-                        <Link to="/Profile_Account" id="nav_item" aria-current="page" >Profile</Link>
-                        </li> 
-                     
-                        
-                         </ul></ul>}
-
-                <a onClick={() => setVisible(!isVisible)}> <div  className="icon-ham">
-                    <span>
-                    </span>
-                    <span>
-                    </span>
-                </div></a>
-                 
-                
-            </div>
-        
-        </nav>   
-                
+        </nav>           
     )
 }
 

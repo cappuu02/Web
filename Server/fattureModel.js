@@ -7,10 +7,10 @@ const pool = new Pool({
   port: 5432,
 });
 
-const getProdotti = async () => {
+const getFatture = async () => {
   try {
     return await new Promise(function (resolve, reject) {
-      pool.query("SELECT * FROM prodotti", (error, results) => {
+      pool.query("SELECT * FROM fatture", (error, results) => {
         if (error) {
           reject(error);
         }
@@ -27,68 +27,55 @@ const getProdotti = async () => {
   }
 };
 
-
-const createProdotti = (body) => {
+const createFatture = (body) => {
   return new Promise(function (resolve, reject) {
-    const { name, email } = body;
+    const { utente_email, create } = body;
+  
     pool.query(
-      "INSERT INTO prodotti (name, email) VALUES ($1, $2) RETURNING *",
-      [name, email],
+      'INSERT INTO fatture (utente_email, metodo_pagamento, carta_credito, data_scadenza, cod_sicurezza) VALUES ($1,NULL,NULL,NULL,NULL) RETURNING *',
+      [utente_email],
       (error, results) => {
         if (error) {
           reject(error);
         }
         if (results && results.rows) {
           resolve(
-            `A new product has been added: ${JSON.stringify(results.rows[0])}`
+            `change`
           );
         } else {
-          reject(new Error("No results found"));
+          resolve('no change');
         }
       }
     );
   });
 };
 
-
-const deleteProdotti = (id) => {
+const updateFatture = (body) => {
   return new Promise(function (resolve, reject) {
+    const { utente_email, metodo_pagamento, carta_credito, data_scadenza, cod_sicurezza, update } = body;
+  
     pool.query(
-      "DELETE FROM prodotti WHERE id = $1",
-      [id],
-      (error, results) => {
-        if (error) {
-          reject(error);
-        }
-        resolve(`Product deleted with ID: ${id}`);
-      }
-    );
-  });
-};
-
-
-const updateProdotti = (id, body) => {
-  return new Promise(function (resolve, reject) {
-    const { name, email } = body;
-    pool.query(
-      "UPDATE prodotti SET id = $1, email = $2 WHERE id = $3 RETURNING *",
-      [name, email, id],
+      'UPDATE fatture SET metodo_pagamento = $2, carta_credito = $3, data_scadenza = $4, cod_sicurezza = $5 WHERE utente_email = $1 RETURNING *',
+      [utente_email, metodo_pagamento, carta_credito, data_scadenza, cod_sicurezza],
       (error, results) => {
         if (error) {
           reject(error);
         }
         if (results && results.rows) {
-          resolve(`product updated: ${JSON.stringify(results.rows[0])}`);
+          resolve(
+            `change`
+          );
         } else {
-          reject(new Error("No results found"));
+          resolve('no change');
         }
       }
     );
   });
 };
+
+
 module.exports = {
-  getProdotti,
-  createProdotti,
-  deleteProdotti,
-  updateProdotti
-};
+    getFatture,
+    createFatture,
+    updateFatture,
+  };

@@ -1,23 +1,43 @@
-import Navbar from './components/navbar'
-import VideoC from './components/VideoSfondo'
-import HomeCard from './components/Home_Card'
-import Seconda from './components/seconda'
-import Terzo from './components/terzo'
-import { useEffect, useState } from "react";
-import Footer_Home from './components/Footer_Home'
+import React, { useEffect, useState} from 'react';
+import Navbar from './components/navbar';
+import VideoC from './components/VideoSfondo';
+import HomeCard from './components/Home_Card';
+import image1 from './Images/obbiettivi.webp';
+import image2 from './Images/canong.png';
+
 
 function App() {
   const topFunction = () => {
     window.scrollTo(0, 0);
-  
-  }
+  };
 
-  const [prodotti, setProdotti] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+
+  useEffect(() => {
+    const cookie = document.cookie
+     .split('; ')
+     .find((row) => row.startsWith('isAuthenticated='));
+
+    if (cookie) {
+      setIsAuthenticated(true);
+    } else {
+      
+    }
+  }, []);
 
   return (
     <>
 
-    
+<div>
+      {isAuthenticated? (
+        <div>miao</div>
+      ) : (
+        <div>You are not authenticated</div>
+      )}
+    </div>
+
+
       <div className='w-auto pt-0'>
         <Navbar />
       </div>
@@ -25,7 +45,7 @@ function App() {
       <div className="container-fluid p-0 m-0">
         
         <VideoC />
-       
+        <h1 id='Titolo_Home_Page'>Benvenuto nel nostro sito</h1>
       </div>
       
      
@@ -37,26 +57,12 @@ function App() {
         <div id="container_card" className='card-container'>
           <HomeCard  />
           <div id='spazio'></div>
-          <div id='spazio'></div>
         </div>
-        <div id="container_card2">
-          <Seconda  />
-        </div>
-        <div id='spazio'></div>
-        <div id='container_card2'>
-        <Terzo />
-        </div>
-        <div id='spazio'></div>
-      </div>
-
-      {/*{prodotti ? prodotti : 'There is no product data available'}*/}
-
-    <footer>
-        <Footer_Home />
-    </footer>
         
+        
+      </div>
     </>
   );
 }
 
-export default App;
+export default App
