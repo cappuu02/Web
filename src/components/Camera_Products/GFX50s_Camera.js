@@ -6,8 +6,8 @@ function GFX50s(){
     return(
         <>
  <div id='card_shop' class="container m-4">
-  <div  class="card border-0 rounded-0 shadow" >
-    <img src={image1} class="card-img-top rounded-0" alt="..." />
+  <div className="card border-0 rounded-0 shadow" >
+    <img src={image1} id="img"class="card-img-top rounded-0 " alt="..." />
     <div class="card-body mt-3 mb-3">
       <div class="row">
         <div class="col-10">

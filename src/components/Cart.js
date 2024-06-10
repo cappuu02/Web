@@ -2,13 +2,15 @@ import React from 'react';
 import './Cart.css';
 import { useCart } from '../CartContext';
 import Navbar from './navbar'
-
+import NavS from './Navbar_Store'
 const Cart = () => {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
 
   return (
     <div>
+       
         <Navbar />
+        <NavS />
         <div className="cart-container">
       <div className="cart">
         <h1>Shopping Cart</h1>

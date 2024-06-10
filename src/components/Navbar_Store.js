@@ -34,7 +34,7 @@ function Navbar_Store(){
                        
                         <Link to="/Cart"><li id={style.li_profile}><a id={style.link_profile_Store}>
                             <i className={`bi bi-cart-check ${style.icon_Store}`}></i>
-                            <span id='Security' className={style.nav_item_Store}>Accessories</span>
+                            <span id='Security' className={style.nav_item_Store}>Cart</span>
                         </a></li></Link>
                     </ul>
                 </nav>

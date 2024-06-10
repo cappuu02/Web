@@ -2,6 +2,7 @@ import React from 'react';
 import image3 from '../Images/ricambi.jpg';
 import image2 from '../Images/obbiettivi.webp';
 import image1 from '../Images/production.jpg';
+import { Link } from 'react-router-dom';
 function HomeCard() {
   return (
     <>
@@ -15,7 +16,7 @@ function HomeCard() {
           <img style={{borderRadius: '30px'}} src={image2}  id='immagine-li'></img>
           <h2 >niche production</h2>
               <p>from a careful market analysis we have managed to select the best products with the best technologies to offer to customers.</p>
-              <button type="button" id='buttoncard' className="btn">Shop Now</button>        
+             <Link to="/Store" class="nav-link" aria-current="page"> <button type="button" id='buttoncard' className="btn">Shop Now</button> </Link>       
       </div>
 
       <div id="card">

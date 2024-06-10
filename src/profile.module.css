@@ -64,6 +64,7 @@
   margin-left: 14%;
   font-size: 20px;
   margin-top: 7%;
+
 }
 
 .logoProfile .imgProfile{
@@ -213,7 +214,10 @@ label{
 @media screen and (max-width: 500px) {
 
   
+  .title_store_logo{
+display: none;
   
+  }
   #navbar_profile{
     display: none
   }
@@ -522,7 +526,7 @@ label{
   transition: all 0.5s ease;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 #logo_shop_nav{
@@ -530,7 +534,7 @@ label{
 }
 
 .title_store_logo{
-  margin-left: 14%;
+  margin-left: 10px;
   font-size: 20px;
   margin-top: 7%;
 }
@@ -543,7 +547,7 @@ label{
   display: table;
   width: 300px;
   padding-bottom: 30px;
-  padding-left:20px;
+  padding-left:10px;
 }
 
 .icon_Store{
@@ -559,7 +563,7 @@ label{
   position: relative;
   overflow: hidden;
   top: 12px;
-  margin-left: 15px;
+  margin-left: 10px;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
@@ -599,6 +603,10 @@ label{
     margin-bottom: 10px;
     margin-left: 15px;
   }
-
-  
+  #link_profile_Store{
+   display: none;
+  }
+  .nav_item_Store{
+    font-size: 0px;
+  }
 }
