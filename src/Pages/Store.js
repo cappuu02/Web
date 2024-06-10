@@ -4,8 +4,11 @@ import NavbarStore from "../components/Navbar_Store"
 import Lens from "./Lens";
 import Accessori from "./Accessori"
 function Store() {
+
   return (
     <>
+   
+      
       <Navbar />
       <NavbarStore />
       <Lens/>

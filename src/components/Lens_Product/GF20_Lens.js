@@ -5,7 +5,7 @@ import '../../Store_style.module.css';
 function GF20(){
     return(
         <>
- <div id='card_shop' class="container m-4">
+ <div id='card_shop' class="container m-2 sinistra">
   <div  class="card border-0 rounded-0 shadow" >
     <img src={image1} class="card-img-top rounded-0" alt="..." />
     <div class="card-body mt-3 mb-3">

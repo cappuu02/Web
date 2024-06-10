@@ -4,12 +4,12 @@ import { useCart } from '../CartContext';
 import Navbar from './navbar'
 
 const Cart = () => {
-  const { cartItems, removeFromCart } = useCart();
+  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
 
   return (
     <div>
         <Navbar />
-    <div className="cart-container">
+        <div className="cart-container">
       <div className="cart">
         <h1>Shopping Cart</h1>
         <ul className="cart-list">
@@ -19,6 +19,11 @@ const Cart = () => {
               <div className="cart-item-details">
                 <span>{item.name}</span>
                 <span>${item.price}</span>
+                <div className="cart-item-quantity">
+                  <button onClick={() => decreaseQuantity(item.id)} className="quantity-button">-</button>
+                  <input type="text" readOnly value={item.quantity} className="quantity-input" />
+                  <button onClick={() => increaseQuantity(item.id)} className="quantity-button">+</button>
+                </div>
               </div>
               <button 
                 className="btn btn-remove"
@@ -29,6 +34,9 @@ const Cart = () => {
             </li>
           ))}
         </ul>
+        <button className="btn btn-order">
+          Ordina
+        </button>
       </div>
     </div>
     </div>

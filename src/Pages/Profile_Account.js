@@ -10,7 +10,7 @@ import NavbarP from '../components/Navbar_Profile';
 
         useEffect(() => {
           const handleMouseMove = (event) => {
-            if (event.clientX < 330) {  // Soglia aggiornata a 50 pixel
+            if (event.clientX < 430) {  // Soglia aggiornata a 50 pixel
               setIsCursorNear(true);
             } else {
               setIsCursorNear(false);
