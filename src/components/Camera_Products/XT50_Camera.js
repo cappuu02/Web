@@ -56,7 +56,7 @@ function XT50() {
             <div className="col-10">
               <h4 className="card-title">sas</h4>
               <p>{2024}</p>
-             
+              <p>{tipo}cazzo</p>
             </div>
             <div className="col-2 text-end">
               <i className="bi bi-card-text fs-1 float-end" onClick={handleDescToggle} style={{ cursor: 'pointer' }}></i>
