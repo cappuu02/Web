@@ -55,14 +55,14 @@ function XT50() {
           <div className="row">
             <div className="col-10">
               <h4 className="card-title">sas</h4>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-fill text-warning"></i>
-              (1.003)
+              <p>{2024}</p>
+             
             </div>
             <div className="col-2 text-end">
               <i className="bi bi-card-text fs-1 float-end" onClick={handleDescToggle} style={{ cursor: 'pointer' }}></i>
+              <div className="col-10 anno">
+             
+            </div>
             </div>
           </div>
           
@@ -76,9 +76,7 @@ function XT50() {
             </div>
           </div>
           <div className="row">
-            <div className="col-10 anno">
-              <p>{2024}</p>
-            </div>
+            
             <div className='col-12 text-center'>
             <div className={`${styles['dropdown-custom']} ${showDesc ? styles.show : ''}`}>
             <p>asdasdasdasdasdasdsa</p>
