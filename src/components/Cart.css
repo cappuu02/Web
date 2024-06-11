@@ -9,7 +9,8 @@
 
 .cart {
   margin-left:0px;
-  background-color: #343a40;
+  background: rgb(205,205,205);
+background: radial-gradient(90deg, rgba(205,205,205,1) 58%, rgba(158,158,158,1) 78%, rgba(70,70,70,1) 100%);
   color: #000000;
   border-radius: 15px;
   padding: 20px;
@@ -38,7 +39,6 @@
   padding: 10px;
   background-color: #bac1c7;
   border-radius: 10px;
-  border:solid 0.01px red;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.544);
 }
 
@@ -129,7 +129,6 @@
 @media screen and (max-width:800px) {
   .cart {
     margin-left:70px;
-    background-color: #343a40;
     color: #fff;
     border-radius: 15px;
     padding: 20px;
