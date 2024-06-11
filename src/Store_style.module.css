@@ -2,7 +2,7 @@ body{
   background-color: rgba(0, 0, 0, 0.13);
 }
 .dropdown-custom {
-  z-index: 1000;
+  z-index: 100;
   position: absolute;
   top: 0%;
   left: 0;

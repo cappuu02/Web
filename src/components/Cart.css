@@ -125,7 +125,9 @@ background: radial-gradient(90deg, rgba(205,205,205,1) 58%, rgba(158,158,158,1) 
   background-color: #ff4d4d;
   opacity: 0.8;
 }
-
+.card p{
+margin-left:10%;
+}
 @media screen and (max-width:800px) {
   .cart {
     margin-left:70px;

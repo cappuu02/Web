@@ -76,7 +76,7 @@ function XT50() {
             </div>
           </div>
           <div className="row">
-            <div className="col-12 text-center">
+            <div className="col-10 anno">
               <p>{2024}</p>
             </div>
             <div className='col-12 text-center'>
