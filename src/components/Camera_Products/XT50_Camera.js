@@ -64,15 +64,14 @@ function XT50() {
              
             </div>
             </div>
-          </div>
-          
-          <p>{tipo}</p>
+       </div>
+       </div>
           <div className="row align-items-center text-center g-0">
             <div className="col-4">
               <h5>{`${100}€`}</h5>
             </div>
             <div className="col-8">
-              <a href="#" className={`btn btn-dark w-100 p-3 rounded-0 ${styles.customTextRed}`}>ADD TO CART</a>
+              <a href="#" className={`btn btn-dark w-100 p-3 rounded-0 custom-text-red`}>ADD TO CART</a>
             </div>
           </div>
           <div className="row">
@@ -83,7 +82,7 @@ function XT50() {
           </div>
             </div>
           </div>
-        </div>
+      
       </div>
     </div>
   );

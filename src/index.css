@@ -611,7 +611,7 @@ footer {
     top:0;
     left:0;
     background:white;
-    height: 2800px;
+    height: 2900px;
   }
   #container_card{
     display: flex; /* Abilita Flexbox */
@@ -772,7 +772,7 @@ transform: translateY(0%);
     padding: 0px;
   }
   footer {
-    margin-top:0%;
+    margin-top:1%;
     background-color: #f9f9f9;
     padding: 20px 0;
     border-top: 2px solid #e3001b;

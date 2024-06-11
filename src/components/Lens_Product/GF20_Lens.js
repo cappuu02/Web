@@ -5,12 +5,12 @@ import '../../Store_style.module.css';
 function GF20(){
     return(
         <>
- <div id='card_shop' class="container m-2 sinistra">
+ <div id='card_shop' class="container m-2">
   <div  class="card border-0 rounded-0 shadow" >
     <img src={image1} class="card-img-top rounded-0" alt="..." />
     <div class="card-body mt-3 mb-3">
       <div class="row">
-        <div class="col-10">
+        <div class="col ">
           <h4 class="card-title">GF20</h4>
           <p class="card-text">
             <i class="bi bi-star-fill text-warning"></i>

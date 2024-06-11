@@ -21,9 +21,13 @@ import Store_Acessori from './Pages/Store_Acessori'
 import Store_Camera from './Pages/Store_Camera'
 import Cart from './components/Cart';
 import { CartProvider } from './CartContext';
-
+import Ordine from './components/Ordine'
 
 const router = createBrowserRouter([
+  {
+    path: "/Ordine",
+    element: <Ordine />,
+  },
   {
     path: "/",
     element: <App />,

@@ -3,7 +3,6 @@ import './Cart.css';
 import { useCart } from '../CartContext';
 import Navbar from './navbar'
 import NavS from './Navbar_Store'
-
 const Cart = () => {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
 
@@ -37,8 +36,9 @@ const Cart = () => {
             </li>
           ))}
         </ul>
-        <Link to="/Ordine" class="nav-link" aria-current="page" ><button className="btn btn-order">
-        </button></Link>
+        <button className="btn btn-order">
+          Ordina
+        </button>
       </div>
     </div>
     </div>
