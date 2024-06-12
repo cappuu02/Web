@@ -3,6 +3,8 @@ import './Cart.css';
 import { useCart } from '../CartContext';
 import Navbar from './navbar'
 import NavS from './Navbar_Store'
+import { Link } from 'react-router-dom';
+
 
 const Cart = () => {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();

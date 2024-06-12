@@ -29,9 +29,9 @@ function Navbar(){
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
                         <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
                         </li> 
-                        <li id="nav_item_princ" class="nav-item p-1 m-3 ">
+                        <Link to="/InvioOrdini"><li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Support</a>
-                        </li> 
+                        </li></Link> 
                     </div>
                 </ul>      
               

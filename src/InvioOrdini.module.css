@@ -1,0 +1,86 @@
+#grid_container {
+    display: grid;
+    align-content: start;
+    height: 70vh;
+    width: 50vw;
+    margin-top: 10%;
+    margin-left: 25%;
+    border: solid 1px black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 2%;
+}
+
+#box {
+    justify-self: center;
+    align-self: center;
+}
+
+#titolo {
+    text-align: center;
+    margin-top: 2%;
+}
+
+#paragrafo {
+    text-align: center;
+}
+
+#label {
+    margin: 0%;
+}
+
+#input_ordine {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+#rowbox {
+    margin-top: 5%;
+}
+
+#button_send_order {
+    margin-top: 3%;
+    margin-left: 30%;
+    width: 40%;
+}
+
+@media screen and (max-width: 500px) {
+    #grid_container {
+        width: 350px;
+        margin-top: 30%;
+        margin-left: 9%;
+        height: 99vh;
+    }
+
+    #paragrafo {
+        display: none;
+    }
+
+    #rowbox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #label {
+        width: 100%;
+        text-align: left;
+    }
+
+    #input_ordine {
+        width: 100%;
+        text-align: left;
+    }
+
+    .col {
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 15px; /* Aggiungi questa riga per aumentare la distanza tra le righe */
+    }
+}
