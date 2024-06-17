@@ -596,8 +596,11 @@ footer {
     width: 100%;
     padding-top: 50%;
     padding-left: 50%;
-  
+    transform: none;
+    transition: none;
   }
+
+  
   #navbar_principale{
     
     position: fixed;
@@ -617,11 +620,7 @@ footer {
    
   }
 
-  #card{
-    font-size:medium;
-    width: 80%;
-    height: 80%;
-  }
+
   #immagine-li{
     width: 80%;
     height: 80%;
@@ -659,7 +658,10 @@ footer {
     font-size:medium;
     width: 100%;
     height: 100%;
+    transform: none;
+    transition: none;
   }
+ 
   #immagine-li{
     width: 100%;
     height: 100%;
@@ -725,19 +727,18 @@ transform: translateY(0%);
     z-index: 999;
     position:absolute;
     top:50px;
-   
+    
     width:100%;
     height: 0px;
     translate: -100%;
   }
-  .menu-open li {padding:3%;justify-content:space-between;border-bottom:1px solid #d70a0abc;list-style-type: none;font-size: 35px;}
-  .menu-open{ background-color: rgba(255, 255, 255, 0.822); /* Colore di sfondo trasparente */
-  backdrop-filter: blur(10px);
+  .menu-open li {padding:3%;justify-content:space-between;border-bottom:1px solid #ff0000bc;list-style-type: none;font-size: 35px;}
+  .menu-open{ background-color: rgba(255, 255, 255, 0.863);
+    backdrop-filter: blur(20px); /* Effetto blur */
     padding:5%;height: 200vh;position:absolute;width:100%;
     top:63px;
     animation: comparsa2;
-    animation-duration: 0.7s;
-    
+    animation-duration: 0.7s;  
   }
   .icon-ham{
     height:50px;width: 50px;margin-left:80%;position:fixed;top:35%;
@@ -793,8 +794,10 @@ transform: translateY(0%);
     width: 200%;
   }
 
+  .h1-terza{
+    margin-left: 47px;
+  }
   
-
 }
 @media screen and (max-width: 900px){
   .card-container{

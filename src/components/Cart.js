@@ -30,17 +30,16 @@ const Cart = () => {
                   <button onClick={() => increaseQuantity(item.id)} className="quantity-button">+</button>
                 </div>
               </div>
-              <button 
-                className="btn btn-remove"
-                onClick={() => removeFromCart(item.id)}
-              >
+              <button  className="btn btn-remove" onClick={() => removeFromCart(item.id)}>
                 Remove
+              </button>
+              <button  className="btn btn-remove_cell" onClick={() => removeFromCart(item.id)}>
+                <i class="bi bi-trash"></i>
               </button>
             </li>
           ))}
         </ul>
-        <Link to="/Ordine" class="nav-link" aria-current="page" ><button className="btn btn-order">
-        </button></Link>
+        <Link to="/Ordine" class="nav-link" aria-current="page" ><button className="btn btn-order">Buy</button></Link>
       </div>
     </div>
     </div>
@@ -48,3 +47,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
+

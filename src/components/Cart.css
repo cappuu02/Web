@@ -97,7 +97,7 @@
 }
 
 .btn {
-  padding: 10px 15px;
+  padding: 20px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -112,11 +112,12 @@
   background-color: #ff4d4d;
   color: #fff;
   margin-right: 10px;
+  
 }
 
 .btn-order {
   background-color: #ff4d4d;
-  color: #000000;
+  color: #ffffff;
   display: block;
   width: 43%;
   margin: 20px auto 0;
@@ -126,29 +127,48 @@
 
 .btn-order:hover {
   background-color: #28a745;
-  opacity: 0.8;
+  color: #000000;
+  transition: all 0.5s ease-in-out;
 }
 .btn-remove:hover {
-  background-color: #ff4d4d;
-  opacity: 0.8;
+  background-color: #ff2727;
   transition: all 1s ease-in-out;
+}
+
+.btn-remove_cell{
+  display: none;
 }
 
 @media screen and (max-width:800px) {
   .cart {
-    margin-left:70px;
+    margin-left: 70px;
     color: #fff;
     border-radius: 15px;
     padding: 20px;
-    width: 90%;
+    width: 80%;
     max-width: 600px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
+  
   .btn-remove {
-    position :relative;
-    background-color: #932d2d;
-    color: #000000;
-    margin-right: 10px;
-    width: 30%;
+    display: none;
+  }
+  
+  .btn-remove_cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4d4d;
+    color: #fff;
+    margin-right: 0px;
+    margin-left: -20px; /* Aggiungi margine negativo per spostare a sinistra */
+    height: 40px; /* Imposta un'altezza fissa per il bottone */
+    width: 40px; /* Imposta una larghezza fissa per il bottone */
+    border: none; /* Rimuove il bordo predefinito */
+    border-radius: 50%; /* Rende il bottone circolare */
+  }
+  
+  .bi-trash {
+    font-size: 20px;
   }
 }

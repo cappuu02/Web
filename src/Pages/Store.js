@@ -7,8 +7,6 @@ function Store() {
 
   return (
     <>
-   
-      
       <Navbar />
       <NavbarStore />
       <Lens/>
