@@ -582,6 +582,16 @@ footer {
 /*----------*/
 
 @media screen and (max-width: 500px){
+  #card:hover {
+    background-color: white;
+    transition: 1s;
+   transform:translate(0%,0%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.446);
+    flex: 1;
+    margin: 0 1rem;
+    animation:  1s ease-in-out forwards;
+  }
   #cerca {
     width: 300px;
     margin-left: 0;

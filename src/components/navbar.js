@@ -27,7 +27,7 @@ function Navbar(){
                         <li><Link to="/Store_Lens"  class="nav-link" aria-current="page" >Lens</Link></li>
                         </li> 
                         <li id="nav_item_princ" class="nav-item p-1 m-3 ">
-                        <Link to="/Store_Accessori"  class="nav-link" aria-current="page" >Accessori</Link>
+                        <Link to="/Profile_Account"  class="nav-link" aria-current="page" >Profile</Link>
                         </li> 
                         <Link to="/InvioOrdini"><li id="nav_item_princ" class="nav-item p-1 m-3 ">
                             <a class="nav-link" href="#">Support</a>
