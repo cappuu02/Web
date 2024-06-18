@@ -1,10 +1,12 @@
 import Navbar from "../components/navbar";
 import style from "../InvioOrdini.module.css"
-
+import Cart_tot from "../components/Cart_tot";
+import Navbar_Store from "../components/Navbar_Store";
 function InvioOrdini() {
   return (
     <> 
         <Navbar />
+        <Navbar_Store />
         <div id={style.grid_container}>
             <div id={style.box}>
                 <h1 id={style.titolo}>Fill and Order</h1> 
@@ -58,8 +60,11 @@ function InvioOrdini() {
                 <hr></hr>
                 <div id={style.rowbox} className="row">
                     <h2 id={style.Products}>Products</h2>
-                    <div className="col">
-                            
+                     <div className="col">
+
+                     </div>
+                    <div>
+                    <Cart_tot /> 
                     </div>
                 </div>
                 <button id={style.button_send_order}  class="btn btn-success">Success</button>

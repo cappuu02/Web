@@ -1,12 +1,11 @@
 #grid_container {
-    position: fixed;
+    position:relative;
     display: grid;
     align-content: start;
-    height: 86vh; /* Altezza relativa al viewport */
+    height: 100%; /* Altezza relativa al viewport */
     width: 50vw; /* Larghezza relativa al viewport */
     top: 13vh; /* Spostamento dall'alto relativo al viewport */
     left: 25vw; /* Spostamento da sinistra relativo al viewport */
-    border: solid 0.2px black;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.493);
     padding: 2%;
     overflow: hidden; /* Previene l'uscita degli elementi dal container */
@@ -15,9 +14,10 @@
 #box {
     justify-self: center;
     align-self: center;
-    width: 100%; /* Larghezza relativa al container */
-    height: auto; /* Altezza automatica in base al contenuto */
+    width: 80%; /* Larghezza relativa al container */
+    height: 100%; /* Altezza automatica in base al contenuto */
     overflow: hidden; /* Previene l'uscita degli elementi dal box */
+    
 }
 
 #titolo {
@@ -34,7 +34,7 @@
 }
 
 #input_ordine, #input_ordine_credit {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.575);
+   
     border-radius: 10px;
     padding: 5px;
     width: 100%;
@@ -45,7 +45,7 @@
 }
 
 #button_send_order {
-    margin-top: 2%;
+    margin-top: 0%;
     margin-left: 30%;
     width: 40%;
     max-width: calc(100% - 60%); /* Assicura che il bottone non esca dal container */
@@ -56,6 +56,10 @@
 }
 
 @media screen and (max-width: 500px) {
+    #grid_container {
+        top:5vh;
+        left: 5vh; /* Spostamento da sinistra relativo al viewport */
+    }
     #grid_container {
         width: 350px;
         margin-top: 30%;
