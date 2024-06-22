@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
+import './Sign_inup.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import App from './App';
 import Store from './Pages/Store';
 import Login from './Pages/Login';
 import './Sign_inup.css';
@@ -19,8 +21,15 @@ import Profile_Orders from './Pages/Profile_Orders'
 import Store_Lens from './Pages/Store_Lens';
 import Store_Acessori from './Pages/Store_Acessori'
 import Store_Camera from './Pages/Store_Camera'
-import Cart from './components/Cart';
+import Cart from './components/Camera_Products/Cart';
 import { CartProvider } from './CartContext';
+import Password_Changer from './components/Password_Changer'
+import Email_Changer from './components/Email_Changer'
+import Change_Email from './components/Change_Email';
+import Telephone_Changer from './components/Telephone_Changer';
+import Password_Check from './components/Password_Check';
+import Card_Changer from './components/Card_Changer';
+
 import InvioOrdini from './Pages/InvioOrdini';
 
 
@@ -74,6 +83,31 @@ const router = createBrowserRouter([
     element: <Cart />,
   },
   {
+    path: "/Profile_Security/Email_Changer",
+    element: <Email_Changer />,
+  },
+  {
+    path: "/Profile_Security/Change_Email",
+    element: <Change_Email />,
+  },
+  {
+    path: "/Profile_Security/Password_Changer",
+    element: <Password_Changer />,
+  },
+  {
+    path: "/Profile_Security/Telephone_Changer",
+    element: <Telephone_Changer />,
+  },
+  {
+    path: "/Profile_Security/Password_Check",
+    element: <Password_Check />,
+  },
+  {
+    path: "/Profile_Security/Card_Changer",
+    element: <Card_Changer />,
+  },
+
+  {
     path: "/InvioOrdini",
     element: <InvioOrdini />,
   },
@@ -89,4 +123,7 @@ root.render(
   </React.StrictMode>
 );
 
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
