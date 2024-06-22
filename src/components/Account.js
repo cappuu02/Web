@@ -17,6 +17,16 @@ import React, {  useState, useEffect } from 'react';
       var isAuthenticated = cookie1.split('=')[1];
     }
 
+    
+
+    const cookie1 = document.cookie.split('; ')
+    .find((row) => row.startsWith('isAuthenticated='));
+
+    if (cookie1) {
+      var utente_email = cookie1.split(',')[1];
+      var isAuthenticated = cookie1.split('=')[1];
+    }
+
 function Account(){
 
     const [name, setName] = useState('');
@@ -29,6 +39,7 @@ function Account(){
     const [city, setCity] = useState('');
     const [region, setRegion] = useState('');
     const [nation, setNation] = useState('');
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
     const [password, setPassword] = useState('');
@@ -64,6 +75,8 @@ function Account(){
           setNation(userDataObj1[0].nazione);
           console.log(email)
 =======
+=======
+>>>>>>> Stashed changes
     const [type, setType] = useState('');
     const [card, setCard] = useState('');
     const [exp, setExp] = useState('');
@@ -80,7 +93,13 @@ function Account(){
     
 
     const handleRead = async () => {
+<<<<<<< Updated upstream
 
+=======
+      if(!isAuthenticated){
+        window.location.href = '/Login';
+      }
+>>>>>>> Stashed changes
       let create = 1;
 
       try {
@@ -280,8 +299,31 @@ function Account(){
         handleRead();
         const EditIcon = document.getElementById(style.icona_modifier);
         
+<<<<<<< Updated upstream
 
         
+            
+            const handleModifierClick = () => {
+=======
+>>>>>>> Stashed changes
+
+                setIsEditable(true);
+            
+              };
+              
+              EditIcon.addEventListener('click', handleModifierClick);
+>>>>>>> Stashed changes
+        
+<<<<<<< Updated upstream
+          try {
+            const response1 = await fetch('http://localhost:3001/utenti', {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              
+            });
+=======
             
             const handleModifierClick = () => {
 
@@ -291,15 +333,6 @@ function Account(){
               
               EditIcon.addEventListener('click', handleModifierClick);
 >>>>>>> Stashed changes
-        
-          try {
-            const response1 = await fetch('http://localhost:3001/utenti', {
-              method: 'GET',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              
-            });
         
         
           const userData2 = await response1.text()
@@ -353,7 +386,11 @@ function Account(){
             <div class={style.grid_item} >
                 <label>Surname:</label>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 <input id={style.input_profilo} type="surname" value={surname} readonly/>
+=======
+                <input id={style.input_profilo}  type="text" defaultValue={surname} onChange={(e) => { setSurname(e.target.value) }} />
+>>>>>>> Stashed changes
 =======
                 <input id={style.input_profilo}  type="text" defaultValue={surname} onChange={(e) => { setSurname(e.target.value) }} />
 >>>>>>> Stashed changes
@@ -365,6 +402,9 @@ function Account(){
 =======
                 
                 <input id={style.input_profilo} type="text" value={email} />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             </div>
             <div class={style.grid_item} style = {{display:'none'}}>
@@ -374,6 +414,9 @@ function Account(){
 =======
                 
                 <input id={style.input_profilo} type="password" value={password} />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             </div>
             <div class={style.grid_item} style = {{display:'none'}}>
@@ -383,6 +426,9 @@ function Account(){
 =======
                 
                 <input id={style.input_profilo} type="text" value={telephone} />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             </div>
             <hr></hr>

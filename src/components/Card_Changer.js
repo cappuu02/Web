@@ -28,7 +28,13 @@ function Card_Changer(){
   const handleNew = async (e) => {
     e.preventDefault();
 
+<<<<<<< Updated upstream
 
+=======
+    if(!isAuthenticated){
+      window.location.href = '/Login';
+    }
+>>>>>>> Stashed changes
   
     
 
@@ -92,7 +98,13 @@ function Card_Changer(){
     }
   
   }
+<<<<<<< Updated upstream
 
+=======
+  const handleReturn = async () => {
+    window.location.href = '/Profile_Security';
+  }
+>>>>>>> Stashed changes
   
 
     return(
@@ -114,6 +126,10 @@ function Card_Changer(){
             </form>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+        <button id='return_home_btn' onClick={handleReturn}>Return Profile</button>
+>>>>>>> Stashed changes
       </div>        
         </>
     )

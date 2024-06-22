@@ -32,7 +32,14 @@ function Change_Email(){
 
   const handleNew = async (e) => {
     e.preventDefault();
+<<<<<<< Updated upstream
 
+=======
+    
+    if(!isAuthenticated){
+      window.location.href = '/Login';
+    }
+>>>>>>> Stashed changes
 
     if (!validateEmail(email) || email === "" ) {
       setEmailError("Please enter a valid email address.");
@@ -114,7 +121,13 @@ function Change_Email(){
     }
   
   }}
+<<<<<<< Updated upstream
 
+=======
+  const handleReturn = async () => {
+    window.location.href = '/Profile_Security';
+  }
+>>>>>>> Stashed changes
   
 
     return(
@@ -133,6 +146,10 @@ function Change_Email(){
             </form>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+        <button id='return_home_btn' onClick={handleReturn}>Return Profile</button>
+>>>>>>> Stashed changes
       </div>        
         </>
     )

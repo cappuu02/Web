@@ -5,7 +5,11 @@ const port = 3001
 
 const prodotti_model = require('./prodottiModel')
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const ordine_model = require('./ordineModel')
+=======
+const ordini_model = require('./ordiniModel')
+>>>>>>> Stashed changes
 =======
 const ordini_model = require('./ordiniModel')
 >>>>>>> Stashed changes
@@ -14,6 +18,10 @@ const user_stats_model = require('./user_statsModel')
 const indirizzi_model = require('./indirizziModel')
 const email_sender = require('./email_sender')
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+const fatture_model = require('./fattureModel')
+>>>>>>> Stashed changes
 =======
 const fatture_model = require('./fattureModel')
 >>>>>>> Stashed changes
@@ -41,9 +49,12 @@ app.get('/prodotti', (req, res) => {
 
 app.post('/send-email', (req,res) => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   email_sender.sendEmail(req.body)
 });
 =======
+=======
+>>>>>>> Stashed changes
   if (req.body.hasOwnProperty('log')) {
   email_sender.sendEmail(req.body)
   }
@@ -57,9 +68,15 @@ app.post('/send-email', (req,res) => {
     }
 
   });
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
 app.post('/prodotti', (req, res) => {
+=======
+
+app.post('/prodotti', (req, res) => {
+  if (req.body.hasOwnProperty('create')) {
+>>>>>>> Stashed changes
   prodotti_model.createProdotti(req.body)
   .then(response => {
     res.status(200).send(response);
@@ -67,6 +84,23 @@ app.post('/prodotti', (req, res) => {
   .catch(error => {
     res.status(500).send(error);
   })
+}if (req.body.hasOwnProperty('get')) {
+  prodotti_model.getSpecProdotti(req.body)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+}if (req.body.hasOwnProperty('updateQta')) {
+  prodotti_model.updateQtaProdotti(req.body)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+}
 })
 
 app.delete('/prodotti/:id', (req, res) => {
@@ -92,8 +126,13 @@ app.put("/prodotti/:id", (req, res) => {
 });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 app.get('/ordine', (req, res) => {
    ordine_model.getOrdine()
+=======
+app.get('/ordini', (req, res) => {
+   ordini_model.getordini()
+>>>>>>> Stashed changes
 =======
 app.get('/ordini', (req, res) => {
    ordini_model.getordini()
@@ -108,9 +147,12 @@ app.get('/ordini', (req, res) => {
 })
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 app.post('/ordine', (req, res) => {
   ordine_model.createOrdine(req.body)
 =======
+=======
+>>>>>>> Stashed changes
 app.post('/ordini', (req, res) => {
   if (req.body.hasOwnProperty('get')) {
   ordini_model.getordiniUser(req.body)
@@ -131,6 +173,7 @@ app.post('/ordini', (req, res) => {
 }
 })
 
+<<<<<<< Updated upstream
 app.delete('/ordini/:id', (req, res) => {
   ordini_model.deleteordini(req.params.id)
 >>>>>>> Stashed changes
@@ -163,6 +206,8 @@ app.put("/ordine", (req, res) => {
       res.status(500).send(error);
     });
 });
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -214,7 +259,10 @@ app.post('/utenti', (req, res) => {
       });
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     if(req.body.hasOwnProperty('change')) {
       utenti_model.checkEmailChange(req.body)
         .then(response => {
@@ -233,6 +281,9 @@ app.post('/utenti', (req, res) => {
             res.status(500).send(error);
           });
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 );
@@ -305,7 +356,10 @@ app.get('/indirizzi', (req, res) => {
 })
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 app.post('/indirizzi', (req, res) => {
   if (req.body.hasOwnProperty('create')) {
     
@@ -377,6 +431,9 @@ app.post('/fatture', (req, res) => {
   }
 })
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 app.listen(port, () => {

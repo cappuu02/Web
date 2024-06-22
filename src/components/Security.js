@@ -1,6 +1,9 @@
 import style from '../profile.module.css'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 >>>>>>> Stashed changes
@@ -34,6 +37,14 @@ function Security(){
 
 
     const handleRead = async () => {
+<<<<<<< Updated upstream
+=======
+
+      if(!isAuthenticated){
+        window.location.href = '/Login';
+      }
+      
+>>>>>>> Stashed changes
         try {
             const response1 = await fetch('http://localhost:3001/utenti', {
               method: 'GET',
@@ -168,6 +179,7 @@ function Security(){
         
         <>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <div>
                 <div id={style.box_profile2} >
                     <h2 id={style.title_2}>Email Changer</h2>
@@ -177,6 +189,10 @@ function Security(){
 =======
         
                 <div id={style.box_profile2} >
+=======
+        
+                <div id={style.box_profile2} >
+>>>>>>> Stashed changes
                     <h2 id={style.title_2}>Email</h2>
                     <p style={{textAlign: 'center'}}>If you want to update your email address click the button below to start!</p>
                     <input id={style.input_profilo2} type="text" value={email} readonly/>                    
@@ -211,6 +227,9 @@ function Security(){
                         <input id={style.input_profilo4} type="text" value={scadenza} readonly/>
                         <input id={style.input_profilo4} type="password" value={sicurezza} readonly/>
                         <Link to = "/Profile_Security/Password_Check" style = {{justifyContent: 'center'}}><button id={style.button_psw_reset2} type='button' class="btn btn-danger">Update</button></Link>                    </div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 </div>
                 <div id={style.box_profile3} >

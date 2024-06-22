@@ -170,6 +170,7 @@ white;
 .video-container {
   position: relative;
   width: 100%;
+  height: 100%;
   padding-top: 56.25%; /* Imposta l'altezza del contenitore in base al rapporto 16:9 (9/16 * 100) */
   
 }
@@ -340,11 +341,20 @@ white;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+<<<<<<< Updated upstream
 #cerca{
   width: 350px;
   margin-right: 110px;
   margin-top: 15px;
   border: solid 3px rgb(207, 207, 207);
+=======
+#cerca {
+  width: 500px;
+  height: 60%;
+  margin-top: 25px;
+  margin-left: 130px;
+  border: solid 2px rgb(0, 0, 0);
+>>>>>>> Stashed changes
   border-radius: 20px;
   background: transparent;
   color: aliceblue;
@@ -352,17 +362,40 @@ white;
   font-size: 18px;
 }
 
+<<<<<<< Updated upstream
 #search_icon{
   margin-top: 15px;
   
 }
+=======
+@keyframes comparsa {
+  from{
+   transform:translatex(-20%);
+    opacity: 0;
+  }
+  to{
+   transform: translatex(0%);
+   opacity: 1;
+  }
+}
+
+
+
+>>>>>>> Stashed changes
 
 #cart_icon{
   margin-top: 15px;
 }
 
 #cart_icon{
+<<<<<<< Updated upstream
   margin-top: 15px;
+=======
+  margin-top: 0.8%;
+  margin-bottom: 1%;
+  margin-left: 100px;
+
+>>>>>>> Stashed changes
 }
 
 #profile_icon{
@@ -370,16 +403,251 @@ white;
 }
 
 
+<<<<<<< Updated upstream
 @media screen and (max-width: 700px){
   #container_card {
+=======
+
+
+
+.icon-ham {
+  overflow:hidden;
+}
+@keyframes comparsa2 {
+  from{
+   transform:translatex(-50px);
+    opacity: 0;
+  }
+  to{
+   transform: translatex(0px);
+   opacity: 1;
+  }
+}
+
+#conteiner_caru{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  width:fit-content;
+  height:fit-content;
+ 
+}
+#imgcaru{
+  box-shadow: 0px 1px 80px rgba(0, 0, 0, 0.642);
+  position: relative;
+  width: 100%;
+  height: 70%;
+  margin-top: 14%;
+  
+}
+
+
+
+
+
+/* ELEMENTI DI TERZA*/
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.benefit {
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.benefit img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.h1-terza {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+
+
+
+
+
+/*FOOOTER*/
+footer {
+  margin-top:0%;
+  background-color: #f9f9f9;
+  padding: 20px 0;
+  border-top: 2px solid #e3001b;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  width: 22%;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+
+.register-button:hover {
+  border-color: red;
+  color:red;
+}
+
+/*nav bar NON TOCCARE*/
+.header{
+  box-shadow: 0px 1px 80px rgba(0, 0, 0, 0.642);
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index:9999;
+  width: 100%;
+  height: 9%;
+  box-shadow: inset;
+ 
+}
+
+.header__content{white-space: nowrap;height:100%;width: 100%;display:inline-flex;}
+.header__logo h1{font-size:50px;}
+.header__logo{width: 250px; text-decoration: none;padding: 0px 15px;color: rgba(247, 245, 245, 0.471);font-family: 'Times New Roman', Times, serif;padding-right: 10%;margin-top:0.5%;}
+.header__menu{padding-bottom:0;margin-bottom:0;margin-right:30%;margin-top:0.5%; }
+.header__menu li{white-space: nowrap;display: inline-block ;justify-content: space-between;position: relative;}
+.header__menu li a{white-space: nowrap;color:white;opacity: 0.8;display: inline-block;padding: 16px;font-size: 22px;}
+.header__icons{float:right;display: flex;margin-top:1.1%;}
+.header__menu li a:hover{
+  border-bottom: 0.001px solid red;
+  color: rgb(255, 255, 255);
+}
+
+.container-fluid-ham{
+  display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* 0.5);
+    padding-left: calc(var(--bs-gutter-x)* 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/*RESPONSIVE*/
+/*----------*/
+
+@media screen and (max-width: 500px){
+  #card:hover {
+    background-color: white;
+    transition: 1s;
+   transform:translate(0%,0%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.446);
+    flex: 1;
+    margin: 0 1rem;
+    animation:  1s ease-in-out forwards;
+  }
+  #cerca {
+    width: 300px;
+    margin-left: 0;
+    margin-bottom: 5%;
+    
+  }
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    padding-top: 50%;
+    padding-left: 50%;
+    transform: none;
+    transition: none;
+  }
+
+  
+  #navbar_principale{
+    
+    position: fixed;
+    
+  }
+  #sfondoparte2{
+    margin-bottom: 0%;
+    position:relative;
+    top:0;
+    left:0;
+    background:white;
+    height: 2900px;
+  }
+  #container_card{
+>>>>>>> Stashed changes
     display: flex; /* Abilita Flexbox */
     flex-direction: column; /* Imposta la direzione dei figli in verticale */
   }
+<<<<<<< Updated upstream
   #card{
     font-size:medium;
     width: 80%;
     height: 80%;
   }
+=======
+
+
+>>>>>>> Stashed changes
   #immagine-li{
     width: 80%;
     height: 80%;
@@ -389,8 +657,162 @@ white;
     color: black;
     
 }
+<<<<<<< Updated upstream
+=======
+.video-container video {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: 1;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.5);
+}
+  #container_card {
+    display: flex; /* Abilita Flexbox */
+    flex-direction: column; /* Imposta la direzione dei figli in verticale */
+  }
+  
+
+  .card-container{
+    flex-direction: column;
+  }
+  #container_card {
+    display: flex; /* Abilita Flexbox */
+    flex-direction: column; /* Imposta la direzione dei figli in verticale */
+  }
+  #card{
+    font-size:medium;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    transition: none;
+  }
+ 
+  #immagine-li{
+    width: 100%;
+    height: 100%;
+  }
+  #Titolo_Home_Page{
+    
+    font-size: medium;
+    
+    
+>>>>>>> Stashed changes
 }
 
 
+<<<<<<< Updated upstream
 
 
+=======
+  .header__menu{
+    display: inline-block;
+    z-index: 999;
+    position:absolute;
+    top:50px;
+    background-color: black;
+    width:100%;
+    height: 0px;
+    translate: -100%;
+  }
+  
+  #cart_icon{
+   translate:100px;
+  }
+  .cart-R{
+    color:black;
+
+    
+  }
+  #profile_icon{
+    translate:-100px;
+  }
+  #search_icon{
+    translate: -100px;
+  }
+ 
+
+  .header__menu{
+    z-index: 999;
+    position:absolute;
+    top:50px;
+    
+    width:100%;
+    height: 0px;
+    translate: -100%;
+  }
+  .menu-open li {padding:3%;justify-content:space-between;border-bottom:1px solid #ff0000bc;list-style-type: none;font-size: 35px;}
+  .menu-open{ background-color: rgba(255, 255, 255, 0.863);
+    backdrop-filter: blur(20px); /* Effetto blur */
+    padding:5%;height: 200vh;position:absolute;width:100%;
+    top:63px;
+    animation: comparsa2;
+    animation-duration: 0.7s;  
+  }
+  .icon-ham{
+    height:50px;width: 50px;margin-left:80%;position:fixed;top:35%;
+  }
+  .icon-ham span{
+    height:1px;width:50px;background: rgb(0, 0, 0);position:relative;display: block;margin-bottom: 10px;
+  }
+
+  #paragrafo_terzo{
+    display: none;
+  }
+
+  .benefits{
+    display: table-column;
+    text-align: left;
+  }
+  .benefit{
+    display: table-row;
+  }
+  #spazio{
+    padding: 0px;
+  }
+  footer {
+    margin-top:1%;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    border-top: 2px solid #e3001b;
+  }
+  .footer-container{
+    justify-content: center;
+    display: table-row;
+    text-align: center;
+    position: relative;
+    left: 15%;
+  }
+
+  #titolo_footer{
+    text-align: center;
+  }
+  
+  #li_hide_footer{
+    display: none;
+  }
+  
+  #register_button_footer{
+    margin-left: 160%;
+    width: 200%;
+
+  }
+
+  #newsletter_button{
+    margin-left: 160%;
+    width: 200%;
+  }
+
+  .h1-terza{
+    margin-left: 47px;
+  }
+  
+}
+@media screen and (max-width: 900px){
+  .card-container{
+    padding-left:0;
+  }
+}
+>>>>>>> Stashed changes

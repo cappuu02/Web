@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Navbar_Profile(){
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     const deleteCookie = () => {
         document.cookie = 'isAuthenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
       };
@@ -14,6 +15,27 @@ function Navbar_Profile(){
 =======
     const handleLogout = async () => {
         document.cookie = `isAuthenticated=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+=======
+    const handleLogout = async () => {
+        document.cookie = `isAuthenticated=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+        const cookies = document.cookie.split(';');
+
+
+for (let i = 0; i < cookies.length; i++) {
+
+    const cookie = cookies[i].trim();
+
+    const [name, value] = cookie.split('=');
+
+
+    if (name.startsWith('cart_')) {
+
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+
+    }
+
+}
+>>>>>>> Stashed changes
         window.location.href = "/";
     }
     
@@ -42,7 +64,11 @@ function Navbar_Profile(){
                             <span id='Security' className={style.nav_item}>Security</span>
                         </a></li></Link>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                         <Link to="/"><li onClick={deleteCookie} id={style.li_profile}><a id={style.link_profile}>
+=======
+                        <li id={style.li_profile} onClick={handleLogout}><a id={style.link_profile}>
+>>>>>>> Stashed changes
 =======
                         <li id={style.li_profile} onClick={handleLogout}><a id={style.link_profile}>
 >>>>>>> Stashed changes

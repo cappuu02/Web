@@ -9,9 +9,15 @@ function Change_Email(){
   const cookie = document.cookie
     .split('; ')
     .find((row) => row.startsWith('Email='));
+<<<<<<< Updated upstream
     const email = cookie.split('=')[1];
     if (cookie) {
       const email = cookie.split('=')[1];
+=======
+    
+    if (cookie) {
+      var email = cookie.split('=')[1];
+>>>>>>> Stashed changes
       // Now you can use the email value
       console.log(email);
     } else {
@@ -23,7 +29,11 @@ function Change_Email(){
     .find((row) => row.startsWith('isAuthenticated='));
     const utente_email = cookie1.split(',')[1];
     if (cookie1) {
+<<<<<<< Updated upstream
       const isAuthenticated = cookie1.split('=')[1];
+=======
+      var isAuthenticated = cookie1.split('=')[1];
+>>>>>>> Stashed changes
       
 
     } else {
@@ -33,6 +43,12 @@ function Change_Email(){
 
 
   const handleNew = async () => {
+<<<<<<< Updated upstream
+=======
+    if(!isAuthenticated){
+      window.location.href = '/Login';
+    }
+>>>>>>> Stashed changes
     let emailupdate = 1;
 
     console.log(utente_email)
@@ -50,7 +66,11 @@ function Change_Email(){
         body: JSON.stringify({ utente_email, email, emailupdate }),
       });
 
+<<<<<<< Updated upstream
 
+=======
+      document.cookie = `Email=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+>>>>>>> Stashed changes
       window.location.href = "/Profile_Account";
 
     

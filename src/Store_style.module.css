@@ -1,0 +1,79 @@
+body{
+  background-color: rgba(0, 0, 0, 0.13);
+}
+.dropdown-custom {
+  z-index: 100;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0;
+  height: 61%;
+  margin-top: 0px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.201);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-custom.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.container {
+  display: grid;
+  margin-left: 16%;
+ padding-top:10%;
+ padding:10%;
+}
+.custom-text-red {
+    color: rgba(220, 17, 17, 0.785);
+}
+.grid {
+  display: grid;
+  gap: 10px; /*Gap griglia orizzontale*/
+  
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.col {
+  display: grid;
+
+}
+.btn-primary{
+  background-color: aliceblue;
+}
+.btn{
+  background-color: aliceblue;
+}
+
+#card_shop{
+  width: 10rem;
+}
+@media screen and (max-width:500px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+  .container {
+    right: 10%;
+    margin-left: 0%;
+  }
+}
+
+
+
+
+
+

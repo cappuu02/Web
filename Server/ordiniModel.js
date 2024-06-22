@@ -56,11 +56,19 @@ const getordiniUser = (body) => {
 
 const createordini = (body) => {
   return new Promise(function (resolve, reject) {
+<<<<<<< Updated upstream
     const { utente_email, create } = body;
   
     pool.query(
       'INSERT INTO ordini (utente_email, prodotto_id, quantita, costo_totale) VALUES ($1, NULL, NULL, NULL) RETURNING *',
       [utente_email],
+=======
+    const { id, utente_email,prodotto_id, quantita, costo_totale, create } = body;
+  
+    pool.query(
+      'INSERT INTO ordini (id, utente_email, prodotto_id, quantita, costo_totale) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+      [id, utente_email,prodotto_id, quantita, costo_totale],
+>>>>>>> Stashed changes
       (error, results) => {
         if (error) {
           reject(error);

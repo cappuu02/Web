@@ -5,7 +5,11 @@ const pool = new Pool({
   database: 'fotosito',
   password: 'postgres',
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   port: 5433,
+=======
+  port: 5432,
+>>>>>>> Stashed changes
 =======
   port: 5432,
 >>>>>>> Stashed changes
@@ -31,9 +35,12 @@ const getIndirizzi = async () => {
   }
 };
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 module.exports = {
     getIndirizzi,
 =======
+=======
+>>>>>>> Stashed changes
 
 const createIndirizzi = (body) => {
   return new Promise(function (resolve, reject) {
@@ -148,5 +155,8 @@ module.exports = {
     updateIndirizzi,
     updateTelefono,
     checkTelefono,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   };

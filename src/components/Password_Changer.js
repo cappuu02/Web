@@ -23,6 +23,13 @@ function Reset_Password(){
 
   const handleNew = async (e) => {
     e.preventDefault();
+<<<<<<< Updated upstream
+=======
+    
+    if(!isAuthenticated){
+      window.location.href = '/Login';
+    }
+>>>>>>> Stashed changes
 
     let pass = pass1Rec;
     let pass2 = pass2Rec;
@@ -109,7 +116,13 @@ if (!/^\d+$/.test(pass)) {
     
   }
   }
+<<<<<<< Updated upstream
 
+=======
+  const handleReturn = async () => {
+    window.location.href = '/Profile_Security';
+  }
+>>>>>>> Stashed changes
   
 
     return(
@@ -129,6 +142,10 @@ if (!/^\d+$/.test(pass)) {
             </form>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+        <button id='return_home_btn' onClick={handleReturn}>Return Profile</button>
+>>>>>>> Stashed changes
       </div>        
         </>
     )

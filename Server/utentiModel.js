@@ -5,7 +5,11 @@ const pool = new Pool({
   database: 'fotosito',
   password: 'postgres',
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   port: 5433,
+=======
+  port: 5432,
+>>>>>>> Stashed changes
 =======
   port: 5432,
 >>>>>>> Stashed changes
@@ -125,7 +129,10 @@ const checkEmail = (body) => {
 };
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 const checkEmailChange = (body) => {
   return new Promise(function (resolve, reject) {
     const { email, rec } = body;
@@ -168,6 +175,9 @@ const emailUpdate = (body) => {
   });
 };
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -250,6 +260,11 @@ module.exports = {
   checkUtenti,
   checkEmail,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  checkEmailChange,
+  emailUpdate,
+>>>>>>> Stashed changes
 =======
   checkEmailChange,
   emailUpdate,

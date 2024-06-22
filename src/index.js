@@ -23,7 +23,7 @@ import Profile_Orders from './Pages/Profile_Orders'
 import Store_Lens from './Pages/Store_Lens';
 import Store_Acessori from './Pages/Store_Acessori'
 import Store_Camera from './Pages/Store_Camera'
-import Cart from './components/Cart';
+import Cart from './components/Camera_Products/Cart';
 import { CartProvider } from './CartContext';
 import Password_Changer from './components/Password_Changer'
 import Email_Changer from './components/Email_Changer'
@@ -31,6 +31,10 @@ import Change_Email from './components/Change_Email';
 import Telephone_Changer from './components/Telephone_Changer';
 import Password_Check from './components/Password_Check';
 import Card_Changer from './components/Card_Changer';
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+import InvioOrdini from './Pages/InvioOrdini';
 >>>>>>> Stashed changes
 
 
@@ -108,6 +112,13 @@ const router = createBrowserRouter([
   {
     path: "/Profile_Security/Card_Changer",
     element: <Card_Changer />,
+  },
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+  {
+    path: "/InvioOrdini",
+    element: <InvioOrdini />,
   },
 >>>>>>> Stashed changes
 ]);

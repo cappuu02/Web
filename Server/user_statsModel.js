@@ -5,7 +5,11 @@ const pool = new Pool({
   database: 'fotosito',
   password: 'postgres',
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   port: 5433,
+=======
+  port: 5432,
+>>>>>>> Stashed changes
 =======
   port: 5432,
 >>>>>>> Stashed changes

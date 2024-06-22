@@ -31,9 +31,12 @@ const sendEmail = async (body) => {
   
 };
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 module.exports = {
     sendEmail
 =======
+=======
+>>>>>>> Stashed changes
 
 const sendEmail1 = async (body) => {
   const { email } = body;
@@ -105,5 +108,8 @@ module.exports = {
     sendEmail1,
     sendEmail2,
     sendEmail3,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   };

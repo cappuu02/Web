@@ -58,6 +58,13 @@ const cookie1 = document.cookie.split('; ')
           }
 
         const handleRead = async () => {
+<<<<<<< Updated upstream
+=======
+          if(!isAuthenticated){
+            window.location.href = '/Login';
+          }
+          
+>>>>>>> Stashed changes
             let get = 1;
             try {
                 const response = await fetch('http://localhost:3001/ordini', {
@@ -142,6 +149,7 @@ const cookie1 = document.cookie.split('; ')
               
                         <div class={style.contenuto} >
               
+<<<<<<< Updated upstream
                           <input id={style.input_profilo_order} class="form-control" type="text" value={id1} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto1} readOnly/>
@@ -149,6 +157,15 @@ const cookie1 = document.cookie.split('; ')
                           <input id={style.input_profilo_order} class="form-control" type="text" value={qta1} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={costo1} readOnly/>
+=======
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Order: ${id1}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto1} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Quantity: ${qta1}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Price: ${costo1}€`} readOnly/>
+>>>>>>> Stashed changes
               
                         </div>
               
@@ -164,6 +181,7 @@ const cookie1 = document.cookie.split('; ')
               
                         <div class={style.contenuto}>
               
+<<<<<<< Updated upstream
                           <input id={style.input_profilo_order} class="form-control" type="text" value={id2} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto2} readOnly/>
@@ -171,6 +189,15 @@ const cookie1 = document.cookie.split('; ')
                           <input id={style.input_profilo_order} class="form-control" type="text" value={qta2} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={costo2} readOnly/>
+=======
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Order: ${id2}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto2} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Quantity: ${qta2}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Price: ${costo2}€`} readOnly/>
+>>>>>>> Stashed changes
               
                         </div>
               
@@ -186,6 +213,7 @@ const cookie1 = document.cookie.split('; ')
               
                         <div class={style.contenuto}>
               
+<<<<<<< Updated upstream
                           <input id={style.input_profilo_order} class="form-control" type="text" value={id3} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto3} readOnly/>
@@ -193,6 +221,15 @@ const cookie1 = document.cookie.split('; ')
                           <input id={style.input_profilo_order} class="form-control" type="text" value={qta3} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={costo3} readOnly/>
+=======
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Order: ${id3}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto3} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Quantity: ${qta3}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Price: ${costo3}€`} readOnly/>
+>>>>>>> Stashed changes
               
                         </div>
               
@@ -208,6 +245,7 @@ const cookie1 = document.cookie.split('; ')
               
                         <div class={style.contenuto}>
               
+<<<<<<< Updated upstream
                           <input id={style.input_profilo_order} class="form-control" type="text" value={id4} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto4} readOnly/>
@@ -215,6 +253,15 @@ const cookie1 = document.cookie.split('; ')
                           <input id={style.input_profilo_order} class="form-control" type="text" value={qta4} readOnly/>
               
                           <input id={style.input_profilo_order} class="form-control" type="text" value={costo4} readOnly/>
+=======
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Order: ${id4}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={prodotto4} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Quantity: ${qta4}`} readOnly/>
+              
+                          <input id={style.input_profilo_order} class="form-control" type="text" value={`Price${costo4}€`} readOnly/>
+>>>>>>> Stashed changes
               
                         </div>
               

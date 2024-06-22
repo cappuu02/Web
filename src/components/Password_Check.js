@@ -23,6 +23,13 @@ function Password_Check(){
   const handleNew = async (e) => {
     e.preventDefault();
 
+<<<<<<< Updated upstream
+=======
+    if(!isAuthenticated){
+      window.location.href = '/Login';
+    }
+
+>>>>>>> Stashed changes
     let password = pass1Rec;
     let login = 1;
     let email = utente_email;
@@ -79,7 +86,13 @@ function Password_Check(){
     }
   
   }
+<<<<<<< Updated upstream
 
+=======
+  const handleReturn = async () => {
+    window.location.href = '/Profile_Security';
+  }
+>>>>>>> Stashed changes
   
 
     return(
@@ -98,6 +111,10 @@ function Password_Check(){
             </form>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+        <button id='return_home_btn' onClick={handleReturn}>Return Profile</button>
+>>>>>>> Stashed changes
       </div>        
         </>
     )

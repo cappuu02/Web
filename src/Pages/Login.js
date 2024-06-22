@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 function Login() {
 =======
+=======
+>>>>>>> Stashed changes
 import { Link } from 'react-router-dom';
 
 function Login() {
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   const [accessi, setAccessCount] = useState(0);
   const [data_ultimo_accesso, setLastAccess] = useState(new Date());
@@ -16,6 +22,12 @@ function Login() {
   const [emailLogin, setEmailLogin] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  const [email1Error, setEmail1Error] = useState("");
+
+  const [logError, setLogError] = useState("");
+>>>>>>> Stashed changes
 =======
   const [email1Error, setEmail1Error] = useState("");
 
@@ -27,6 +39,11 @@ function Login() {
   const [emailError, setEmailError] = useState("");
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  const [regError, setRegError] = useState("");
+
+>>>>>>> Stashed changes
 =======
   const [regError, setRegError] = useState("");
 
@@ -37,11 +54,14 @@ function Login() {
   }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateEmail(emailReg)) {
 =======
+=======
+>>>>>>> Stashed changes
 
 
   const handleSubmit = async (e) => {
@@ -52,6 +72,9 @@ function Login() {
     let reg = 1;
 
     if (!validateEmail(emailReg) & emailReg != "" &  passwordReg != "") {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       setEmailError("Please enter a valid email address.");
       
@@ -61,6 +84,7 @@ function Login() {
       return;
     }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     let email = emailReg;
     let password = passwordReg;
@@ -80,6 +104,8 @@ function Login() {
         label.remove();
       }, 700);
 =======
+=======
+>>>>>>> Stashed changes
     
 
     if (email === "" || password === "") {
@@ -90,6 +116,9 @@ function Login() {
       
 }, 700);
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       return;
     }
@@ -107,6 +136,7 @@ function Login() {
 
       if (esito === 'Registration successful') {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'Registration successful';
         label.style.color = 'green';
@@ -119,10 +149,15 @@ function Login() {
         setTimeout(() => {
           label.remove();
 =======
+=======
+>>>>>>> Stashed changes
         setRegError("Registration Successful")
 
         setTimeout(() => {
           setRegError("")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }, 700);
 
@@ -149,6 +184,7 @@ function Login() {
       }
       if (esito === 'This email is already used') {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'This email is already used';
         label.style.color = 'red';
@@ -163,6 +199,8 @@ function Login() {
         }, 700);
         return;
 =======
+=======
+>>>>>>> Stashed changes
         setEmailError("This email is already in use.");
       
 
@@ -171,6 +209,9 @@ function Login() {
       }, 700);
       return;
         
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       }
       else {
@@ -191,6 +232,7 @@ function Login() {
 
     if (email === "" || password === "") {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       const label = document.createElement('label');
       label.textContent = 'Please fill all the fields';
       label.style.color = 'red';
@@ -204,11 +246,16 @@ function Login() {
         label.remove();
       }, 700);
 =======
+=======
+>>>>>>> Stashed changes
       setEmail1Error("Please fill all fields")
 
         setTimeout(() => {
           setEmail1Error("")
         }, 700);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       return;
     }
@@ -225,6 +272,7 @@ function Login() {
       const esito = await response.text();
 
       if (esito === 'Login successful') {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'Login successful';
@@ -244,6 +292,8 @@ function Login() {
         }, 700);
 
 =======
+=======
+>>>>>>> Stashed changes
         setLogError("Login Successful")
 
         setTimeout(() => {
@@ -254,6 +304,9 @@ function Login() {
 
       
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         setAccessCount(accessi);
         setLastAccess(new Date());
@@ -279,6 +332,7 @@ function Login() {
       }
       if (esito === 'This email is not registered') {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         const label = document.createElement('label');
         label.textContent = 'Invalid Email or Password';
         label.style.color = 'red';
@@ -291,10 +345,15 @@ function Login() {
         setTimeout(() => {
           label.remove();
 =======
+=======
+>>>>>>> Stashed changes
         setEmail1Error("Email taken/Invalid Password")
 
         setTimeout(() => {
           setEmail1Error("")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }, 700);
         return;
@@ -308,10 +367,18 @@ function Login() {
     }
   }
 
+<<<<<<< Updated upstream
   useEffect(() => {
 <<<<<<< Updated upstream
     const container = document.getElementById('container');
 =======
+=======
+  const handleReturn = async () => {
+    window.location.href = '/';
+  }
+
+  useEffect(() => {
+>>>>>>> Stashed changes
 
     
     const container = document.getElementById('container_login');
@@ -373,9 +440,13 @@ function Login() {
               <h1>Create Account</h1>
               <span>Use your email for registration</span>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
               <input type='email' placeholder='Email' onChange={(e) => { setEmailReg(e.target.value) }} />
               {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+=======
+              <input type='email' placeholder='Email' onChange={(e) => { setEmailReg(e.target.value) }} />
+>>>>>>> Stashed changes
 =======
               <input type='email' placeholder='Email' onChange={(e) => { setEmailReg(e.target.value) }} />
 >>>>>>> Stashed changes
@@ -394,9 +465,12 @@ function Login() {
               <input type='email' placeholder='Email' onChange={(e) => { setEmailLogin(e.target.value) }} />
               <input type='password' placeholder='Password' onChange={(e) => { setPasswordLogin(e.target.value) }} />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               <a href='#'>Forgot your password?</a>
               <button >Sign in</button>
 =======
+=======
+>>>>>>> Stashed changes
               <Link to="/Login/MissPassword" id='forgot'>Forgot your password?</Link>
               <button>Sign in</button>
 >>>>>>> Stashed changes
@@ -423,6 +497,10 @@ function Login() {
             </div>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+        <button id='return_home_btn' onClick={handleReturn}>Return Home</button>
+>>>>>>> Stashed changes
       </div>
     </>
   );

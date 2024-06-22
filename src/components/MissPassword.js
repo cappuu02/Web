@@ -103,6 +103,13 @@ function MissPassword(){
     }
   }
 
+<<<<<<< Updated upstream
+=======
+  const handleReturn = async () => {
+    window.location.href = '/';
+  }
+
+>>>>>>> Stashed changes
     return(
         <>
       <div id='body_sign_inup' >
@@ -120,6 +127,10 @@ function MissPassword(){
             </form>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+        <button id='return_home_btn' onClick={handleReturn}>Return Home</button>
+>>>>>>> Stashed changes
       </div>        
         </>
     )

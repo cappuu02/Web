@@ -27,6 +27,26 @@ const getProdotti = async () => {
   }
 };
 
+const getSpecProdotti = (body) => {
+  return new Promise(function (resolve, reject) {
+    const { id, get } = body;
+    pool.query(
+      "SELECT * FROM prodotti WHERE id = $1",
+      [id],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results && results.rows) {
+          resolve(results.rows);
+        } else {
+          reject(new Error("No results found"));
+        }
+      }
+    );
+  });
+};
+
 
 const createProdotti = (body) => {
   return new Promise(function (resolve, reject) {
@@ -86,9 +106,31 @@ const updateProdotti = (id, body) => {
     );
   });
 };
+
+const updateQtaProdotti = (body) => {
+  return new Promise(function (resolve, reject) {
+    const { id, quantity, updateQta } = body;
+    pool.query(
+      "UPDATE prodotti SET quantita = quantita - $2 WHERE id = $1 RETURNING *",
+      [id, quantity],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results && results.rows) {
+          resolve(`product updated: ${JSON.stringify(results.rows[0])}`);
+        } else {
+          reject(new Error("No results found"));
+        }
+      }
+    );
+  });
+};
 module.exports = {
   getProdotti,
+  getSpecProdotti,
   createProdotti,
   deleteProdotti,
-  updateProdotti
+  updateProdotti,
+  updateQtaProdotti
 };

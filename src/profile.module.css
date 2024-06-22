@@ -1,0 +1,612 @@
+
+#body_profilo_account{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  height: 100%;
+}
+
+#body_profilo_security{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  height: 100%;
+}
+
+#body_profilo_orders{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  height: 100%;
+}
+
+
+
+
+/*SIDE NAVBAR*/
+/*-----------*/
+
+
+
+*{
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#navbar_profile{
+  position: fixed;
+  padding: 0;
+  top: 10%;
+  bottom: 0;
+  height: 120vh; /*altezza della navbar*/
+  left: 0;
+  background: #ffffff;
+  width: 15%;
+  overflow: hidden; /*serve per nascondere ci; che uscirebbe dalla navbar*/
+  transition: width 0.3s ease;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+#elenco_ul{
+  padding-left: 2%;
+}
+
+.logoProfile{
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+#logo_shop_nav{
+  font-size: 40px;
+}
+
+.title_store_logo{
+  margin-left: 14%;
+  font-size: 20px;
+  margin-top: 7%;
+
+}
+
+.logoProfile .imgProfile{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+.imgProfile:hover{
+  width: 60px;
+  height: 60px;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  
+}
+
+
+
+#link_profile{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 18px;
+  display: table;
+  width: 300px;
+  padding-bottom: 30px;
+  padding-left:20px;
+}
+
+.icon{
+  position: relative;
+  margin-right:10%;
+  top: 14px;
+  font-size: 30px; /*aumento dimensione icone*/
+  text-align: center;
+}
+
+
+
+.nav_item{
+  position: relative;
+  overflow: hidden;
+  top: 12px;
+  margin-left: 15px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  
+}
+
+.icon_list{
+  display: none;
+}
+
+#link_profile:hover{
+  background: #eee;
+  color: red;
+  border-radius: 20px;
+}
+
+/*
+#navbar_profile:hover{
+  width: 280px;
+  transition: all 0.5s ease-in-out;
+}
+*/
+
+#icon_list{
+  display: none;
+}
+
+
+
+/*--------------------------------------------------------------*/
+/*                            Account                          */
+/*------------------------------------------------------------*/
+#box_profile{
+  z-index:1;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap:25px;
+  grid-template-columns: auto;
+  border: solid 2px rgb(235, 235, 235);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  width: 40%;
+  text-align: left;
+  position: absolute;
+  margin-top: 6%;
+  left: 35%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+
+
+.grid_item{
+  display: flex;
+  align-items: center;
+}
+
+#input_profilo{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-left: 12%;
+  width: 40%;
+}
+
+#div_titolo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titolo_account{
+  margin-right: 5%;
+}
+
+#icona_modifier{
+  font-size: xx-large;
+}
+
+#icona_modifier:hover{
+  color: red;
+  box-shadow: #000000;
+}
+
+label{
+  width: 200px;
+  font-size: 23px;
+  margin-left: 10%;
+}
+
+#button_modifica{
+  width: 30%;
+  margin-left: 38%;
+  margin-top: 5%;
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+  
+  .title_store_logo{
+display: none;
+  
+  }
+  #navbar_profile{
+    display: none
+  }
+
+  #icon_list{
+    display:none;
+  }
+  
+  #box_profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Aggiunge spazio tra gli elementi */
+    width: 80%;
+    margin-top: 30%;
+    margin-left: -25%;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+}
+
+
+#input_profilo{
+  width: 140%;
+  margin: 0;
+}
+
+.grid_item{
+  display: flex;
+  flex-direction: column;
+  
+}
+  
+label{
+  width: 200px;
+  font-size: 23.6px;
+  margin-left: -40%;
+  display: inline;
+}
+
+#button_modifica{
+  margin-left: 7%;
+  width: 50%;
+}
+}
+
+
+/*--------------------------------------------------------------*/
+/*                            SECURITY                         */
+/*------------------------------------------------------------*/
+
+#body_profilo{
+  position: relative;
+
+}
+
+
+#container_security{
+  display: flex;
+
+}
+
+#box_profile2{
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  grid-template-columns: auto;
+  padding: 20px;
+  border: solid 2px rgb(235, 235, 235);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+  margin-top: 8%;
+  left: 35%
+}
+
+
+#numberphone_field{
+  border: solid 2px #eee;
+  background: #eee;
+  margin-top: 1%;
+  margin-left: 1%;
+  text-align: center;
+  width: 40%;
+  padding: 0.3%;
+}
+
+
+#numberphone_field{
+  margin-left: 5%;
+}
+
+
+
+#pass_reset_field{
+  border: solid 2px #eee;
+  background: #eee;
+  margin-top: 1%;
+  margin-left: 5%;
+  text-align: center;
+  width: 40%;
+  padding: 0.3%;
+}
+
+
+#input_profilo2{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+}
+
+#input_profilo3{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 40%;
+  margin-left: 5%;
+}
+
+#input_profilo4{
+  border: solid 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 40%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}
+
+#button_email_reset2{
+  width: 70%;
+  margin-left: 15%;
+}
+
+#button_psw_reset2{
+  width: 40%;
+  margin-left: 4%;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    
+  #box_profile2{
+    margin-top: 20%;
+    width: 90%;
+    margin-left: -29%;
+  }
+  #button_psw_reset2{
+    width: 90%;
+    margin-left: 4%;
+  }
+  
+  #input_profilo2{
+    border: solid 2px rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+  }
+  #input_profilo3{
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  #input_profilo4{
+
+    width: 93%;
+    display: block;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  #button_email_reset2{
+    width: 90%;
+    margin-left: 6%;
+  }
+}
+
+
+
+/*--------------------------------------------------------------*/
+/*                            ORDERS                           */
+/*------------------------------------------------------------*/
+#box_profile3{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+
+  grid-gap: 20px;
+  
+  padding: 20px;
+  width: 60%;
+  margin-top: 10%;
+  left: 26%;
+
+  border: solid 2px rgb(235, 235, 235);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+
+.dropbtn {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;/*faccio comparire la manina*/
+}
+
+.contenuto {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  white-space: nowrap;
+  padding: 16px; 
+  justify-content: center;/*Allineo scritte dentro i box bianchi quando hover sul button*/
+  font-size: 18px;
+}
+
+.dropdown:hover .contenuto {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+}
+
+.contenuto p {
+  margin: 0 10px;
+}
+
+.dropbtn:hover {
+  background-color: #3e8e41;
+  width: 100%; /* add this line */
+  font-size: 25px;
+}
+
+#input_profilo_order{
+  width: 20%;
+  margin: 1%;
+}
+
+
+@media screen and (max-width: 500px) {
+  #box_profile3{
+    margin-top: 20%;
+    width: 90%;
+    margin-left: -18%;
+  }
+  
+  .dropbtn {
+    width: 100%;
+  }
+  
+  .contenuto {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column; /* add this line */
+  }
+
+  #input_profilo_order{
+    width: 100%;
+    margin: 1%;
+  }
+
+}
+
+
+/*--------------------------------------------------------------*/
+/*                            Store                            */
+/*------------------------------------------------------------*/
+
+.navbar_Store{
+  position: fixed;
+  padding: 0;
+  top: 10%;
+  bottom: 0;
+  height: 100%; /*altezza della navbar*/
+  left: 0;
+  background: #ffffffcd;
+  width: 15%;
+  overflow: hidden; /*serve per nascondere ci; che uscirebbe dalla navbar*/
+  transition: width 0.3s ease;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+#elenco_ul_Store{
+  padding-left: 2%;
+}
+
+.logoProfile_Store{
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+#logo_shop_nav{
+  font-size: 40px;
+}
+
+.title_store_logo{
+  margin-left: 10px;
+  font-size: 20px;
+  margin-top: 7%;
+}
+
+
+#link_profile_Store{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 18px;
+  display: table;
+  width: 300px;
+  padding-bottom: 30px;
+  padding-left:10px;
+}
+
+.icon_Store{
+  position: relative;
+  margin-right:10%;
+  top: 14px;
+  font-size: 30px; /*aumento dimensione icone*/
+  text-align: center;
+}
+
+
+.nav_item_Store{
+  position: relative;
+  overflow: hidden;
+  top: 12px;
+  margin-left: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  
+}
+.icon_list_Store{
+  display: none;
+}
+#link_profile:hover{
+  background: #eee;
+  color: red;
+  border-radius: 20px;
+}
+
+
+@media  screen and(max-width:500px) {
+  .navbar_Store{
+    width: 60%; /* Smaller width */
+    height: 60%; /* Smaller height */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20%; /* Adjust top position */
+  }
+  
+  #elenco_ul_Store{
+    padding-left: 2%;
+  }
+  
+  .logoProfile_Store{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
+  #link_profile_Store{
+   display: none;
+  }
+  .nav_item_Store{
+    font-size: 0px;
+  }
+}
