@@ -1,11 +1,32 @@
 import { useState, useEffect } from 'react';
-import './Cart.css';
-import { useCart } from '../CartContext';
-
+import '../Cart.css';
+import { useCart } from '../../CartContext';
+import Navbar from '../navbar'
+import NavS from '../Navbar_Store'
 const Cart = () => {
 
-  const { cartItems, addToCart } = useCart();
+  const cookie1 = document.cookie.split('; ').find((row) => row.startsWith('cart_'));
+    
+    if (cookie1) {
+      var hasCartCookie = cookie1!== undefined;
+   
+      
+    }
+  
+  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity, addToCart } = useCart();
+  const [insert, setInsert] = useState({
 
+    id: '',
+
+    qta: 0,
+  
+    name: '',
+  
+    price: '',
+  
+    image: '',
+  
+  });
   const getCookie = (name) => {
 
     const value = `; ${document.cookie}`;
@@ -15,6 +36,16 @@ const Cart = () => {
     if (parts.length === 2) return JSON.parse(parts.pop().split(';').shift());
   
   };
+
+  const handleOrdina = async (e) => {
+    e.preventDefault();
+    if(hasCartCookie){
+      window.location.href = "/InvioOrdini";
+    }
+    else{
+      alert("Non hai articoli nel carrello")
+    }
+  }
 
   const handleRead = async () => {
 
@@ -72,9 +103,13 @@ const Cart = () => {
   return (
     <div>
        
-    
-   
-    
+        <Navbar />
+        <NavS />
+        <div className="cart-container">
+      <div className="cart">
+        {hasCartCookie ?(
+          <>
+        <h1>Shopping Cart</h1>
         <ul className="cart-list">
           {cartItems.map(item => (
             <li key={item.id} className="cart-item">
@@ -83,17 +118,30 @@ const Cart = () => {
                 <span>{item.name}</span>
                 <span>${item.price}</span>
                 <div className="cart-item-quantity">
-    
+                  <button onClick={() => decreaseQuantity(item.id)} className="quantity-button">-</button>
                   <input type="text" readOnly value={item.qta} className="quantity-input" />
-                 
+                  <button onClick={() => increaseQuantity(item.id)} className="quantity-button">+</button>
                 </div>
               </div>
-           
+              <button 
+                className="btn btn-remove"
+                onClick={() => removeFromCart(item.id)}
+              >
+                Remove
+              </button>
             </li>
           ))}
-        </ul>   
+        </ul>
+        <button className="btn btn-order" onClick={handleOrdina}>
+          Ordina
+        </button>
+        </>
+        ):(
+          <h1>No Items in Cart</h1>
+        )}
+      </div>
     </div>
-   
+    </div>
   );
 };
 

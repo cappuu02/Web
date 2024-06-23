@@ -331,7 +331,7 @@ label{
   padding: 5px;
   text-align: center;
   width: 70%;
-  margin-left: 15%;
+  margin-left: 17%;
 }
 
 #input_profilo3{
@@ -356,13 +356,23 @@ label{
 }
 
 #button_email_reset2{
-  width: 70%;
+  width: 50%;
   margin-left: 15%;
+  padding: 0;
+  margin-left: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
 }
 
 #button_psw_reset2{
-  width: 40%;
+
+  width: 30%;
+  padding: 0;
   margin-left: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
 }
 
 

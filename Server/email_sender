@@ -1,0 +1,128 @@
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+    pass: 'asff qosu izdr immj ' // Password dell'indirizzo email del mittente
+  }
+});
+
+const sendEmail = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Password Recovery MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to recover your password: http://localhost:3000/Login/Reset_Password' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+    
+  }
+
+  
+};
+
+
+const sendEmail1 = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Email Change MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to change your email: http://localhost:3000/Profile_Security/Change_Email' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+
+const sendEmail2 = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Password Change MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to change your password: http://localhost:3000/Profile_Security/Password_Changer' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+
+const sendEmail3 = async (body) => {
+  const { email } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: email, // Indirizzo email del destinatario
+      subject: "Phone Number Change MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: 'Hello dearest client, by clicking this link you will be able to change your phone number: http://localhost:3000/Profile_Security/Telephone_Changer' // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+const sendEmail4 = async (body) => {
+  const { utente_email, id, prodotto_id1, quantita1, costo_totale1, order } = body;
+
+  try {
+    const mailOptions = {
+      from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
+      to: utente_email, // Indirizzo email del destinatario
+      subject: "Confirmed Order MiReflex Shop", // Oggetto della email
+      text: "", // Testo della email
+      html: `Hello dearest client, your order: ${id} has been confirmed. Products: ${prodotto_id1}, Quantity: ${quantita1}, Price: ${price1}€` // Testo HTML della email
+    };
+    await transporter.sendMail(mailOptions);
+    
+  } catch (error) {
+    console.error(error);
+  
+  }
+
+
+};
+
+module.exports = {
+    sendEmail,
+    sendEmail1,
+    sendEmail2,
+    sendEmail3,
+    sendEmail4,
+
+  };

@@ -2,14 +2,34 @@ import React, { useState } from 'react';
 import'../NavbarR.css';
 import settingimage from '../Images/setting.png'
 import { Link } from 'react-router-dom';
-
-
 function SideNavbar({ showToggleButton }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
     const handleToggleClick = () => {
       setIsNavbarOpen(!isNavbarOpen);
     };
+
+    const handleLogout = async () => {
+      document.cookie = `isAuthenticated=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+      const cookies = document.cookie.split(';');
+
+
+for (let i = 0; i < cookies.length; i++) {
+
+  const cookie = cookies[i].trim();
+
+  const [name, value] = cookie.split('=');
+
+
+  if (name.startsWith('cart_')) {
+
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+
+  }
+
+}
+      window.location.href = "/";
+  }
   
     return (
       <div className={`side-navbar-container ${isNavbarOpen ? 'open' : ''}`}>
@@ -41,7 +61,7 @@ function SideNavbar({ showToggleButton }) {
                             <i id='icone_sidebar_resp' className={`bi bi-shield-check ='icon'}`}></i>
                             <span id='Security' className='nav_item'>Security</span>
                         </a></li></Link>
-                        <li id='li_profile'><a id='link_profile'>
+                        <li id='li_profile' onClick={handleLogout}><a id='link_profile'>
                             <i id='icone_sidebar_resp' className={`bi bi-box-arrow-left ='icon'}`}></i>
                             <span className='nav_item'>Logout</span>
                         </a></li>
