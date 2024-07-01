@@ -1,0 +1,12 @@
+CREATE TABLE fatture (
+  utente_email varchar(255) PRIMARY KEY,
+  metodo_pagamento VARCHAR(255),
+  carta_credito VARCHAR(255),
+  data_scadenza DATE,
+  cod_sicurezza int,
+  CONSTRAINT fk_utente
+    FOREIGN KEY (utente_email)
+    REFERENCES utenti(email)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);

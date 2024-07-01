@@ -93,18 +93,24 @@ function Security(){
           
           const index = userDataObj3.findIndex(userDataObj3 => userDataObj3.utente_email === utente_email);
 
+          if(userDataObj3[index].metodo_pagamento != null){
           setMetodo(userDataObj3[index].metodo_pagamento);
+          }
+          if(userDataObj3[index].carta_credito != null){
           setCarta(userDataObj3[index].carta_credito);
+          }
           if(userDataObj3[index].data_scadenza != null){
             setScadenza(userDataObj3[index].data_scadenza.slice(0, 10));
           }
-          
+          if(userDataObj3[index].cod_sicurezza != null){
           setSicurezza(userDataObj3[index].cod_sicurezza);
+          }
 
-          
-          const lastChar = userDataObj3[index].carta_credito.substring(userDataObj3[index].carta_credito.length - 4);
           if(userDataObj3[index].carta_credito != null){
-          setCensurato(`************${lastChar}`);
+            const lastChar = userDataObj3[index].carta_credito.substring(userDataObj3[index].carta_credito.length - 4);
+            if(userDataObj3[index].carta_credito != null){
+            setCensurato(`************${lastChar}`);
+            }
           }
           return
 
@@ -117,6 +123,10 @@ function Security(){
       const handleClick = async () => {
         let pass = 1;
         let email = utente_email;
+
+        
+        alert("An email to change your password will be sent to your address after clicking Ok")
+        
         try {
           const response = await fetch('http://localhost:3001/send-email', {
             method: 'POST',
@@ -126,21 +136,25 @@ function Security(){
             body: JSON.stringify({ email, pass }),
           });
 
+          
+
       }catch (error) {
       console.error(error);
       alert('An error occurred');
     }
   }
 
-  const handleCookie = async () => {
-    document.cookie = `Telephone=${telephone}; max-age=${60 * 60 * 24 * 7}; path=/`;
-  }
+  
+  
 
   const handlePhone = async (e) => {
     e.preventDefault();
     
     let phone = 1;
-      try {
+    alert("An email to change your phone number will be sent to your address after clicking Ok")
+    document.cookie = `Telephone=${telephone}; max-age=${60 * 60 * 24 * 7}; path=/`;
+  
+    try {
         const response = await fetch('http://localhost:3001/send-email', {
           method: 'POST',
           headers: {
@@ -149,7 +163,7 @@ function Security(){
           body: JSON.stringify({ email, phone }),
         });
       
-
+        
       
       return;
 
@@ -195,7 +209,7 @@ function Security(){
                     <h2 id={style.title_2}>Phone Number</h2>
                     <p style={{textAlign: 'center'}}>If you want to add/update your account's telephone number click the button</p>
                     <div>
-                        <input id={style.input_profilo3} type="text" value={telephone} readonly/>
+                        <input id={style.input_profilo3} type="text" value={telephone || ''} readonly/>
                         <button onClick={handlePhone} id={style.button_psw_reset2} type='button' class="btn btn-danger">Update</button>
                     </div>
 
@@ -204,10 +218,10 @@ function Security(){
                     <h2 id={style.title_2}>Card Info</h2>
                     <p style={{textAlign: 'center'}}>If you want to add/update your account's card info click the button</p>
                     <div>
-                        <input id={style.input_profilo4} type="text" value={metodo} readonly/>
-                        <input id={style.input_profilo4} type="text" value={censurato} readonly/>
-                        <input id={style.input_profilo4} type="text" value={scadenza} readonly/>
-                        <input id={style.input_profilo4} type="password" value={sicurezza} readonly/>
+                        <input id={style.input_profilo4} type="text" value={metodo || ''} readonly/>
+                        <input id={style.input_profilo4} type="text" value={censurato || ''} readonly/>
+                        <input id={style.input_profilo4} type="text" value={scadenza || ''} readonly/>
+                        <input id={style.input_profilo4} type="password" value={sicurezza || ''} readonly/>
                         <Link to = "/Profile_Security/Password_Check" style = {{justifyContent: 'center'}}><button id={style.button_psw_reset2} type='button' class="btn btn-danger">Update</button></Link>                    </div>
                 </div>
                 

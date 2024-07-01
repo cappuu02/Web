@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import image1 from '../../Images/Camera/X100VI.webp';
 import styles from '../../Store_style.module.css';
-
+import Popup from '../Popup'; // Assicurati di avere il file Popup.js
 
 const getCookie = (name) => {
 
@@ -114,44 +114,26 @@ function X100V(){
 
   }
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <div id='card_shop' className={`container m-4 ${styles.cardContainer}`}>
       <div className="card border-0 rounded-0 shadow">
-        <img src={image1} className="card-img-top rounded-0" alt="XT50 Camera" />
         <div className="card-body mt-3">
           <div className="row">
             <div className="col-10">
-              <h4 className="card-title">{modello}</h4>
-              <p className="pl-1">{tipo}</p>
-              <p className="card-title">{anno}</p>
-            </div>
-            <div className="col-2 text-end">
-              <i className="bi bi-card-text fs-1 float-end" onClick={handleDescToggle} style={{ cursor: 'pointer' }}></i>
-              <div className="col-10 anno">
-             
-            </div>
+              <button id={styles.btn_boss_addnew} onClick={togglePopup}>
+                <i id={styles.PIU} className="bi bi-plus-lg"></i>
+              </button>
             </div>
           </div>
-          
-          </div>
-          <div className="row align-items-center text-center g-0">
-            <div className="col-4">
-              <h5>{`${prezzo}€`}</h5>
-            </div>
-            <div className="col-8">
-              <button className={`btn btn-dark w-100 p-3 rounded-0 ${styles.customTextRed}`} onClick={handleClick} >ADD TO CART</button>
-            </div>
-          </div>
-          <div className="row">
-            
-            <div className='col-12 text-center'>
-            <div className={`${styles['dropdown-custom']} ${showDesc ? styles.show : ''}`}>
-            <p>{descrizione}</p>
-          </div>
-            </div>
-          </div>
-        
+        </div>
       </div>
+      {isPopupOpen && <Popup closePopup={togglePopup} />}
     </div>
   );
 }

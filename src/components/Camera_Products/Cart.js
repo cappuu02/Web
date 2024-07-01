@@ -9,10 +9,8 @@ const Cart = () => {
     
     if (cookie1) {
       var hasCartCookie = cookie1!== undefined;
-   
-      
     }
-  
+    
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity, addToCart } = useCart();
   const [insert, setInsert] = useState({
 
@@ -27,15 +25,7 @@ const Cart = () => {
     image: '',
   
   });
-  const getCookie = (name) => {
-
-    const value = `; ${document.cookie}`;
   
-    const parts = value.split(`; ${name}=`);
-  
-    if (parts.length === 2) return JSON.parse(parts.pop().split(';').shift());
-  
-  };
 
   const handleOrdina = async (e) => {
     e.preventDefault();
@@ -50,8 +40,7 @@ const Cart = () => {
   const handleRead = async () => {
 
     const cookies = document.cookie.split(';');
-  
-    const cartCookies = {};
+
 
   
     for (let i = 0; i < cookies.length; i++) {
@@ -109,7 +98,7 @@ const Cart = () => {
       <div className="cart">
         {hasCartCookie ?(
           <>
-        <h1>Shopping Cart</h1>
+        <h1> </h1>
         <ul className="cart-list">
           {cartItems.map(item => (
             <li key={item.id} className="cart-item">

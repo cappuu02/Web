@@ -20,12 +20,12 @@ function Seconda() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src={immagine2} text="Third slide" id="imgcaru"/>
+        <img src={immagine} text="Third slide" id="imgcaru"/>
         <Carousel.Caption>
-          <h3>uno due tre e stella</h3>
-          <p>
-            pedro pedro pedro pedro pè fidati di me
-          </p>
+          
+          
+          <h4 style={{color: 'rgb(255,255,255, 0.6)'}}>“Great photography is about depth of feeling, not depth of field.”</h4>
+          
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

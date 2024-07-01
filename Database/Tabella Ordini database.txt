@@ -1,0 +1,13 @@
+CREATE TABLE ordini (
+id varchar(255) primary key,
+utente_email varchar(255),
+prodotto_id varchar(255),
+quantita INT CHECK (quantita > 0),
+costo_totale INT CHECK (quantita > 0),
+CONSTRAINT fk_utente
+    FOREIGN KEY (utente_email)
+    REFERENCES utenti(email)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+

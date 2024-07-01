@@ -1,0 +1,51 @@
+CREATE TABLE prodotti (
+id varchar(255) primary key,
+modello varchar(255),
+prezzo INT CHECK (quantita > 0),
+descrizione text,
+anno int,
+quantita INT CHECK (quantita > 0), 
+tipo varchar(255)
+);
+
+INSERT INTO prodotti (id, modello, prezzo,descrizione,anno,quantita,tipo) VALUES
+('C1','X100V',1630,'High-performance compact camera with advanced features and classic design, suitable for street and travel photography. Features a 26.1MP APS-C X-Trans CMOS 4 sensor, high-speed image processing, and 4K video recording.',2020,540,'Corpo'),
+('C2','X100VI',1850,'Advanced compact camera with improved performance and new technology. It offers enhanced autofocus, a 26.1MP APS-C sensor, and versatile shooting options, making it ideal for both enthusiasts and professionals.',2024,2324,'Corpo'),
+('X1','XT50',1450,'Compact mirrorless camera with a 26.1MP APS-C X-Trans CMOS 4 sensor. It features 4K video recording, advanced autofocus, a vari-angle touchscreen, and a vintage design. Perfect for photographers and videographers seeking high-quality, portable performance.',2024,3554,'Corpo'),
+('X2','XT5',1700,'Mirrorless APS-C camera with high-speed processing, a 26.1MP sensor, and versatile shooting capabilities. Includes 4K video, advanced autofocus, and a robust build. Suitable for various photography styles and professional use.',2022,3404,'Corpo'),
+('X3','XH2',1930,'High-resolution mirrorless APS-C camera with a 40MP sensor and professional features. Offers 8K video recording, advanced autofocus, and a durable build. Ideal for professional photographers and videographers.',2022,4532,'Corpo'),
+('X4','XH2s',1259,'Fast mirrorless APS-C camera with advanced autofocus and video capabilities. Features a 26.1MP sensor, 4K video, high-speed burst shooting, and a rugged design. Suitable for sports, wildlife, and action photography.',2022,4325,'Corpo'),
+('X5','XS20',1440,'Versatile mirrorless APS-C camera with excellent image quality and portability. Features a 26.1MP sensor, 4K video, advanced autofocus, and user-friendly controls. Ideal for travel, everyday photography, and vlogging.',2023,3762,'Corpo'),
+('X6','XS10',945,'Compact mirrorless APS-C camera with a 26.1MP sensor and high performance. Offers 4K video, in-body image stabilization, advanced autofocus, and intuitive controls. Perfect for beginners and enthusiasts seeking a lightweight option.',2020,1432,'Corpo'),
+('G1','GFX50s',3500,'Medium format mirrorless camera with exceptional image quality and dynamic range. Features a 51.4MP sensor, advanced autofocus, and a durable build. Suitable for studio, landscape, and commercial photography.',2021,2321,'Corpo'),
+('G2','GFX100S',6185,'High-end medium format camera with a 102MP sensor and advanced features. Offers 4K video, in-body stabilization, and professional-grade performance. Ideal for high-resolution photography, commercial work, and fine art.',2021,1023,'Corpo'),
+('G3','GFX100',11185,'Professional medium format camera with a 102MP sensor, 4K video, and in-body stabilization. Designed for high-end commercial and fine art photography, offering exceptional image quality and dynamic range.',2019,568,'Corpo'),
+('G4','GFX100II',8145,'Advanced medium format camera with a 102MP sensor, 8K video recording, and improved autofocus. Ideal for professionals requiring high-resolution images and video. Perfect for studio, landscape, and commercial photography.',2023,5646,'Corpo'),
+
+
+('XF1','XF33mm',899,'Standard APS-C lens with excellent image quality and fast autofocus, suitable for a variety of photography styles.', 2021, 3222,'Obiettivo'),
+('XF2','XF18mm',939,'Wide-angle APS-C lens ideal for landscapes, architecture, and street photography, offering sharp images and low distortion.', 2021, 1762,'Obiettivo'),
+('XF3','XF56mm',1249,'Medium telephoto APS-C lens perfect for portraits, with a large aperture for beautiful background blur and low-light performance.',2022,2483,'Obiettivo'),
+('XF4','XF80mm',1350,'Macro APS-C lens designed for close-up photography with high magnification and superb image quality.',2017,723,'Obiettivo'),
+('XF5','XF16-50',760,'Kit zoom APS-C lens versatile for everyday use, covering a wide range of focal lengths.',2024,3742,'Obiettivo'),
+('XF6','XF70-300mm',720,'Telephoto APS-C lens great for wildlife and sports photography, offering a long reach and fast focus.',2021,2223,'Obiettivo'),
+('XF7','XF100-400mm',2049,'Super telephoto APS-C lens ideal for distant subjects, with optical stabilization for sharp images.',2016,562,'Obiettivo'),
+('GX1','GF20-35mm',2845,'Wide-angle medium format lens for expansive landscapes and architectural shots with superb clarity and detail.',2022, 3555,'Obiettivo'),
+('GX2','GF120mm',2623,'Macro medium format lens perfect for detailed close-up shots with high resolution and accurate color reproduction.',2017,1249,'Obiettivo'),
+('GX3','GF250mm',2750,'Telephoto medium format lens designed for sports and wildlife photography, offering excellent sharpness and fast autofocus.',2018,845,'Obiettivo'),
+('GX4','GF55mm',2645,'Standard medium telephoto medium format lens great for portraits and general photography, with beautiful background blur.',2023,4731,'Obiettivo'),
+('GX5','GF500mm',3965,'Super telephoto medium format lens ideal for capturing distant subjects with outstanding clarity and detail.',2024,3421,'Obiettivo'),
+
+
+('A1','TripodTG-BT1',199,'Sturdy tripod with Bluetooth connectivity, ideal for stable and flexible shooting in various conditions.',2022,2431,'Accessorio'),
+('A2','MHG-XT5',149,'Ergonomic grip for XT5, enhances camera handling and comfort during extended use.',2022,1435,'Accessorio'),
+('A3','EF-60Flash',429,'Compact and powerful flash unit, suitable for low-light situations and creative lighting effects.',2021,2341,'Accessorio'),
+('A4','EF-W1',219,'Wireless control unit for off-camera flash operation, enabling creative lighting setups.',2020,1834,'Accessorio'),
+('A5','LHCP-27',9,'Lens cap to protect your lens from dust, scratches, and damage when not in use.',2018,7434,'Accessorio'),
+('A6','LH-XF24II',69,'Lens hood designed to prevent flare and protect your lens from impact and elements.',2019,5345,'Accessorio'),
+('A7','NP-W126S',69,'Rechargeable battery for long-lasting power during extended shooting sessions.',2017,12431,'Accessorio'),
+('A8','NP-W235',69,'High-capacity rechargeable battery ensuring reliable power for your camera.',2020,8242,'Accessorio'),
+('A9','LC-X100V',89,'Protective case for X100V, offering stylish protection and easy access to your camera.',2020,2034,'Accessorio'),
+('A10','RR-100',39,'Remote control for convenient camera operation from a distance.',2017,4301,'Accessorio'),
+('A11','BC-W126S',59,'Battery charger for efficient and fast recharging of your camera batteries.',2017,2321,'Accessorio'),
+('A12','BC-W235',69,'High-speed battery charger ensuring quick and reliable charging for your camera.',2020,4545,'Accessorio');

@@ -14,22 +14,17 @@ function Change_Email(){
       var email = cookie.split('=')[1];
       // Now you can use the email value
       console.log(email);
-    } else {
-      // Handle the case when the cookie is not found
-      throw new Error('Email cookie not found');
-    }
+    } 
 
     const cookie1 = document.cookie.split('; ')
     .find((row) => row.startsWith('isAuthenticated='));
-    const utente_email = cookie1.split(',')[1];
+    
     if (cookie1) {
       var isAuthenticated = cookie1.split('=')[1];
+      var utente_email = cookie1.split(',')[1];
       
 
-    } else {
-      // Handle the case when the cookie is not found
-      throw new Error('Email cookie not found');
-    }
+    } 
 
 
   const handleNew = async () => {

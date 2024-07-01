@@ -46,6 +46,13 @@ app.post('/send-email', (req,res) => {
     email_sender.sendEmail3(req.body)
     }if (req.body.hasOwnProperty('order')) {
       email_sender.sendEmail4(req.body)
+      .then(response => {
+    
+        res.status(200).send(response);
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      })
       }
 
   });

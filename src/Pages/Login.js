@@ -175,13 +175,12 @@ function Login() {
         return;
 
       } catch (error) {
-        console.error(error);
-        alert('An error occurred');
+       
       }
       }
       if (esito === 'This email is not registered') {
 
-        setEmail1Error("Email taken/Invalid Password")
+        setEmail1Error("Email unregistered/Invalid Password")
 
         setTimeout(() => {
           setEmail1Error("")
@@ -189,9 +188,7 @@ function Login() {
         }, 700);
         return;
       }
-      else {
-        alert(response)
-      }
+      
     } catch (error) {
       console.error(error);
       alert('An error occurred');

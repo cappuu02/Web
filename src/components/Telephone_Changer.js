@@ -94,7 +94,7 @@ function Telephone_Changer(){
           }
       if (esito === 'GoodNumber') {
         setNewError("Number accepted");
-      
+        document.cookie = `Telephone=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
 
       setTimeout(() => {
         setNewError("")
@@ -115,9 +115,7 @@ function Telephone_Changer(){
         }, 700);
         return;
         }
-        else{
-          alert("miao")
-        }
+      
       
 
     

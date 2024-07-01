@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 
 function Footer_Home(){
     return(
+        
         <div class="footer-container">
+            <hr></hr>
             <div class="footer-section1">
                 <h2 id='titolo_footer'>Support services</h2>
                 <ul>
                     <li id="li_hide_footer">Contact us via:</li>
                     <ul>
-                      <li>Email: <a href="https://www.google.com/intl/it/gmail/about/">MI-Support@gmail.com</a></li>
-                      <li>Telephone: +39 3662883732</li>
+                      <li>Email: <a href="https://www.google.com/intl/it/gmail/about/">mireflexstoreshop@gmail.com</a></li>
+                      <li>Telephone: +39 3920591860</li>
                       
                     </ul>
                 </ul>
@@ -27,16 +29,18 @@ function Footer_Home(){
             <div class="footer-section3">
                 <h2 id='titolo_footer'>Acquisto</h2>
                 <ul>
-                    <li><a href="#">Camera</a></li>
-                    <li><a href="#">Lenses</a></li>
-                    <li><a href="#">Accessories and merchandising</a></li>
+                <Link to="/Store_Camera">Cameras</Link>
+                <tr></tr>
+                <Link to="/Store_Lens">Lenses</Link>
+                <tr></tr>
+                <Link to="/Store_Accessori">Accessories</Link>
                 </ul>
             </div>
             <div class="footer-section newsletter">
-                <h2 id="li_hide_footer">Sign up to receive Canon news</h2>
-                <p id="li_hide_footer">Receive regular updates via email on new products, useful tips and offers</p>
+                <h2 id="li_hide_footer">Sign up</h2>
+                <p id="li_hide_footer">Sign up and buy now from our expansive store</p>
                 <Link to="/Login"><button id='register_button_footer' class="register-button">Sign Up</button></Link>
-                <Link to="/Login"><button id='newsletter_button' class="register-button">Newsletter</button></Link>
+                
             </div>
             
         </div>

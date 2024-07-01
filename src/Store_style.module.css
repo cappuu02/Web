@@ -1,6 +1,12 @@
 body{
   background-color: rgba(0, 0, 0, 0.13);
 }
+
+:any-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .dropdown-custom {
   z-index: 100;
   position: absolute;
@@ -60,6 +66,7 @@ body{
 #card_shop{
   width: 10rem;
 }
+
 @media screen and (max-width:500px) {
   .row {
     display: grid;
@@ -73,7 +80,39 @@ body{
 }
 
 
+#btn_boss_delete{
+  background-color: rgb(195, 59, 41);
+  width: 50%;
+  height: 50px;
+  border: 1px solid rgb(195, 59, 41);
+  z-index: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btn_boss_modify{
+  background-color: green;
+  width: 50%;
+  height: 50px;
+  border: 2px solid green;
+  border-left: solid 1px black;
+  z-index: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#image1{
+  z-index: 0;
+}
 
 
+#btn_boss_addnew{
+  background-color: green;
+  text-align: center;
+  width: 100%;
+  margin-left: 10%;
+  height: 10vh;
+  overflow: hidden;
+}
 
-
+#PIU{
+  font-size: 50px;
+}

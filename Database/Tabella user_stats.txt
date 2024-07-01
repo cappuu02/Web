@@ -1,0 +1,14 @@
+CREATE TABLE user_stats (
+  utente_email VARCHAR(255) PRIMARY KEY,
+  accessi INT,
+  data_ultimo_accesso TIMESTAMP WITH TIME ZONE,
+  data_registrazione TIMESTAMP WITH TIME ZONE,
+  
+
+  CONSTRAINT fk_utente
+    FOREIGN KEY (utente_email)
+    REFERENCES utenti(email)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+    
+);

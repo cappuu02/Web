@@ -95,9 +95,7 @@ if (!/^\d+$/.test(pass)) {
       return;
         
       }
-      else {
-        alert(response)
-      }
+      
     } catch (error) {
       console.error(error);
       alert('An error occurred');

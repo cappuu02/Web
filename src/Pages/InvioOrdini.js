@@ -69,22 +69,42 @@ function InvioOrdini() {
         });
   
         const userData1 = await response.text();
+        
         const userDataObj1 = JSON.parse(userData1);
         
         
-        const index = userDataObj1.findIndex(userDataObj2 => userDataObj2.utente_email === utente_email);
-
+        const index = userDataObj1.findIndex(userDataObj1 => userDataObj1.utente_email === utente_email);
+        
+        if(userDataObj1[index] != undefined){
+        
         setName(userDataObj1[index].nome);
-
+        
+       
         setSurname(userDataObj1[index].cognome);
+        
+        
         setEmail(userDataObj1[index].email);
         
+        
         setAddress(userDataObj1[index].via);
+        
+        
         setHouseNumber(userDataObj1[index].civico);
+        
+        
         setCap(userDataObj1[index].cap);
+        
+        
         setCity(userDataObj1[index].citta);
+        
+        
         setRegion(userDataObj1[index].regione);
+        
+       
         setNation(userDataObj1[index].nazione);
+        
+    }
+    
 
         
         
@@ -109,7 +129,7 @@ function InvioOrdini() {
           const userData3 = await response.text();
           const userDataObj3 = JSON.parse(userData3);
           console.log(`${userDataObj3}`);
-          const index = userDataObj3.findIndex(userDataObj2 => userDataObj2.utente_email === utente_email);
+          const index = userDataObj3.findIndex(userDataObj3 => userDataObj3.utente_email === utente_email);
 
          
           setCard(userDataObj3[index].carta_credito);
@@ -283,7 +303,12 @@ try {
       },
       body: JSON.stringify({ utente_email, id, prodotto_id1, quantita1, costo_totale1, order }),
     });
-
+    const esito = response.text();
+    if(esito == "notSent"){
+        alert("Not sent")
+    }else{
+        window.location.href = "/Profile_Orders";
+    }
 
             
 } catch (error) {

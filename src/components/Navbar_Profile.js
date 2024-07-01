@@ -54,11 +54,11 @@ for (let i = 0; i < cookies.length; i++) {
                         </a></li></Link>
                         
 
-                        <li id={style.li_profile} onClick={handleLogout}><a id={style.link_profile}>
+                        <Link> <li id={style.li_profile} onClick={handleLogout}><a id={style.link_profile}>
 
                             <i id='Logout' className={`bi bi-box-arrow-left ${style.icon}`}></i>
                             <span className={style.nav_item}>Logout</span>
-                        </a></li>
+                        </a></li></Link>
                         
                     </ul>
                 </nav>

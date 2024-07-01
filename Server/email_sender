@@ -105,10 +105,18 @@ const sendEmail4 = async (body) => {
       from: 'mireflexstoreshop@gmail.com', // Indirizzo email del mittente
       to: utente_email, // Indirizzo email del destinatario
       subject: "Confirmed Order MiReflex Shop", // Oggetto della email
-      text: "", // Testo della email
-      html: `Hello dearest client, your order: ${id} has been confirmed. Products: ${prodotto_id1}, Quantity: ${quantita1}, Price: ${price1}€` // Testo HTML della email
+      text: `Hello dearest client, your order: ${id} has been confirmed. Products: ${prodotto_id1}, Quantity: ${quantita1}, Price: ${costo_totale1}€`,
+      html: `<p>Hello dearest client, your order: <b>${id}</b> has been confirmed. Products: <b>${prodotto_id1}</b>, Quantity: <b>${quantita1}</b>, Price: <b>${costo_totale1}€</b></p>`
     };
-    await transporter.sendMail(mailOptions);
+    transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      return res.status(500).json({ error: 'NotSent' });
+    }
+    console.log('Email sent:', info.response);
+    res.status(200).json({ message: 'Sent' });
+  });
+
     
   } catch (error) {
     console.error(error);

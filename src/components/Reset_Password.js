@@ -86,9 +86,7 @@ function Reset_Password(){
       return;
         
       }
-      else {
-        alert(response)
-      }
+      
     } catch (error) {
       console.error(error);
       alert('An error occurred');

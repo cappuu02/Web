@@ -82,10 +82,7 @@ function Card_Changer(){
       return;
         
       }
-      else {
-        alert(response)
-        
-      }
+      
     } catch (error) {
       console.error(error);
       alert('An error occurred');
@@ -108,9 +105,9 @@ function Card_Changer(){
               <h1>Change Card Info</h1>
               <span style={{fontSize: "15px"}}>Add your new card info. It will be update after the confirm.</span>
               <span style={{fontSize: "15px", marginBottom: "5%"}}>If you'll have any problems, contact us on the dedicated page</span>
-              <select id="payment-method" style={{ marginBottom: "2%",fontSize: "20px", width: "100%", border: "0px", borderRadius: "5px", height: "40px", paddingLeft: "15px" }}onChange={(e) => {setMetodo(e.target.value);}}><option value="">Select payment method</option><option value="Visa">Visa</option><option value="Mastercard">Mastercard</option><option value="American Express">American Express</option><option value="Discover">Discover</option></select>              
+              <select id="payment-method" style={{ paddingTop: "1%", paddingBottom: "1%",marginBottom: "2%",fontSize: "20px", width: "100%", border: "0px", borderRadius: "5px", height: "40px", paddingLeft: "15px" }}onChange={(e) => {setMetodo(e.target.value);}}><option value="">Select payment method</option><option value="Visa">Visa</option><option value="Mastercard">Mastercard</option><option value="American Express">American Express</option><option value="Discover">Discover</option></select>              
               <input style={{fontSize: "15px"}} id='psw_reset_login' type='text' placeholder='Card Number' onChange={(e) => { setCarta(e.target.value) }} />
-              <input style={{fontSize: "15px"}} id='psw_reset_login' type='date' placeholder='Expiration Date' onChange={(e) => { setScadenza(e.target.value) }} />
+              <input style={{fontSize: "15px", paddingTop: "5%", paddingBottom: "5%"}} id='psw_reset_login' type='date' placeholder='Expiration Date' onChange={(e) => { setScadenza(e.target.value) }} />
               <input style={{fontSize: "15px"}} id='psw_reset_login' type='password' placeholder='Security Pin' onChange={(e) => { setPin(e.target.value) }} />
               <button>Confirm</button>
               <p class="good-text-new">&nbsp;  {goodError}</p>

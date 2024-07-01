@@ -40,7 +40,6 @@ function Navbar(){
                     </div>
                 </ul>      
                 <form id="Icone" class="d-flex" role="search">
-                
                         {/*{isSearchVisible && <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>}
                         <div  id="search_icon" class="me-5 mb-4"><a onClick={() => setSearchVisible(!isSearchVisible)}><i class="bi bi-search"  id="search_bar"></i></a></div>*/}
                         {hasCartCookie ? (
@@ -61,9 +60,7 @@ function Navbar(){
         <div class="container-fluid-ham">
       
         {isVisible && <ul className="menu-open"><ul>
-                        <li>
-                        <input id='cerca' class="form-control " type="search" placeholder="Search" aria-label="Search"/>
-                        </li>
+                        
                         <li >
                         <Link to="/Store"  class="nav-link" aria-current="page" >Store</Link>
                         </li>

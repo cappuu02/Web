@@ -46,6 +46,10 @@ function Account(){
 
     const handleRead = async () => {
 
+      if(!isAuthenticated){
+        window.location.href = '/Login';
+      }else{
+
       let create = 1;
 
       try {
@@ -178,7 +182,7 @@ function Account(){
       }catch (error) {
         console.error(error);
         alert('An error occurred');
-    }}
+    }}}
 
     const [isEditable, setIsEditable] = useState(false);
 
@@ -230,9 +234,7 @@ function Account(){
             }, 700);
             return;
           }
-          else {
-            alert(response)
-          }
+          
         } catch (error) {
           console.error(error);
           alert('An error occurred');

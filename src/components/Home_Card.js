@@ -14,7 +14,7 @@ function HomeCard() {
       
       <div id="card">
           <img style={{borderRadius: '30px'}} src={image2}  id='immagine-li'></img>
-          <h2 >niche production</h2>
+          <h2 >Niche Production</h2>
               <p>from a careful market analysis we have managed to select the best products with the best technologies to offer to customers.</p>
              <Link to="/Store" class="nav-link" aria-current="page"> <button type="button" id='buttoncard' className="btn">Shop Now</button> </Link>       
       </div>

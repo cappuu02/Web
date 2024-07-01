@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import image1 from '../../Images/Camera/XT5.webp';
 import styles from '../../Store_style.module.css';
+import Popup from '../Popup2'; // Assicurati di avere il file Popup.js
+import Popup2 from '../Popup2';
+
 
 const getCookie = (name) => {
 
@@ -113,9 +116,19 @@ function XT5(){
 
   }
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <div id='card_shop' className={`container m-4 ${styles.cardContainer}`}>
       <div className="card border-0 rounded-0 shadow">
+        <div>
+          <button id={styles.btn_boss_delete}>Delete</button>
+          <button id={styles.btn_boss_modify} onClick={togglePopup}>Modify</button>
+        </div>
         <img src={image1} className="card-img-top rounded-0" alt="XT50 Camera" />
         <div className="card-body mt-3">
           <div className="row">
@@ -151,6 +164,7 @@ function XT5(){
           </div>
         
       </div>
+      {isPopupOpen && <Popup2 closePopup={togglePopup} />}
     </div>
   );
 }

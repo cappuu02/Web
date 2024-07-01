@@ -1,0 +1,17 @@
+CREATE TABLE indirizzi (
+  utente_email varchar(255) PRIMARY KEY,
+  nome VARCHAR(255),
+  cognome VARCHAR,
+  telefono varchar(255),
+  via VARCHAR(255),
+  civico VARCHAR(255),
+  cap varchar(255),
+  citta VARCHAR(255),
+  regione VARCHAR(255),
+  nazione VARCHAR(255),
+  CONSTRAINT fk_utente
+    FOREIGN KEY (utente_email)
+    REFERENCES utenti(email)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);

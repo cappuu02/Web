@@ -94,16 +94,16 @@ white;
   background-color: rgba(255, 255, 255, 0.644); /* Colore di sfondo trasparente */
   position: fixed;
   z-index: 1000;
-  width: 100%;
+  width: 200%;
   height: 10%;
 }
 
 /*icone navbar principale*/
 .me-5 a i {
   color: rgb(0, 0, 0);
-  font-size:  x-large;
+  font-size: x-large;
   position: relative;
-  left:90%;
+  right:100%;
   top:45%;
 }
 
@@ -590,6 +590,7 @@ footer {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.446);
     flex: 1;
     margin: 0 1rem;
+    margin-top: 55%;
     animation:  1s ease-in-out forwards;
   }
   #cerca {
@@ -604,8 +605,9 @@ footer {
     align-items: center;
     padding: 2rem;
     width: 100%;
-    padding-top: 50%;
+    padding-top: 20%;
     padding-left: 50%;
+    margin-bottom: 30%;
     transform: none;
     transition: none;
   }
@@ -615,6 +617,10 @@ footer {
     
     position: fixed;
     
+  }
+
+  #card{
+    margin-top: 55%;
   }
   #sfondoparte2{
     margin-bottom: 0%;
@@ -751,7 +757,7 @@ transform: translateY(0%);
     animation-duration: 0.7s;  
   }
   .icon-ham{
-    height:50px;width: 50px;margin-left:80%;position:fixed;top:35%;
+    height:50px;width: 50px;margin-left:38%;position:fixed;top:35%;
   }
   .icon-ham span{
     height:1px;width:50px;background: rgb(0, 0, 0);position:relative;display: block;margin-bottom: 10px;
@@ -772,9 +778,11 @@ transform: translateY(0%);
     padding: 0px;
   }
   footer {
-    margin-top:1%;
+    margin-top:0%;
     background-color: #f9f9f9;
     padding: 20px 0;
+    padding-top: 180%;
+    z-index: 9999;
     border-top: 2px solid #e3001b;
   }
   .footer-container{
@@ -783,6 +791,7 @@ transform: translateY(0%);
     text-align: center;
     position: relative;
     left: 15%;
+    
   }
 
   #titolo_footer{
@@ -806,6 +815,7 @@ transform: translateY(0%);
 
   .h1-terza{
     margin-left: 47px;
+   
   }
   
 }
