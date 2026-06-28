@@ -20,12 +20,12 @@ Fullstack e-commerce web application developed as a university project for the *
 - nanoid (unique ID generation)
 
 ## 📁 Project Structure
-├──Database/       # SQL scripts and database configuration
-├── Server/         # Node.js backend logic
-├── public/         # Static assets
-├── src/            # React frontend source code
-├── package.json
-└── .gitignore
+- Database/       # SQL scripts and database configuration
+- Server/         # Node.js backend logic
+- public/         # Static assets
+- src/            # React frontend source code
+- package.json
+- .gitignore
 
 ## 🚀 Getting Started
 
